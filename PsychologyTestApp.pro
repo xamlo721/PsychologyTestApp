@@ -17,14 +17,16 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     common/InitModule.cpp \
-    common/controller/CoreApp.cpp \
+    common/controller/UIController.cpp \
+    common/logic/ApplicationLogic.cpp \
     common/logic/Database.cpp \
     main.cpp \
     common/ui/MainWindow.cpp
 
 HEADERS += \
     common/InitModule.h \
-    common/controller/CoreApp.h \
+    common/controller/UIController.h \
+    common/logic/ApplicationLogic.h \
     common/logic/Database.h \
     common/ui/MainWindow.h
 
