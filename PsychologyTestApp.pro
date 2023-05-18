@@ -17,15 +17,35 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     common/InitModule.cpp \
-    common/controller/CoreApp.cpp \
+    common/controller/UIController.cpp \
+    common/items/Answer.cpp \
+    common/logic/ApplicationLogic.cpp \
     common/logic/Database.cpp \
+    common/items/Question.cpp \
+    common/logic/SQLHelper.cpp \
+    common/logic/Settings.cpp \
+    common/items/Test.cpp \
+    common/items/TestResult.cpp \
+    common/items/TestSection.cpp \
+    common/logic/XMLHelper.cpp \
     main.cpp \
     common/ui/MainWindow.cpp
 
 HEADERS += \
     common/InitModule.h \
-    common/controller/CoreApp.h \
+    common/controller/UIController.h \
+    common/items/Answer.h \
+    common/logic/ApplicationLogic.h \
     common/logic/Database.h \
+    common/items/EnumDatabaseType.h \
+    common/items/EnumTestType.h \
+    common/items/Question.h \
+    common/logic/SQLHelper.h \
+    common/logic/Settings.h \
+    common/items/Test.h \
+    common/items/TestResult.h \
+    common/items/TestSection.h \
+    common/logic/XMLHelper.h \
     common/ui/MainWindow.h
 
 FORMS += \
