@@ -54,7 +54,10 @@ HEADERS += \
     common/ui/MainWindow.h
 
 FORMS += \
-    ui/MainWindow.ui
+    ui/Instructions.ui \
+    ui/MainWindow.ui \
+    ui/Questions.ui \
+    ui/Result.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
