@@ -3,12 +3,15 @@
 
 #include <QObject>
 
-class Answer : public QObject {
+#include "common/items/AbstractTextElement.h"
+
+class Answer : public QObject, public AbstractTextElement {
 
     Q_OBJECT
 
     public:
-        explicit Answer(QObject *parent = nullptr);
+        Answer(QObject *parent = nullptr);
+        Answer(const Answer &other);
 
     signals:
 

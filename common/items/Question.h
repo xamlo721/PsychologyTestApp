@@ -2,13 +2,23 @@
 #define QUESTION_H
 
 #include <QObject>
+#include <QMap>
 
-class Question : public QObject {
+#include "common/items/Answer.h"
+#include "common/items/AbstractTextElement.h"
+
+class Question : public QObject, public AbstractTextElement {
 
     Q_OBJECT
 
     public:
-        explicit Question(QObject *parent = nullptr);
+
+        Question(QString text, QMap<int, Answer> answers, QObject *parent = nullptr);
+
+        QMap<int, Answer> getAnswers();
+
+    private:
+        QMap <int, Answer> answers;
 
     signals:
 

@@ -18,7 +18,9 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
     common/InitModule.cpp \
     common/controller/UIController.cpp \
+    common/items/AbstractTextElement.cpp \
     common/items/Answer.cpp \
+    common/items/TestInstruction.cpp \
     common/logic/ApplicationLogic.cpp \
     common/logic/Database.cpp \
     common/items/Question.cpp \
@@ -32,9 +34,12 @@ SOURCES += \
     common/ui/MainWindow.cpp
 
 HEADERS += \
+    api/ITextElement.h \
     common/InitModule.h \
     common/controller/UIController.h \
+    common/items/AbstractTextElement.h \
     common/items/Answer.h \
+    common/items/TestInstruction.h \
     common/logic/ApplicationLogic.h \
     common/logic/Database.h \
     common/items/EnumDatabaseType.h \

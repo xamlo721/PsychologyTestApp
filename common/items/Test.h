@@ -2,6 +2,7 @@
 #define TEST_H
 
 #include <QObject>
+#include <QMap>
 
 #include "common/items/EnumTestType.h"
 #include "common/items/TestResult.h"
@@ -14,6 +15,13 @@ class Test : public QObject {
 
     public:
         explicit Test(QObject *parent = nullptr);
+
+    private:
+        EnumTestType testType;
+
+        TestResult testResult;
+
+        QMap<int, TestSection> sections;
 
     signals:
 

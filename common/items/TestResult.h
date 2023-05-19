@@ -3,12 +3,14 @@
 
 #include <QObject>
 
-class TestResult : public QObject {
+#include "common/items/AbstractTextElement.h"
+
+class TestResult : public QObject, public AbstractTextElement {
 
     Q_OBJECT
 
     public:
-        explicit TestResult(QObject *parent = nullptr);
+        TestResult(QObject *parent = nullptr);
 
     signals:
 
