@@ -13,7 +13,7 @@ class Question : public QObject, public AbstractTextElement {
 
     public:
 
-        Question(QString text, QMap<int, Answer> answers, QObject *parent = nullptr);
+        Question(QString text, QMap<int, Answer> answers, bool hasImage = false, QString imagePath = "",  QObject *parent = nullptr);
 
         QMap<int, Answer> getAnswers();
 

@@ -10,7 +10,7 @@ class TestInstruction : public QObject, public AbstractTextElement {
     Q_OBJECT
 
     public:
-        TestInstruction(QObject *parent = nullptr);
+        TestInstruction(QString text, bool hasImage = false, QString imagePath = "", QObject *parent = nullptr);
 
 };
 

@@ -12,12 +12,15 @@ void Database::setDatabaseType(EnumDatabaseType type) {
     this->testType = type;
 }
 
-void Database::readDatabase() {
+void Database::load() {
     //TODO:
 }
 
-void Database::getDatabase() {
-    //TODO:
+Test* Database::getTest(EnumTestType testType) {
+
+    Test * test = this->database.value(testType);
+    //TODO: Проверить на наличие теста и бросить исключение
+    return test;
 }
 
 Database::~Database() {

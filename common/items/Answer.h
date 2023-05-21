@@ -10,7 +10,7 @@ class Answer : public QObject, public AbstractTextElement {
     Q_OBJECT
 
     public:
-        Answer(QObject *parent = nullptr);
+        Answer(QString text, bool hasImage = false, QString picturePath = "", QObject *parent = nullptr);
         Answer(const Answer &other);
 
     signals:

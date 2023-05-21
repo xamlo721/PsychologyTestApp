@@ -18,6 +18,10 @@ class TestSection : public QObject {
 
     public:
         explicit TestSection(QObject *parent = nullptr);
+        TestSection(const TestSection& other);
+        TestSection& operator=(const TestSection& other);
+        bool operator==(const TestSection& other) const;
+        bool operator!=(const TestSection& other) const;
 
     private:
         QMap<int, Question> questions;

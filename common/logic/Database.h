@@ -2,9 +2,12 @@
 #define DATABASE_H
 
 #include <QObject>
+#include <QMap>
 
 #include "common/items/EnumTestType.h"
 #include "common/items/EnumDatabaseType.h"
+#include "common/items/Test.h"
+
 
 class Database : public QObject {
 
@@ -21,13 +24,16 @@ class Database : public QObject {
 
         void setDatabaseType(EnumDatabaseType type);
 
-        void readDatabase();
+        void load();
 
-        void getDatabase();
+        Test * getTest(EnumTestType testType);
 
     private:
 
         EnumDatabaseType testType;
+
+        //TODO: Заменить на хранение по значению
+        QMap<EnumTestType, Test *> database;
 
     signals:
 

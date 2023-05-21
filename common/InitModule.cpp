@@ -8,6 +8,9 @@ void InitModule::init() {
     database = new Database();
     logic = new ApplicationLogic();
     uiController = new UIController();
+
+    database->load();
+
 }
 
 void InitModule::connect() {
@@ -15,6 +18,7 @@ void InitModule::connect() {
 }
 
 void InitModule::launch() {
+
     window->show();
 
 }

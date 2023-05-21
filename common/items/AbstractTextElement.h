@@ -6,12 +6,19 @@
 class AbstractTextElement : public ITextElement {
 
     public:
+        AbstractTextElement() = delete;
+        AbstractTextElement(QString text, bool hasImage = false, QString imagePath = "");
 
-        QString getText() override;
 
-        bool hasPicture() override;
+        virtual QString getText() override;
 
-        QString getPicturePath() override;
+        virtual bool hasPicture() override;
+
+        virtual QString getPicturePath() override;
+
+        AbstractTextElement& operator=(const AbstractTextElement& other);
+        virtual bool operator==(const AbstractTextElement& other) const;
+        virtual bool operator!=(const AbstractTextElement& other) const;
 
     protected:
 

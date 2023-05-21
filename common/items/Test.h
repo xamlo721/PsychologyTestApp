@@ -14,7 +14,17 @@ class Test : public QObject {
     Q_OBJECT
 
     public:
-        explicit Test(QObject *parent = nullptr);
+        explicit Test(EnumTestType testType, QMap<int, TestSection> sections, TestResult testResult, QObject *parent = nullptr);
+        Test(const Test& other);
+
+        Test& operator=(const Test& other);
+        bool operator==(const Test& other) const;
+        bool operator!=(const Test& other) const;
+        bool operator<(const Test& other) const;
+
+        EnumTestType getTestType() const;
+
+        TestResult getTestResult() const;
 
     private:
         EnumTestType testType;
