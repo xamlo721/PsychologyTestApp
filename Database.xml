@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Database>
+    <Test>
+        <Name>TestName1</Name>
+        <Description>аррарара</Description>
+        <imagePath>какой-то/путь/до/картинки</imagePath>
+        <Sections>
+            <Section>
+                <Description>Описание секции 1</Description>
+                <imagePath>какой-то/путь/до/картинки</imagePath>
+                <Questions>
+                    <Question>
+                        <Text>Вопрос 1</Text>
+                        <imagePath>какой-то/путь/до/картинки</imagePath>
+                        <Answers>
+                            <Answer>
+                                <Text>Ответ 1.1</Text>
+                                <imagePath>какой-то/путь/до/картинки</imagePath>
+                                <IsCorrect>true</IsCorrect>
+                            </Answer>
+                            <Answer>
+                                <Text>Ответ 1.2</Text>
+                                <imagePath>какой-то/путь/до/картинки</imagePath>
+                                <IsCorrect>false</IsCorrect>
+                            </Answer>
+                        </Answers>
+                    </Question>
+                    <Question>
+                        <Text>Вопрос 1</Text>
+                        <imagePath>какой-то/путь/до/картинки</imagePath>
+                        <Answers>
+                            <Answer>
+                                <Text>Ответ 1.1</Text>
+                                <imagePath>какой-то/путь/до/картинки</imagePath>
+                                <IsCorrect>true</IsCorrect>
+                            </Answer>
+                            <Answer>
+                                <Text>Ответ 1.2</Text>
+                                <imagePath>какой-то/путь/до/картинки</imagePath>
+                                <IsCorrect>false</IsCorrect>
+                            </Answer>
+                        </Answers>
+                    </Question>
+                </Questions>
+            </Section>
+        </Sections>
+    </Test>
+</Database>

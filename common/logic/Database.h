@@ -30,7 +30,7 @@ class Database : public QObject {
 
     private:
 
-        EnumDatabaseType testType;
+        EnumDatabaseType databaseType;
 
         //TODO: Заменить на хранение по значению
         QMap<EnumTestType, Test *> database;

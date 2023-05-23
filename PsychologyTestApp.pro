@@ -30,6 +30,7 @@ SOURCES += \
     common/items/TestResult.cpp \
     common/items/TestSection.cpp \
     common/logic/XMLHelper.cpp \
+    common/utils/XmlUtils.cpp \
     main.cpp \
     common/ui/MainWindow.cpp
 
@@ -51,7 +52,8 @@ HEADERS += \
     common/items/TestResult.h \
     common/items/TestSection.h \
     common/logic/XMLHelper.h \
-    common/ui/MainWindow.h
+    common/ui/MainWindow.h \
+    common/utils/XmlUtils.h
 
 FORMS += \
     ui/Instructions.ui \
@@ -63,3 +65,6 @@ FORMS += \
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+DISTFILES += \
+    Database.xml

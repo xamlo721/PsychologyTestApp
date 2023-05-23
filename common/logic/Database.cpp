@@ -1,19 +1,37 @@
 #include "Database.h"
+#include "common/logic/XMLHelper.h"
+#include "common/logic/SQLHelper.h"
 
-Database::Database(QObject *parent) : QObject(parent), testType(defaultDatabaseType){
+Database::Database(QObject *parent) : QObject(parent), databaseType(defaultDatabaseType){
 
 }
 
 EnumDatabaseType Database::getDatabaseType() {
-    return this->testType;
+    return this->databaseType;
 }
 
 void Database::setDatabaseType(EnumDatabaseType type) {
-    this->testType = type;
+    this->databaseType = type;
 }
 
 void Database::load() {
-    //TODO:
+
+    QList<Test *>tests;
+    switch (this->databaseType) {
+
+    case EnumDatabaseType::SQL : {
+            //TODO:
+            break;
+        }
+        case EnumDatabaseType::XML : {
+
+            break;
+        }
+        default: {
+
+            break;
+        }
+    }
 }
 
 Test* Database::getTest(EnumTestType testType) {
