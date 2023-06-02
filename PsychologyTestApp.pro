@@ -56,9 +56,11 @@ HEADERS += \
     common/utils/XmlUtils.h
 
 FORMS += \
-    ui/Instructions.ui \
+    ui/InstructionLiri.ui \
+    ui/InstructionTorston.ui \
     ui/MainWindow.ui \
-    ui/Questions.ui \
+    ui/QuestionsLiri.ui \
+    ui/QuestionsTorston.ui \
     ui/Result.ui
 
 # Default rules for deployment.
@@ -68,3 +70,6 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 DISTFILES += \
     Database.xml
+
+RESOURCES += \
+    ui/1.qrc

@@ -67,13 +67,13 @@ border-radius: 10px;
 background-color:rgba(217, 217, 217, 1);
 }</string>
    </property>
-   <widget class="QTextEdit" name="liri">
+   <widget class="QTextEdit" name="torston">
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>10</y>
+      <y>40</y>
       <width>871</width>
-      <height>331</height>
+      <height>281</height>
      </rect>
     </property>
     <property name="font">
@@ -87,7 +87,7 @@ background-color:rgba(217, 217, 217, 1);
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Montserrat Medium'; font-size:16pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Перед Вами опросник, содержащий различные характеристики. Внимательно прочитайте каждую и оцените, соответствует ли она Вашему представлению о себе.&lt;br /&gt;Если да, то перечеркните в сетке регистрационного листа крестом цифру, соответствующую порядковому номеру характеристики.&lt;br /&gt;Если нет, то не делайте никаких пометок на регистрационном листе. Постарайтесь проявить максимальную внимательность и откровенность, чтобы избежать повторного обследования.&lt;br /&gt;Заполните первую сетку «Какой Вы человек?», затем вторую «Каким бы Вы хотели быть?». То есть на все 128 вопросов надо будет ответить два раза – в сумме должно быть 256 ответов.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Тест целевого назначения. Используется для диагностики взрослых. Время выполнения – 10 минут.&lt;br /&gt;Методика предназначена для диагностики свойств полезависимости / поленезависимости.&lt;br /&gt;В каждом из 49 задании представлен эталон (искомая фигура) и четыре более сложных изображения. Из них некоторые содержат эталон с сохранением его размера и ориентации. Задания предъявляются последовательно сразу же после ответа испытуемого. Задача испытуемого состоит в нахождении эталонной фигуры в «зашумленных» изображениях.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
   </widget>
@@ -112,7 +112,7 @@ border-radius: 10px;
 background-color:rgba(217, 217, 217, 1);
 }</string>
    </property>
-   <widget class="QTextEdit" name="InstructionLiri">
+   <widget class="QTextEdit" name="InstructionTorston">
     <property name="geometry">
      <rect>
       <x>0</x>
@@ -132,7 +132,7 @@ background-color:rgba(217, 217, 217, 1);
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Montserrat Medium'; font-size:16pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:18pt;&quot;&gt;ИНСТРУКЦИЯ К ТЕСТУ ЛИРИ&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:18pt;&quot;&gt;ИНСТРУКЦИЯ К ТЕСТУ ТОРСТОНА&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
   </widget>
