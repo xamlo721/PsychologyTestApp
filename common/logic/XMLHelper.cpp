@@ -36,7 +36,8 @@ QList<Test *> XMLHelper::readTests(QString databasePath) {
 
 Test * XMLHelper::readTest(QDomElement testDomElement) {
 
-    EnumTestType testType;
+    QDomElement nameDomElement = XmlUtils::readSingleNode(testDomElement, "Name");
+    EnumTestType testType = this->readTestType(nameDomElement);
 
     QDomElement sectionsDomElement = XmlUtils::readSingleNode(testDomElement, "Sections");
 
@@ -46,16 +47,31 @@ Test * XMLHelper::readTest(QDomElement testDomElement) {
     for(QDomElement sectionDomElement : sectionListDomElement) {
         sectionsList.insert(sectionsList.size(), *this->readSection(sectionDomElement));
     }
-    //Потом доедлаю, поезд через 2 часа!!! Test * test = new Test();
+
+    QDomElement resultDomElement = XmlUtils::readSingleNode(testDomElement, "Result");
+    TestResult testResult = this->readResult(resultDomElement);
+
+    Test * test = new Test(testType, sectionsList, testResult);
+    return test;
 }
 
 Question * XMLHelper::readQuestion(QDomElement testDomElement) {
 
 }
+
 Answer * XMLHelper::readAnswer(QDomElement testDomElement) {
 
 }
+
 TestSection * XMLHelper::readSection(QDomElement testDomElement) {
+
+}
+
+TestResult XMLHelper::readResult(QDomElement testDomElement) {
+
+}
+
+EnumTestType XMLHelper::readTestType(QDomElement testDomElement) {
 
 }
 

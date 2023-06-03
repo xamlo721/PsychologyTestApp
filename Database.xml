@@ -44,5 +44,6 @@
                 </Questions>
             </Section>
         </Sections>
+        <Result>Какой-то результат. Формат придумай сама </Result>
     </Test>
 </Database>

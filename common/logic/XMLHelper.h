@@ -11,6 +11,7 @@
 #include "common/items/Answer.h"
 #include "common/items/TestSection.h"
 #include "common/items/EnumTestType.h"
+#include "common/items/TestResult.h"
 
 class XMLHelper : public QObject {
 
@@ -26,6 +27,8 @@ class XMLHelper : public QObject {
         Question * readQuestion(QDomElement testDomElement);
         Answer * readAnswer(QDomElement testDomElement);
         TestSection * readSection(QDomElement testDomElement);
+        TestResult readResult(QDomElement testDomElement);
+        EnumTestType readTestType(QDomElement testDomElement);
 
     signals:
 
