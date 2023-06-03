@@ -13,6 +13,12 @@ class Answer : public QObject, public AbstractTextElement {
         Answer(QString text, bool hasImage = false, QString picturePath = "", QObject *parent = nullptr);
         Answer(const Answer &other);
 
+        Answer& operator=(const Answer& other);
+        virtual bool operator==(const Answer& other) const;
+        virtual bool operator!=(const Answer& other) const;
+        virtual bool operator<(const Answer& other) const;
+        virtual bool operator>(const Answer& other) const;
+
     signals:
 
 };

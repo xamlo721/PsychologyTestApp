@@ -3,6 +3,7 @@
 
 #include <QObject>
 #include <QMap>
+#include "common/items/AbstractTextElement.h"
 
 #include "common/items/Question.h"
 
@@ -12,19 +13,23 @@
  * на секции, в которых содержатся вопросы, то
  * эта сущность описывает секцию вопросов
  */
-class TestSection : public QObject {
+class TestSection : public QObject, public AbstractTextElement {
 
     Q_OBJECT
 
     public:
-        explicit TestSection(QObject *parent = nullptr);
+        explicit TestSection(QString text, QMap<int, Question> questionList, bool hasImage = false, QString imagePath = "", QObject *parent = nullptr);
         TestSection(const TestSection& other);
+
         TestSection& operator=(const TestSection& other);
-        bool operator==(const TestSection& other) const;
-        bool operator!=(const TestSection& other) const;
+        virtual bool operator==(const TestSection& other) const;
+        virtual bool operator!=(const TestSection& other) const;
+        virtual bool operator<(const TestSection& other) const;
+        virtual bool operator>(const TestSection& other) const;
 
     private:
         QMap<int, Question> questions;
+
 
     signals:
 

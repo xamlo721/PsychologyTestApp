@@ -4,6 +4,8 @@
 #include "api/ITextElement.h"
 
 class AbstractTextElement : public ITextElement {
+    private:
+        static int counter;
 
     public:
         AbstractTextElement() = delete;
@@ -19,6 +21,8 @@ class AbstractTextElement : public ITextElement {
         AbstractTextElement& operator=(const AbstractTextElement& other);
         virtual bool operator==(const AbstractTextElement& other) const;
         virtual bool operator!=(const AbstractTextElement& other) const;
+        virtual bool operator<(const AbstractTextElement& other) const;
+        virtual bool operator>(const AbstractTextElement& other) const;
 
     protected:
 
@@ -27,6 +31,8 @@ class AbstractTextElement : public ITextElement {
         QString picturePath;
 
         bool hasImage;
+
+        int id;
 };
 
 #endif // ABSTRACTTEXTELEMENT_H

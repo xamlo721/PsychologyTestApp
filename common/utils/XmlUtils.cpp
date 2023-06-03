@@ -279,7 +279,7 @@ QDomElement XmlUtils::readSingleNode(QDomElement element, QString searchElementN
             throw std::runtime_error(QString("[XmlUtils] Error reading QDomElement from file!").toLocal8Bit().constData());
         }
 
-        //Так как это элемент, можно ноду для поиска скастовать в элемент для работы
+        //Так 3как это элемент, можно ноду для поиска скастовать в элемент для работы
         QDomElement domElement = domNode.toElement();
 
         //на всякий случай, проверяем, что он нормально скастовался

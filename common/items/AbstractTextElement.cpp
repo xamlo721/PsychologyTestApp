@@ -1,12 +1,15 @@
 #include "AbstractTextElement.h"
 
-AbstractTextElement::AbstractTextElement(QString text, bool hasImage, QString imagePath) {
+int AbstractTextElement::counter = 0;
+
+AbstractTextElement::AbstractTextElement(QString text, bool hasImage, QString imagePath) : id(counter++) {
     this->text = text;
     this->hasImage = hasImage;
     if (hasImage && imagePath.isEmpty()) {
         //TODO: Бросить исключение
     }
     this->picturePath = imagePath;
+    this->id = AbstractTextElement::counter++;
 }
 
 QString AbstractTextElement::getText() {
@@ -42,4 +45,12 @@ bool AbstractTextElement::operator==(const AbstractTextElement& other) const {
 
 bool AbstractTextElement::operator!=(const AbstractTextElement& other) const {
     return !(*this == other);
+}
+
+bool AbstractTextElement::operator<(const AbstractTextElement& other) const {
+    return this->id < other.id;
+}
+
+bool AbstractTextElement::operator>(const AbstractTextElement& other) const {
+    return this->id > other.id;
 }

@@ -19,12 +19,13 @@ void Database::load() {
     QList<Test *>tests;
     switch (this->databaseType) {
 
-    case EnumDatabaseType::SQL : {
-            //TODO:
+        case EnumDatabaseType::SQL : {
+            //TODO: Может когда-нибудь сделаем
             break;
         }
         case EnumDatabaseType::XML : {
-
+            //По сути просто тесты читаем
+            tests = XMLHelper::readTests("C:/workspace/PsychologyTestApp/Database.xml"); //TODO: Подтянуть файл из настроек
             break;
         }
         default: {
@@ -42,5 +43,5 @@ Test* Database::getTest(EnumTestType testType) {
 }
 
 Database::~Database() {
-
+    //TODO: Почистить за собой тесты
 }
