@@ -15,7 +15,7 @@
   </property>
   <property name="styleSheet">
    <string notr="true">QWidget#QuestionsLiri {
-            background: url(D:/jessleProject/PsychologyTestApp/pictures/back.png);
+             background: url(:/pictures/back.png);
       }</string>
   </property>
   <widget class="QLabel" name="esc">

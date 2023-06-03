@@ -15,8 +15,9 @@
   </property>
   <property name="styleSheet">
    <string notr="true">QWidget#InstructionMain {
-            background: url(D:/jessleProject/PsychologyTestApp/pictures/back.png);
-      }</string>
+            background: url(:/pictures/back.png);
+      }
+</string>
   </property>
   <widget class="QPushButton" name="tothetest">
    <property name="geometry">

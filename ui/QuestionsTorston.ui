@@ -15,7 +15,7 @@
   </property>
   <property name="styleSheet">
    <string notr="true">QWidget#QuestionsLiri {
-            background: url(D:/jessleProject/PsychologyTestApp/pictures/back.png);
+            background: url(:/pictures/back.png);
       }</string>
   </property>
   <widget class="QLabel" name="esc">
@@ -38,7 +38,7 @@
     </font>
    </property>
    <property name="text">
-    <string>*Можно использовать клавиши клавиатуры (1 и 2), для выхода нажмитие &lt;Esc&gt;</string>
+    <string>*Можно использовать клавиши клавиатуры (1, 2, 3, 4, 5), для выхода нажмитие &lt;Esc&gt;</string>
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>
