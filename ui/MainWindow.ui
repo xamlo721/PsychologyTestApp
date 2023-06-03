@@ -21,8 +21,8 @@
   </property>
   <property name="styleSheet">
    <string notr="true">QWidget#centralwidget {
-            background: url(D:/jessleProject/PsychologyTestApp/pictures/back.png);
-      }</string>
+            background-image: url(&quot;:/pictures/back.png&quot;);
+}</string>
   </property>
   <property name="tabShape">
    <enum>QTabWidget::Rounded</enum>
@@ -102,8 +102,8 @@ QPushButton:hover {
     </property>
     <property name="styleSheet">
      <string notr="true">QWidget#image {
-            background: url(D:/jessleProject/PsychologyTestApp/pictures/face.png);
-      }</string>
+            background-image: url(&quot;:/pictures/face.png&quot;);
+}</string>
     </property>
    </widget>
    <widget class="QLabel" name="name">

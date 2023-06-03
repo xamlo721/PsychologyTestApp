@@ -69,7 +69,9 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 DISTFILES += \
-    Database.xml
+    Database.xml \
+    pictures/back.png \
+    pictures/face.png
 
 RESOURCES += \
     ui/1.qrc
