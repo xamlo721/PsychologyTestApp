@@ -22,137 +22,77 @@
   <property name="styleSheet">
    <string notr="true">QWidget#centralwidget {
             background-image: url(&quot;:/pictures/back.png&quot;);
-}</string>
+}
+</string>
   </property>
   <property name="tabShape">
    <enum>QTabWidget::Rounded</enum>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QPushButton" name="TestLiri">
-    <property name="geometry">
-     <rect>
-      <x>539</x>
-      <y>199</y>
-      <width>344</width>
-      <height>75</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Montserrat Medium</family>
-      <pointsize>22</pointsize>
-      <weight>75</weight>
-      <bold>true</bold>
-      <kerning>false</kerning>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">QPushButton {
-border-radius: 10px;
-background-color: rgb(255, 255, 255);
-drop-shadow: (0px 10px 10px rgba(0, 0, 0, 0.5));
-}
-QPushButton:hover {
-        background-color: rgba(216, 249, 255);
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QStackedWidget" name="stackedWidget">
+      <property name="styleSheet">
+       <string notr="true">QWidget#page {
+            background-image: url(&quot;:/pictures/back.png&quot;);
 }</string>
-    </property>
-    <property name="text">
-     <string>ТЕСТ ЛИРИ</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="TestTorston">
-    <property name="geometry">
-     <rect>
-      <x>540</x>
-      <y>300</y>
-      <width>344</width>
-      <height>75</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Montserrat Medium</family>
-      <pointsize>22</pointsize>
-      <weight>75</weight>
-      <bold>true</bold>
-      <kerning>false</kerning>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">QPushButton {
-border-radius: 10px;
-background-color: rgb(255, 255, 255);
-}
-QPushButton:hover {
-        background-color: rgba(216, 249, 255);
-}</string>
-    </property>
-    <property name="text">
-     <string>ТЕСТ ТОРСТОНА</string>
-    </property>
-   </widget>
-   <widget class="QWidget" name="image" native="true">
-    <property name="geometry">
-     <rect>
-      <x>79</x>
-      <y>102</y>
-      <width>403</width>
-      <height>396</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">QWidget#image {
-            background-image: url(&quot;:/pictures/face.png&quot;);
-}</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="name">
-    <property name="geometry">
-     <rect>
-      <x>770</x>
-      <y>510</y>
-      <width>181</width>
-      <height>51</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Montserrat Medium</family>
-      <pointsize>11</pointsize>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">color: rgb(255, 255, 255);</string>
-    </property>
-    <property name="text">
-     <string>Программист
-Журавлева Олеся</string>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-    </property>
-   </widget>
-   <widget class="QLabel" name="info">
-    <property name="geometry">
-     <rect>
-      <x>18</x>
-      <y>18</y>
-      <width>131</width>
-      <height>24</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Montserrat Medium</family>
-      <pointsize>14</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>Справка - F1</string>
-    </property>
-   </widget>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="MainMenuWidget" name="mainMenu">
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+      </widget>
+      <widget class="InstructionLiriWidget" name="infoLiri"/>
+      <widget class="InstrutionTorsonWidget" name="infoTorson"/>
+      <widget class="QuestionLiriWidget" name="questLiri"/>
+      <widget class="QuestionTorsonWidget" name="questTorson"/>
+      <widget class="ResultWidget" name="questResult"/>
+     </widget>
+    </item>
+   </layout>
   </widget>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>MainMenuWidget</class>
+   <extends>QWidget</extends>
+   <header>common/ui/MainMenuWidget.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>ResultWidget</class>
+   <extends>QWidget</extends>
+   <header>common/ui/ResultWidget.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>QuestionTorsonWidget</class>
+   <extends>QWidget</extends>
+   <header>common/ui/QuestionTorsonWidget.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>QuestionLiriWidget</class>
+   <extends>QWidget</extends>
+   <header>common/ui/QuestionLiriWidget.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>InstrutionTorsonWidget</class>
+   <extends>QWidget</extends>
+   <header>common/ui/InstrutionTorsonWidget.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>InstructionLiriWidget</class>
+   <extends>QWidget</extends>
+   <header>common/ui/InstructionLiriWidget.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections/>
 </ui>

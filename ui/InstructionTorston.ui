@@ -14,7 +14,7 @@
    <string>Form</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">QWidget#InstructionMain {
+   <string notr="true">QWidget#InstructionTorstonWidget {
            background-image: url(&quot;:/pictures/back.png&quot;);
 }</string>
   </property>
