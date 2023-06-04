@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Database>
+    <Test>
+        <Name>Torston</Name>
+        <Description>Поиск искомой фигуры</Description>
+        <ImagePath></ImagePath>
+        <Sections>
+            <Section>
+                <Description></Description>
+                <ImagePath></ImagePath>
+                <Questions>
+                    <Question>
+                        <Text>Найдите эталонную фигуру</Text>
+                        <ImagePath>путь к первой картинке</ImagePath>
+                        <Answers>
+                            <Answer>
+                                <Text>Ответ 1.1</Text>
+                                <ImagePath></ImagePath>
+                                <IsCorrect>true</IsCorrect>
+                            </Answer>
+                            <Answer>
+                                <Text>Ответ 1.2</Text>
+                                <imagePath></imagePath>
+                                <IsCorrect>false</IsCorrect>
+                            </Answer>
+							<Answer>
+                                <Text>Ответ 1.3</Text>
+                                <imagePath></imagePath>
+                                <IsCorrect>false</IsCorrect>
+                            </Answer>
+							<Answer>
+                                <Text>Ответ 1.4</Text>
+                                <imagePath></imagePath>
+                                <IsCorrect>false</IsCorrect>
+                            </Answer>
+							<Answer>
+                                <Text>Ответ 1.5</Text>
+                                <imagePath></imagePath>
+                                <IsCorrect>false</IsCorrect>
+                            </Answer>
+                        </Answers>
+                    </Question>
+                    <Question>
+                        <Text>Производит впечатление на окружающих</Text>
+                        <ImagePath></ImagePath>
+                        <Answers>
+                            <Answer>
+                                <Text>Ответ 1.1</Text>
+                                <ImagePath></ImagePath>
+                                <IsCorrect>true</IsCorrect>
+                            </Answer>
+                            <Answer>
+                                <Text>Ответ 1.2</Text>
+                                <ImagePath></ImagePath>
+                                <IsCorrect>false</IsCorrect>
+                            </Answer>
+                        </Answers>
+                    </Question>					
+                </Questions>
+            </Section>
+        </Sections>
+        <Result>Какой-то результат. Формат придумай сама </Result>
+    </Test>
+</Database>

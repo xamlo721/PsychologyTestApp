@@ -19,6 +19,7 @@ void MainWindow::onMainMenuLiriTestButtonClicked() {
 
 void MainWindow::onMainMenuTorsonTestButtonClicked() {
     //TODO:
+    this->ui_window->stackedWidget->setCurrentIndex(EnumAvailableWidgets::InfoTorson);
 }
 
 void MainWindow::onInfoLiriTestButtonClicked() {
@@ -26,6 +27,7 @@ void MainWindow::onInfoLiriTestButtonClicked() {
 }
 
 void MainWindow::onInfoTorsonTestButtonClicked() {
+    this->ui_window->stackedWidget->setCurrentIndex(EnumAvailableWidgets::QuestTorson);
 
 }
 
