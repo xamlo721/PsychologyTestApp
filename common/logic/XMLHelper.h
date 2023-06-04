@@ -11,6 +11,7 @@
 #include "common/items/Answer.h"
 #include "common/items/TestSection.h"
 #include "common/items/EnumTestType.h"
+#include "common/items/TestResult.h"
 
 class XMLHelper : public QObject {
 
@@ -19,13 +20,15 @@ class XMLHelper : public QObject {
     public:
         explicit XMLHelper(QObject *parent = nullptr);
 
-        QList<Test *> readTests(QString databasePath);
+        static QList<Test *> readTests(QString databasePath);
 
     private:
-        Test * readTest(QDomElement testDomElement);
-        Question * readQuestion(QDomElement testDomElement);
-        Answer * readAnswer(QDomElement testDomElement);
-        TestSection * readSection(QDomElement testDomElement);
+        static Test * readTest(QDomElement testDomElement);
+        static Question readQuestion(QDomElement testDomElement);
+        static Answer readAnswer(QDomElement testDomElement);
+        static TestSection readSection(QDomElement testDomElement);
+        static TestResult readResult(QDomElement testDomElement);
+        static EnumTestType readTestType(QDomElement testDomElement);
 
     signals:
 

@@ -15,8 +15,8 @@
   </property>
   <property name="styleSheet">
    <string notr="true">QWidget#QuestionsLiri {
-             background: url(:/pictures/back.png);
-      }</string>
+	background-image: url(&quot;:/pictures/back.png&quot;);
+}</string>
   </property>
   <widget class="QLabel" name="esc">
    <property name="geometry">
@@ -63,8 +63,8 @@
    </property>
    <property name="styleSheet">
     <string notr="true">QPushButton {
-border-radius: 10px;
-background-color: rgb(217, 217, 217);
+	border-radius: 10px;
+	background-color: rgb(217, 217, 217);
 }
 QPushButton:hover {
         background-color: rgba(216, 249, 255);
@@ -93,8 +93,8 @@ QPushButton:hover {
    </property>
    <property name="styleSheet">
     <string notr="true">QPushButton {
-border-radius: 10px;
-background-color: rgb(217, 217, 217);
+	border-radius: 10px;
+	background-color: rgb(217, 217, 217);
 }
 QPushButton:hover {
         background-color: rgba(216, 249, 255);
@@ -121,8 +121,8 @@ QPushButton:hover {
    </property>
    <property name="styleSheet">
     <string notr="true">QWidget {
-border-radius: 10px;
-background-color:rgba(217, 217, 217, 1);
+	border-radius: 10px;
+	background-color:rgba(217, 217, 217, 1);
 }</string>
    </property>
    <widget class="QTextEdit" name="TitleLiri">
@@ -162,8 +162,8 @@ p, li { white-space: pre-wrap; }
    </property>
    <property name="styleSheet">
     <string notr="true">QWidget {
-border-radius: 10px;
-background-color:rgba(217, 217, 217, 1);
+	border-radius: 10px;
+	background-color:rgba(217, 217, 217, 1);
 }</string>
    </property>
   </widget>

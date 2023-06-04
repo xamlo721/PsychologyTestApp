@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>InstructionMain</class>
- <widget class="QWidget" name="InstructionMain">
+ <class>InstructionTorstonWidget</class>
+ <widget class="QWidget" name="InstructionTorstonWidget">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -14,10 +14,9 @@
    <string>Form</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">QWidget#InstructionMain {
-            background: url(:/pictures/back.png);
-      }
-</string>
+   <string notr="true">QWidget#InstructionTorstonWidget {
+           background-image: url(&quot;:/pictures/back.png&quot;);
+}</string>
   </property>
   <widget class="QPushButton" name="tothetest">
    <property name="geometry">
@@ -36,8 +35,8 @@
    </property>
    <property name="styleSheet">
     <string notr="true">QPushButton {
-border-radius: 10px;
-background-color: rgb(217, 217, 217);
+	border-radius: 10px;
+	background-color: rgb(217, 217, 217);
 }
 QPushButton:hover {
         background-color: rgba(216, 249, 255);
@@ -64,8 +63,8 @@ QPushButton:hover {
    </property>
    <property name="styleSheet">
     <string notr="true">QWidget {
-border-radius: 10px;
-background-color:rgba(217, 217, 217, 1);
+	border-radius: 10px;
+	background-color:rgba(217, 217, 217, 1);
 }</string>
    </property>
    <widget class="QTextEdit" name="torston">
@@ -109,8 +108,8 @@ p, li { white-space: pre-wrap; }
    </property>
    <property name="styleSheet">
     <string notr="true">QWidget {
-border-radius: 10px;
-background-color:rgba(217, 217, 217, 1);
+	border-radius: 10px;
+	background-color:rgba(217, 217, 217, 1);
 }</string>
    </property>
    <widget class="QTextEdit" name="InstructionTorston">

@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Database>
     <Test>
-        <Name>TestName1</Name>
+        <Name>Liri</Name>
         <Description>аррарара</Description>
-        <imagePath>какой-то/путь/до/картинки</imagePath>
+        <ImagePath>какой-то/путь/до/картинки</ImagePath>
         <Sections>
             <Section>
                 <Description>Описание секции 1</Description>
-                <imagePath>какой-то/путь/до/картинки</imagePath>
+                <ImagePath>какой-то/путь/до/картинки</ImagePath>
                 <Questions>
                     <Question>
                         <Text>Вопрос 1</Text>
-                        <imagePath>какой-то/путь/до/картинки</imagePath>
+                        <ImagePath>какой-то/путь/до/картинки</ImagePath>
                         <Answers>
                             <Answer>
                                 <Text>Ответ 1.1</Text>
-                                <imagePath>какой-то/путь/до/картинки</imagePath>
+                                <ImagePath>какой-то/путь/до/картинки</ImagePath>
                                 <IsCorrect>true</IsCorrect>
                             </Answer>
                             <Answer>
@@ -27,16 +27,16 @@
                     </Question>
                     <Question>
                         <Text>Вопрос 1</Text>
-                        <imagePath>какой-то/путь/до/картинки</imagePath>
+                        <ImagePath>какой-то/путь/до/картинки</ImagePath>
                         <Answers>
                             <Answer>
                                 <Text>Ответ 1.1</Text>
-                                <imagePath>какой-то/путь/до/картинки</imagePath>
+                                <ImagePath>какой-то/путь/до/картинки</ImagePath>
                                 <IsCorrect>true</IsCorrect>
                             </Answer>
                             <Answer>
                                 <Text>Ответ 1.2</Text>
-                                <imagePath>какой-то/путь/до/картинки</imagePath>
+                                <ImagePath>какой-то/путь/до/картинки</ImagePath>
                                 <IsCorrect>false</IsCorrect>
                             </Answer>
                         </Answers>
@@ -44,5 +44,6 @@
                 </Questions>
             </Section>
         </Sections>
+        <Result>Какой-то результат. Формат придумай сама </Result>
     </Test>
 </Database>

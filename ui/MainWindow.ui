@@ -28,32 +28,12 @@
    <enum>QTabWidget::Rounded</enum>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QPushButton" name="TestLiri">
-    <property name="geometry">
-     <rect>
-      <x>539</x>
-      <y>199</y>
-      <width>344</width>
-      <height>75</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Montserrat Medium</family>
-      <pointsize>22</pointsize>
-      <weight>75</weight>
-      <bold>true</bold>
-      <kerning>false</kerning>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">QPushButton {
-border-radius: 10px;
-background-color: rgb(255, 255, 255);
-drop-shadow: (0px 10px 10px rgba(0, 0, 0, 0.5));
-}
-QPushButton:hover {
-        background-color: rgba(216, 249, 255);
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QStackedWidget" name="stackedWidget">
+      <property name="styleSheet">
+       <string notr="true">QWidget#page {
+            background-image: url(&quot;:/pictures/back.png&quot;);
 }</string>
     </property>
     <property name="text">
@@ -102,7 +82,7 @@ QPushButton:hover {
     </property>
     <property name="styleSheet">
      <string notr="true">QWidget#image {
-            background: url(:/pictures/face.png);
+            background: url(D:/jessleProject/PsychologyTestApp/pictures/face.png);
       }</string>
     </property>
    </widget>
@@ -153,6 +133,44 @@ QPushButton:hover {
    </widget>
   </widget>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>MainMenuWidget</class>
+   <extends>QWidget</extends>
+   <header>common/ui/MainMenuWidget.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>ResultWidget</class>
+   <extends>QWidget</extends>
+   <header>common/ui/ResultWidget.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>QuestionTorsonWidget</class>
+   <extends>QWidget</extends>
+   <header>common/ui/QuestionTorsonWidget.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>QuestionLiriWidget</class>
+   <extends>QWidget</extends>
+   <header>common/ui/QuestionLiriWidget.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>InstrutionTorsonWidget</class>
+   <extends>QWidget</extends>
+   <header>common/ui/InstrutionTorsonWidget.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>InstructionLiriWidget</class>
+   <extends>QWidget</extends>
+   <header>common/ui/InstructionLiriWidget.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections/>
 </ui>

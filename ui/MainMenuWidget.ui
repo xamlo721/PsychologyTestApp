@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainMenuWidget</class>
+ <widget class="QWidget" name="MainMenuWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1000</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget#MainMenuWidget {
+            background-image: url(&quot;:/pictures/back.png&quot;);
+}</string>
+  </property>
+  <widget class="QPushButton" name="TestLiri">
+   <property name="geometry">
+    <rect>
+     <x>540</x>
+     <y>197</y>
+     <width>344</width>
+     <height>75</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Montserrat Medium</family>
+     <pointsize>22</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+     <kerning>false</kerning>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+border-radius: 10px;
+background-color: rgb(255, 255, 255);
+drop-shadow: (0px 10px 10px rgba(0, 0, 0, 0.5));
+}
+QPushButton:hover {
+        background-color: rgba(216, 249, 255);
+}</string>
+   </property>
+   <property name="text">
+    <string>ТЕСТ ЛИРИ</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="name">
+   <property name="geometry">
+    <rect>
+     <x>771</x>
+     <y>508</y>
+     <width>181</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Montserrat Medium</family>
+     <pointsize>11</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>Программист
+Журавлева Олеся</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="info">
+   <property name="geometry">
+    <rect>
+     <x>19</x>
+     <y>16</y>
+     <width>131</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Montserrat Medium</family>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Справка - F1</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="TestTorston">
+   <property name="geometry">
+    <rect>
+     <x>541</x>
+     <y>298</y>
+     <width>344</width>
+     <height>75</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Montserrat Medium</family>
+     <pointsize>22</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+     <kerning>false</kerning>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+border-radius: 10px;
+background-color: rgb(255, 255, 255);
+}
+QPushButton:hover {
+        background-color: rgba(216, 249, 255);
+}</string>
+   </property>
+   <property name="text">
+    <string>ТЕСТ ТОРСТОНА</string>
+   </property>
+  </widget>
+  <widget class="QWidget" name="image" native="true">
+   <property name="geometry">
+    <rect>
+     <x>80</x>
+     <y>100</y>
+     <width>403</width>
+     <height>396</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QWidget#image {
+            background-image: url(&quot;:/pictures/face.png&quot;);
+}</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
