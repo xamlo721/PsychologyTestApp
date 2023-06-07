@@ -28,6 +28,8 @@ class Database : public QObject {
 
         Test * getTest(EnumTestType testType);
 
+        QMap<EnumTestType, Test *> getAllTests();
+
     private:
 
         EnumDatabaseType databaseType;

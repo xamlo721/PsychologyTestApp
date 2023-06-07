@@ -45,3 +45,7 @@ EnumTestType Test::getTestType() const {
 TestResult Test::getTestResult() const {
     return testResult;
 }
+
+QMap<int, TestSection> Test::getSections() {
+    return this->sections;
+}

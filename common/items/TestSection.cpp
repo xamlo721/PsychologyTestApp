@@ -8,6 +8,11 @@ TestSection::TestSection(const TestSection& other) : QObject(other.parent()), Ab
 
 }
 
+QMap<int, Question> TestSection::getQuestions() {
+    return this->questions;
+}
+
+
 TestSection& TestSection::operator=(const TestSection& other) {
     if (&other == this) {
         return *this;

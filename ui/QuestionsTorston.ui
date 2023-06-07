@@ -158,6 +158,9 @@ QPushButton:hover {
       <property name="text">
        <string>01</string>
       </property>
+      <property name="checkable">
+       <bool>true</bool>
+      </property>
      </widget>
     </item>
     <item>
@@ -181,6 +184,9 @@ QPushButton:hover {
       </property>
       <property name="text">
        <string>02</string>
+      </property>
+      <property name="checkable">
+       <bool>true</bool>
       </property>
      </widget>
     </item>
@@ -206,6 +212,9 @@ QPushButton:hover {
       <property name="text">
        <string>03</string>
       </property>
+      <property name="checkable">
+       <bool>true</bool>
+      </property>
      </widget>
     </item>
     <item>
@@ -229,6 +238,9 @@ QPushButton:hover {
       </property>
       <property name="text">
        <string>04</string>
+      </property>
+      <property name="checkable">
+       <bool>true</bool>
       </property>
      </widget>
     </item>
@@ -260,6 +272,16 @@ QPushButton:hover {
       <property name="text">
        <string>05</string>
       </property>
+      <property name="checkable">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="pushButton_nextQuestion">
+      <property name="text">
+       <string>PushButton</string>
+      </property>
      </widget>
     </item>
    </layout>
@@ -285,7 +307,7 @@ QPushButton:hover {
     <string notr="true"/>
    </property>
    <property name="value">
-    <number>24</number>
+    <number>0</number>
    </property>
   </widget>
  </widget>

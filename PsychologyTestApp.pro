@@ -52,6 +52,7 @@ HEADERS += \
     common/items/EnumDatabaseType.h \
     common/items/EnumTestType.h \
     common/items/Question.h \
+    common/logic/LogicConstants.h \
     common/logic/SQLHelper.h \
     common/logic/Settings.h \
     common/items/Test.h \

@@ -42,6 +42,10 @@ Test* Database::getTest(EnumTestType testType) {
     return test;
 }
 
+QMap<EnumTestType, Test *> Database::getAllTests() {
+    return this->database;
+}
+
 Database::~Database() {
     //TODO: Почистить за собой тесты
 }

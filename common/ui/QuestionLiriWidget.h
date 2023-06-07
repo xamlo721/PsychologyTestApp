@@ -19,10 +19,15 @@ class QuestionLiriWidget : public QWidget {
         explicit QuestionLiriWidget(QWidget *parent = nullptr);
 
     signals:
+        void signalAnswerd(bool answer);
 
     public:
-
         Ui::QuestionsLiri *uiQuestionsLiri;
+        void setQuestion(QString question);
+
+    private slots:
+        void onYesButtonClicked();
+        void onNoButtonClicked();
 
 };
 

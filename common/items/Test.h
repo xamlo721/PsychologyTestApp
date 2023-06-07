@@ -26,6 +26,8 @@ class Test : public QObject {
 
         TestResult getTestResult() const;
 
+        QMap<int, TestSection> getSections();
+
     private:
         EnumTestType testType;
 

@@ -9,11 +9,26 @@ void InitModule::init() {
     logic = new ApplicationLogic();
     uiController = new UIController();
 
+    ///Подтянуть с диска БД
     database->load();
+    ///Загрузить в логику тесты
+    logic->setAvailableTests(database->getAllTests());
 
 }
 
 void InitModule::connect() {
+
+    QObject::connect(logic, &ApplicationLogic::signalAskQuestion, uiController, &UIController::onAskQuestion);
+    QObject::connect(logic, &ApplicationLogic::signalShowResult, uiController, &UIController::onShowResult);
+    QObject::connect(logic, &ApplicationLogic::signalUpdateProgressBar, uiController, &UIController::onUpdateProgressBar);
+
+
+    QObject::connect(uiController, &UIController::signalOpenTest, logic, &ApplicationLogic::onTestSelected);
+    QObject::connect(uiController, &UIController::signalStartTest, logic, &ApplicationLogic::onTestStarted);
+    QObject::connect(uiController, &UIController::signalQuestAnsweredLiri, logic, &ApplicationLogic::onQuestAnsweredLiri);
+    QObject::connect(uiController, &UIController::signalQuestAnsweredTorson, logic, &ApplicationLogic::onQuestAnsweredTorson);
+    QObject::connect(uiController, &UIController::signalAbortTest, logic, &ApplicationLogic::onTestAborted);
+    QObject::connect(uiController, &UIController::signalCompleteTest, logic, &ApplicationLogic::onTestEnded);
 
 }
 

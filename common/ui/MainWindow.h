@@ -21,14 +21,14 @@ class MainWindow : public QMainWindow {
         ~MainWindow();
 
     public slots:
-            void onMainMenuLiriTestButtonClicked();
-            void onMainMenuTorsonTestButtonClicked();
+        void onMainMenuLiriTestButtonClicked();
+        void onMainMenuTorsonTestButtonClicked();
 
-            void onInfoLiriTestButtonClicked();
-            void onInfoTorsonTestButtonClicked();
+        void onInfoLiriTestButtonClicked();
+        void onInfoTorsonTestButtonClicked();
 
 
-    private:
+    public://FIXME
         Ui::MainWindow *ui_window;
 
 };

@@ -27,6 +27,8 @@ class TestSection : public QObject, public AbstractTextElement {
         virtual bool operator<(const TestSection& other) const;
         virtual bool operator>(const TestSection& other) const;
 
+        QMap<int, Question> getQuestions();
+
     private:
         QMap<int, Question> questions;
 
