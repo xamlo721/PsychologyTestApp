@@ -33,6 +33,10 @@ void Database::load() {
             break;
         }
     }
+
+    for (Test * test : tests) {
+        this->database.insert(test->getTestType(), test);
+    }
 }
 
 Test* Database::getTest(EnumTestType testType) {

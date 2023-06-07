@@ -17,14 +17,14 @@ void ApplicationLogic::onTestSelected(EnumTestType testType) {
     this->currentTest = tests.value(testType);
 
     //Запихнуть тест в очередь вопросов
-//    for (int s = 0; s < currentTest->getSections().size(); s++) {
+    for (int s = 0; s < currentTest->getSections().size(); s++) {
 
-//        TestSection section = currentTest->getSections().value(s);
-//        for (int i = 0; i < section.getQuestions().size(); i ++) {
-//            this->questions.append(section.getQuestions().value(i));
-//        }
+        TestSection section = currentTest->getSections().value(s);
+        for (int i = 0; i < section.getQuestions().size(); i ++) {
+            this->questions.append(section.getQuestions().value(i));
+        }
 
-//    }
+    }
 
 }
 

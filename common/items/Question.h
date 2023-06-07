@@ -15,6 +15,7 @@ class Question : public QObject, public AbstractTextElement {
 
         Question(QString text, QMap<int, Answer> answers, bool hasImage = false, QString imagePath = "",  QObject *parent = nullptr);
         Question(const Question& other);
+        Question() : AbstractTextElement("") { }
 
         Question& operator=(const Question& other);
         virtual bool operator==(const Question& other) const;

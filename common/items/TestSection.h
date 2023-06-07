@@ -20,6 +20,7 @@ class TestSection : public QObject, public AbstractTextElement {
     public:
         explicit TestSection(QString text, QMap<int, Question> questionList, bool hasImage = false, QString imagePath = "", QObject *parent = nullptr);
         TestSection(const TestSection& other);
+        TestSection() : AbstractTextElement("") { }
 
         TestSection& operator=(const TestSection& other);
         virtual bool operator==(const TestSection& other) const;

@@ -41,7 +41,7 @@ Test * XMLHelper::readTest(QDomElement testDomElement) {
 
     QDomElement sectionsDomElement = XmlUtils::readSingleNode(testDomElement, "Sections");
 
-    QList<QDomElement> sectionListDomElement = XmlUtils::readMultiNode(testDomElement, "Section");
+    QList<QDomElement> sectionListDomElement = XmlUtils::readMultiNode(sectionsDomElement, "Section");
 
     QMap<int, TestSection> sectionsList;
     for(QDomElement sectionDomElement : sectionListDomElement) {

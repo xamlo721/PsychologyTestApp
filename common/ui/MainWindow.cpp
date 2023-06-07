@@ -14,12 +14,16 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui_window(new Ui:
 }
 
 void MainWindow::onMainMenuLiriTestButtonClicked() {
+    emit signalSelectTest(EnumTestType::Liri);
     this->ui_window->stackedWidget->setCurrentIndex(EnumAvailableWidgets::InfoLiri);
+
 }
 
 void MainWindow::onMainMenuTorsonTestButtonClicked() {
+    emit signalSelectTest(EnumTestType::Torston);
     //TODO:
     this->ui_window->stackedWidget->setCurrentIndex(EnumAvailableWidgets::InfoTorson);
+
 }
 
 void MainWindow::onInfoLiriTestButtonClicked() {

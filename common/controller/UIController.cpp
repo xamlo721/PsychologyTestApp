@@ -6,6 +6,10 @@ UIController::UIController(QObject *parent) : QObject(parent) {
 
 void UIController::init() {
 
+    //TODO: Проверить на наличие окна
+
+    QObject::connect(window, &MainWindow::signalSelectTest, this, &UIController::signalOpenTest);
+
 }
 
 void UIController::setUI(MainWindow * window) {

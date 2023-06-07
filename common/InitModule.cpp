@@ -14,6 +14,10 @@ void InitModule::init() {
     ///Загрузить в логику тесты
     logic->setAvailableTests(database->getAllTests());
 
+    uiController->setUI(window);
+
+    uiController->init();
+
 }
 
 void InitModule::connect() {

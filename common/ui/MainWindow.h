@@ -5,6 +5,7 @@
 #include <QPainter>
 
 #include "ui_MainWindow.h"
+#include "common/items/EnumTestType.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -27,6 +28,8 @@ class MainWindow : public QMainWindow {
         void onInfoLiriTestButtonClicked();
         void onInfoTorsonTestButtonClicked();
 
+    signals:
+        void signalSelectTest(EnumTestType testType);
 
     public://FIXME
         Ui::MainWindow *ui_window;

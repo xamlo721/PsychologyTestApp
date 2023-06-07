@@ -4,7 +4,10 @@ TestSection::TestSection(QString text, QMap<int, Question> questionList, bool ha
     this->questions = questionList;
 }
 
-TestSection::TestSection(const TestSection& other) : QObject(other.parent()), AbstractTextElement(other.text, other.hasImage, other.picturePath) {
+TestSection::TestSection(const TestSection& other)
+    : QObject(other.parent()),
+      AbstractTextElement(other.text, other.hasImage, other.picturePath),
+      questions(other.questions) {
 
 }
 
