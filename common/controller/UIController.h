@@ -38,7 +38,7 @@ class UIController : public QObject {
 
     public slots:
 
-        void onAskQuestion(Question q);
+        void onAskQuestion(EnumTestType testType, Question q);
 
         void onShowResult(TestResult result);
 

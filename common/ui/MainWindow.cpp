@@ -27,10 +27,12 @@ void MainWindow::onMainMenuTorsonTestButtonClicked() {
 }
 
 void MainWindow::onInfoLiriTestButtonClicked() {
+    emit signalTestStarted(EnumTestType::Liri);
     this->ui_window->stackedWidget->setCurrentIndex(EnumAvailableWidgets::QuestLiri);
 }
 
 void MainWindow::onInfoTorsonTestButtonClicked() {
+    emit signalTestStarted(EnumTestType::Torston);
     this->ui_window->stackedWidget->setCurrentIndex(EnumAvailableWidgets::QuestTorson);
 
 }

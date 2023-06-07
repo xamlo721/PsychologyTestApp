@@ -29,8 +29,12 @@ void ApplicationLogic::onTestSelected(EnumTestType testType) {
 }
 
 void ApplicationLogic::onTestStarted() {
+
     //TODO:
-    emit signalAskQuestion(questions.takeFirst());
+
+    currentQuest = questions.takeFirst();
+
+    emit signalAskQuestion(this->currentTest->getTestType(), currentQuest);
 }
 
 void ApplicationLogic::onQuestAnsweredLiri(bool answer) {
@@ -41,8 +45,10 @@ void ApplicationLogic::onQuestAnsweredLiri(bool answer) {
     // в соответствии с правильными ответами, которые
     // по таблице переводятся в стандартные баллы.
 
-    emit signalAskQuestion(questions.takeFirst());
 
+    currentQuest = questions.takeFirst();
+
+    emit signalAskQuestion(this->currentTest->getTestType(), currentQuest);
 }
 
 void ApplicationLogic::onQuestAnsweredTorson(bool a1, bool a2, bool a3, bool a4 ,bool a5) {
@@ -53,7 +59,10 @@ void ApplicationLogic::onQuestAnsweredTorson(bool a1, bool a2, bool a3, bool a4 
     // в соответствии с правильными ответами, которые
     // по таблице переводятся в стандартные баллы.
 
-    emit signalAskQuestion(questions.takeFirst());
+
+    currentQuest = questions.takeFirst();
+
+    emit signalAskQuestion(this->currentTest->getTestType(),currentQuest);
 }
 
 void ApplicationLogic::onSectionEnded() {

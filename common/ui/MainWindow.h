@@ -30,6 +30,7 @@ class MainWindow : public QMainWindow {
 
     signals:
         void signalSelectTest(EnumTestType testType);
+        void signalTestStarted(EnumTestType testType);
 
     public://FIXME
         Ui::MainWindow *ui_window;

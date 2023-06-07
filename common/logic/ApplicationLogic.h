@@ -20,7 +20,7 @@ class ApplicationLogic : public QObject {
         void setAvailableTests(QMap<EnumTestType, Test *> tests);
 
     signals:
-        void signalAskQuestion(Question q);
+        void signalAskQuestion(EnumTestType testType, Question q);
 
         void signalShowSectionDescription();//TODO: не уверен. что он нужен, ну на всякий случай
 
@@ -46,6 +46,7 @@ class ApplicationLogic : public QObject {
     private:
         QMap<EnumTestType, Test *> tests;
         Test * currentTest;
+        Question currentQuest;
         QQueue<Question> questions;
 
         void calculateResult();
