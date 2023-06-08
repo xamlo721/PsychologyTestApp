@@ -10,8 +10,9 @@ class Answer : public QObject, public AbstractTextElement {
     Q_OBJECT
 
     public:
-        Answer(QString text, bool hasImage = false, QString picturePath = "", QObject *parent = nullptr);
+        Answer(QString text, bool isValid, bool hasImage = false, QString picturePath = "", QObject *parent = nullptr);
         Answer(const Answer &other);
+        Answer() : AbstractTextElement("") { } //idk, just shit
 
         Answer& operator=(const Answer& other);
         virtual bool operator==(const Answer& other) const;
@@ -19,7 +20,12 @@ class Answer : public QObject, public AbstractTextElement {
         virtual bool operator<(const Answer& other) const;
         virtual bool operator>(const Answer& other) const;
 
+        bool isTrue();
+
     signals:
+
+    private:
+        bool isValid;
 
 };
 

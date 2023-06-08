@@ -34,6 +34,9 @@ void ApplicationLogic::onTestStarted() {
 
     //TODO:
 
+    rawTorston = 0;
+    rawLiri = 0;
+
     currentQuest = questions.takeFirst();
 
     emit signalAskQuestion(this->currentTest->getTestType(), currentQuest);
@@ -63,9 +66,22 @@ void ApplicationLogic::onQuestAnsweredLiri(bool answer) {
 
 }
 
-void ApplicationLogic::onQuestAnsweredTorson(bool a1, bool a2, bool a3, bool a4 ,bool a5) {
+void ApplicationLogic::onQuestAnsweredTorson(bool a1, bool a2, bool a3, bool a4 ) {
 
     //TODO:Сделать что-то с ответом
+
+
+    QMap<int, Answer> answers = currentQuest.getAnswers();
+
+    Answer answer1 =answers.value(0);
+    Answer answer2 =answers.value(1);
+    Answer answer3 =answers.value(2);
+    Answer answer4 =answers.value(3);
+
+    this->rawTorston += answer1.isTrue() == a1;
+    this->rawTorston += answer2.isTrue() == a2;
+    this->rawTorston += answer3.isTrue() == a3;
+    this->rawTorston += answer4.isTrue() == a4;
 
     // По ключу подсчитывается количество сырых очков
     // в соответствии с правильными ответами, которые
@@ -106,11 +122,45 @@ void ApplicationLogic::onTestEnded() {
 
 QString ApplicationLogic::calculateResult() {
 
-    QString result = this->currentTest->getTestResult().getText();
+    QString result;// = this->currentTest->getTestResult().getText();
+    LogicConstants testLogic;
 
     if (this->currentTest->getTestType() == EnumTestType::Liri) {
 
     } else {
+
+        int torsonPoitns =testLogic.convertTorsonRawState(this->rawTorston);
+
+        result.append("Поздравляем! Вы закончили тест Торстона!"
+                      "Ваш результат: ");
+        switch (testLogic.getTorsonResult(torsonPoitns)) {
+
+            case LogicConstants::EnumTorsonResult::VeryLow : {
+                result.append("Очень низкий");
+                break;
+            }
+
+            case LogicConstants::EnumTorsonResult::Low : {
+                result.append("Низкий");
+                break;
+            }
+
+            case LogicConstants::EnumTorsonResult::Medium : {
+                result.append("Средний");
+                break;
+            }
+
+            case LogicConstants::EnumTorsonResult::High : {
+                result.append("Высокий");
+                break;
+            }
+
+            case LogicConstants::EnumTorsonResult::VeryHigh : {
+                result.append("Очень высокий");
+                break;
+            }
+
+        }
 
     }
 

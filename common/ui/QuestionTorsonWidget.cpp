@@ -11,7 +11,6 @@ void QuestionTorsonWidget::onButtonAnswerClicked() {
     emit signalAnswered(this->uiQuestionsTorston->button1->isChecked(),
                         this->uiQuestionsTorston->button2->isChecked(),
                         this->uiQuestionsTorston->button3->isChecked(),
-                        this->uiQuestionsTorston->button4->isChecked(),
-                        this->uiQuestionsTorston->button5->isChecked()
+                        this->uiQuestionsTorston->button4->isChecked()
                         );
 }

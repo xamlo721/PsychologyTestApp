@@ -8,26 +8,29 @@
 
 #include <QString>
 
-enum EnumTorsonResult : int {
 
-    VeryLow,
-
-    Low,
-
-    Medium,
-
-    High,
-
-    VeryHigh
-
-};
 
 class LogicConstants {
 
     private:
-        static int torsonRawTable[196];
 
     public:
+    int torsonRawTable[196] = {};
+
+        enum EnumTorsonResult : int {
+
+            VeryLow,
+
+            Low,
+
+            Medium,
+
+            High,
+
+            VeryHigh
+
+        };
+
         LogicConstants() {
 
 

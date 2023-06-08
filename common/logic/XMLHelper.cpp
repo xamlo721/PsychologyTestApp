@@ -81,7 +81,7 @@ Answer XMLHelper::readAnswer(QDomElement testDomElement) {
     if (imagePath.isEmpty()) {
         return Answer(answerText, isCorrectAnswer);
     } else {
-        return Answer(answerText, isCorrectAnswer, imagePath);
+        return Answer(answerText, isCorrectAnswer, true, imagePath);
     }
 }
 

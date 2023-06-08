@@ -22,7 +22,7 @@ class QuestionTorsonWidget : public QWidget {
         void onButtonAnswerClicked();
 
     signals:
-        void signalAnswered(bool a1, bool a2, bool a3, bool a4 ,bool a5);
+        void signalAnswered(bool a1, bool a2, bool a3, bool a4 );
 
     public:
         Ui::QuestionsTorston *uiQuestionsTorston;

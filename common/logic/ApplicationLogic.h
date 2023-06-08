@@ -10,6 +10,8 @@
 #include "common/items/TestResult.h"
 #include "common/items/Question.h"
 
+#include "common/logic/LogicConstants.h"
+
 class ApplicationLogic : public QObject {
 
     Q_OBJECT
@@ -35,7 +37,7 @@ class ApplicationLogic : public QObject {
 
         void onQuestAnsweredLiri(bool asnwer);
 
-        void onQuestAnsweredTorson(bool a1, bool a2, bool a3, bool a4 ,bool a5);
+        void onQuestAnsweredTorson(bool a1, bool a2, bool a3, bool a4);
 
         void onSectionEnded();//TODO: пока не реализуется. Я спать хочу
 
@@ -50,6 +52,9 @@ class ApplicationLogic : public QObject {
         QQueue<Question> questions;
 
         int questionsSize;
+
+        int rawTorston;
+        int rawLiri;
 
         QString calculateResult();
 

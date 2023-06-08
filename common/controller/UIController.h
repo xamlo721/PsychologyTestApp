@@ -30,7 +30,7 @@ class UIController : public QObject {
 
         void signalQuestAnsweredLiri(bool asnwer);
 
-        void signalQuestAnsweredTorson(bool a1, bool a2, bool a3, bool a4 ,bool a5);
+        void signalQuestAnsweredTorson(bool a1, bool a2, bool a3, bool a4);
 
         void signalAbortTest();
 
