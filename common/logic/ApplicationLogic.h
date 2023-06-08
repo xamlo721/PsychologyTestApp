@@ -24,7 +24,7 @@ class ApplicationLogic : public QObject {
 
         void signalShowSectionDescription();//TODO: не уверен. что он нужен, ну на всякий случай
 
-        void signalShowResult(TestResult result);
+        void signalShowResult(QString result);
 
         void signalUpdateProgressBar(float completePercent);
 
@@ -51,8 +51,7 @@ class ApplicationLogic : public QObject {
 
         int questionsSize;
 
-        void calculateResult();
-
+        QString calculateResult();
 
 
 };

@@ -40,7 +40,7 @@ class UIController : public QObject {
 
         void onAskQuestion(EnumTestType testType, Question q);
 
-        void onShowResult(TestResult result);
+        void onShowResult(QString result);
 
         void onUpdateProgressBar(float completePercent);
 

@@ -10,6 +10,7 @@ void UIController::init() {
 
     QObject::connect(window, &MainWindow::signalSelectTest, this, &UIController::signalOpenTest);
     QObject::connect(window, &MainWindow::signalTestStarted, this, &UIController::signalStartTest);
+    QObject::connect(window, &MainWindow::signalTestComplete, this, &UIController::signalCompleteTest);
 
     QObject::connect(window->ui_window->questLiri, &QuestionLiriWidget::signalAnswerd, this, &UIController::signalQuestAnsweredLiri);
     QObject::connect(window->ui_window->questTorson, &QuestionTorsonWidget::signalAnswered, this, &UIController::signalQuestAnsweredTorson);
@@ -32,7 +33,9 @@ void UIController::onAskQuestion(EnumTestType testType, Question q) {
 
 }
 
-void UIController::onShowResult(TestResult result) {
+void UIController::onShowResult(QString result) {
+
+    this->window->showResult(result);
 
 }
 

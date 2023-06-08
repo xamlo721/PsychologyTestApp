@@ -21,6 +21,8 @@ class MainWindow : public QMainWindow {
         MainWindow(QWidget *parent = nullptr);
         ~MainWindow();
 
+        void showResult(QString result);
+
     public slots:
         void onMainMenuLiriTestButtonClicked();
         void onMainMenuTorsonTestButtonClicked();
@@ -31,9 +33,12 @@ class MainWindow : public QMainWindow {
     signals:
         void signalSelectTest(EnumTestType testType);
         void signalTestStarted(EnumTestType testType);
+        void signalTestComplete();
 
     public://FIXME
         Ui::MainWindow *ui_window;
+
+        void onTestComplete();
 
 };
 

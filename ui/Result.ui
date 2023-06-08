@@ -152,6 +152,19 @@ QPushButton:hover {
 	background-color:rgba(217, 217, 217, 1);
 }</string>
    </property>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>891</width>
+      <height>391</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>TextLabel</string>
+    </property>
+   </widget>
   </widget>
  </widget>
  <resources/>

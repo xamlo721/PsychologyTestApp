@@ -51,7 +51,7 @@ void ApplicationLogic::onQuestAnsweredLiri(bool answer) {
 
     if (questions.empty()) {
 
-        //emit signalShowResult();
+        emit signalShowResult(calculateResult());
 
         return;
     }
@@ -71,10 +71,9 @@ void ApplicationLogic::onQuestAnsweredTorson(bool a1, bool a2, bool a3, bool a4 
     // в соответствии с правильными ответами, которые
     // по таблице переводятся в стандартные баллы.
 
-
     if (questions.empty()) {
 
-        //emit signalShowResult();
+        emit signalShowResult(calculateResult());
 
         return;
     }
@@ -93,18 +92,27 @@ void ApplicationLogic::onSectionEnded() {
 
 
 void ApplicationLogic::onTestAborted() {
+
    //TODO: Сбросить выполнение и перейти в режим готовности
+
 }
 
 void ApplicationLogic::onTestEnded() {
-    //TODO: Посчитать результат
+
+    //TODO: Сбросить все счётчики и т.д
+
+
 }
 
-void ApplicationLogic::calculateResult() {
+QString ApplicationLogic::calculateResult() {
+
+    QString result = this->currentTest->getTestResult().getText();
+
     if (this->currentTest->getTestType() == EnumTestType::Liri) {
 
     } else {
 
     }
 
+    return result;
 }
