@@ -11,6 +11,9 @@ void UIController::init() {
     QObject::connect(window, &MainWindow::signalSelectTest, this, &UIController::signalOpenTest);
     QObject::connect(window, &MainWindow::signalTestStarted, this, &UIController::signalStartTest);
 
+    QObject::connect(window->ui_window->questLiri, &QuestionLiriWidget::signalAnswerd, this, &UIController::signalQuestAnsweredLiri);
+    QObject::connect(window->ui_window->questTorson, &QuestionTorsonWidget::signalAnswered, this, &UIController::signalQuestAnsweredTorson);
+
 }
 
 void UIController::setUI(MainWindow * window) {

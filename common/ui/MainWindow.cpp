@@ -37,7 +37,6 @@ void MainWindow::onInfoTorsonTestButtonClicked() {
 
 }
 
-
 MainWindow::~MainWindow() {
     delete ui_window;
 }
