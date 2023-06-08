@@ -10,11 +10,33 @@
     <height>600</height>
    </rect>
   </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1000</width>
+    <height>600</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1000</width>
+    <height>600</height>
+   </size>
+  </property>
   <property name="cursor">
    <cursorShape>ArrowCursor</cursorShape>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Психологические тесты</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="aaa.qrc">
+    <normaloff>:/pictures/face.png</normaloff>:/pictures/face.png</iconset>
   </property>
   <property name="autoFillBackground">
    <bool>false</bool>
@@ -93,6 +115,8 @@
    <container>1</container>
   </customwidget>
  </customwidgets>
- <resources/>
+ <resources>
+  <include location="aaa.qrc"/>
+ </resources>
  <connections/>
 </ui>

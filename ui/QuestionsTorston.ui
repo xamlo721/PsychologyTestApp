@@ -22,7 +22,7 @@
    <property name="geometry">
     <rect>
      <x>80</x>
-     <y>552</y>
+     <y>560</y>
      <width>851</width>
      <height>20</height>
     </rect>
@@ -85,6 +85,9 @@
 }</string>
    </property>
    <widget class="QTextEdit" name="TitleTorston">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
     <property name="geometry">
      <rect>
       <x>0</x>
@@ -100,6 +103,9 @@
       <weight>75</weight>
       <bold>true</bold>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(0, 0, 0);</string>
     </property>
     <property name="html">
      <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -133,6 +139,12 @@ p, li { white-space: pre-wrap; }
       <width>511</width>
       <height>51</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Montserrat Medium</family>
+      <pointsize>14</pointsize>
+     </font>
     </property>
     <property name="text">
      <string>TextLabel</string>
@@ -184,7 +196,12 @@ p, li { white-space: pre-wrap; }
 }
 QPushButton:hover {
         background-color: rgba(216, 249, 255);
-}</string>
+}
+QPushButton:checked {
+        background-color: rgba(187, 147, 148);
+		color: rgb(255, 255, 255);
+}
+</string>
       </property>
       <property name="text">
        <string>01</string>
@@ -211,6 +228,10 @@ QPushButton:hover {
 }
 QPushButton:hover {
         background-color: rgba(216, 249, 255);
+}
+QPushButton:checked {
+        background-color: rgba(187, 147, 148);
+		color: rgb(255, 255, 255);
 }</string>
       </property>
       <property name="text">
@@ -238,6 +259,10 @@ QPushButton:hover {
 }
 QPushButton:hover {
         background-color: rgba(216, 249, 255);
+}
+QPushButton:checked {
+        background-color: rgba(187, 147, 148);
+		color: rgb(255, 255, 255);
 }</string>
       </property>
       <property name="text">
@@ -265,6 +290,10 @@ QPushButton:hover {
 }
 QPushButton:hover {
         background-color: rgba(216, 249, 255);
+}
+QPushButton:checked {
+        background-color: rgba(187, 147, 148);
+		color: rgb(255, 255, 255);
 }</string>
       </property>
       <property name="text">
@@ -298,6 +327,10 @@ QPushButton:hover {
 }
 QPushButton:hover {
         background-color: rgba(216, 249, 255);
+}
+QPushButton:checked {
+        background-color: rgba(187, 147, 148);
+		color: rgb(255, 255, 255);
 }</string>
       </property>
       <property name="text">
@@ -305,13 +338,6 @@ QPushButton:hover {
       </property>
       <property name="checkable">
        <bool>true</bool>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QPushButton" name="pushButton_nextQuestion">
-      <property name="text">
-       <string>PushButton</string>
       </property>
      </widget>
     </item>
@@ -339,6 +365,36 @@ QPushButton:hover {
    </property>
    <property name="value">
     <number>0</number>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_nextQuestion">
+   <property name="geometry">
+    <rect>
+     <x>130</x>
+     <y>530</y>
+     <width>761</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Montserrat Medium</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+	border-radius: 10px;
+	background-color: rgb(79, 121, 66);
+	color: rgb(255, 255, 255);
+}
+QPushButton:hover {
+        background-color: rgba(187, 147, 148);
+
+}</string>
+   </property>
+   <property name="text">
+    <string>Отправить ответ</string>
    </property>
   </widget>
  </widget>

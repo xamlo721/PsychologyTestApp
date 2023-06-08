@@ -68,6 +68,9 @@ QPushButton:hover {
 }</string>
    </property>
    <widget class="QTextEdit" name="torston">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
     <property name="geometry">
      <rect>
       <x>20</x>
@@ -79,15 +82,18 @@ QPushButton:hover {
     <property name="font">
      <font>
       <family>Montserrat Medium</family>
-      <pointsize>16</pointsize>
+      <pointsize>18</pointsize>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(0, 0, 0);</string>
     </property>
     <property name="html">
      <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Montserrat Medium'; font-size:16pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Тест целевого назначения. Используется для диагностики взрослых. Время выполнения – 10 минут.&lt;br /&gt;Методика предназначена для диагностики свойств полезависимости / поленезависимости.&lt;br /&gt;В каждом из 49 задании представлен эталон (искомая фигура) и четыре более сложных изображения. Из них некоторые содержат эталон с сохранением его размера и ориентации. Задания предъявляются последовательно сразу же после ответа испытуемого. Задача испытуемого состоит в нахождении эталонной фигуры в «зашумленных» изображениях.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Montserrat Medium'; font-size:18pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;Тест целевого назначения. Используется для диагностики взрослых. Время выполнения – 10 минут.&lt;br /&gt;Методика предназначена для диагностики свойств полезависимости / поленезависимости.&lt;br /&gt;В каждом из 49 задании представлен эталон (искомая фигура) и четыре более сложных изображения. Из них некоторые содержат эталон с сохранением его размера и ориентации. Задания предъявляются последовательно сразу же после ответа испытуемого. Задача испытуемого состоит в нахождении эталонной фигуры в «зашумленных» изображениях.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
   </widget>
@@ -103,7 +109,9 @@ p, li { white-space: pre-wrap; }
    <property name="font">
     <font>
      <family>Montserrat Medium</family>
-     <pointsize>16</pointsize>
+     <pointsize>18</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
     </font>
    </property>
    <property name="styleSheet">
@@ -113,6 +121,9 @@ p, li { white-space: pre-wrap; }
 }</string>
    </property>
    <widget class="QTextEdit" name="InstructionTorston">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
     <property name="geometry">
      <rect>
       <x>0</x>
@@ -124,15 +135,20 @@ p, li { white-space: pre-wrap; }
     <property name="font">
      <font>
       <family>Montserrat Medium</family>
-      <pointsize>16</pointsize>
+      <pointsize>18</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(0, 0, 0);</string>
     </property>
     <property name="html">
      <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Montserrat Medium'; font-size:16pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:18pt;&quot;&gt;ИНСТРУКЦИЯ К ТЕСТУ ТОРСТОНА&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Montserrat Medium'; font-size:18pt; font-weight:600; font-style:normal;&quot;&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;ИНСТРУКЦИЯ К ТЕСТУ ТОРСТОНА&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
   </widget>
