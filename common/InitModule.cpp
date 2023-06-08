@@ -23,7 +23,8 @@ void InitModule::init() {
 void InitModule::connect() {
 
     QObject::connect(logic, &ApplicationLogic::signalAskQuestion, uiController, &UIController::onAskQuestion);
-    QObject::connect(logic, &ApplicationLogic::signalShowResult, uiController, &UIController::onShowResult);
+    QObject::connect(logic, &ApplicationLogic::signalShowTorstonResult, uiController, &UIController::onShowTorstonResult);
+    QObject::connect(logic, &ApplicationLogic::signalShowLiriResult, uiController, &UIController::onShowLiriResult);
     QObject::connect(logic, &ApplicationLogic::signalUpdateProgressBar, uiController, &UIController::onUpdateProgressBar);
 
 

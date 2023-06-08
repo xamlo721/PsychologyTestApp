@@ -54,7 +54,7 @@ void ApplicationLogic::onQuestAnsweredLiri(bool answer) {
 
     if (questions.empty()) {
 
-        emit signalShowResult(calculateResult());
+        sendLiriResult();
 
         return;
     }
@@ -89,7 +89,7 @@ void ApplicationLogic::onQuestAnsweredTorson(bool a1, bool a2, bool a3, bool a4 
 
     if (questions.empty()) {
 
-        emit signalShowResult(calculateResult());
+        emit signalShowTorstonResult(calculateTorstonResult());
 
         return;
     }
@@ -120,7 +120,7 @@ void ApplicationLogic::onTestEnded() {
 
 }
 
-QString ApplicationLogic::calculateResult() {
+QString ApplicationLogic::calculateTorstonResult() {
 
     QString result;// = this->currentTest->getTestResult().getText();
     LogicConstants testLogic;
@@ -165,4 +165,9 @@ QString ApplicationLogic::calculateResult() {
     }
 
     return result;
+}
+
+void ApplicationLogic::sendLiriResult() {
+
+    emit signalShowLiriResult(25,65,75,26,77,80,91,20);
 }

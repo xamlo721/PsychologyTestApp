@@ -1,4 +1,4 @@
-QT       += core gui xml
+QT       += core gui xml charts
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -35,6 +35,7 @@ SOURCES += \
     common/ui/QuestionLiriWidget.cpp \
     common/ui/QuestionTorsonWidget.cpp \
     common/ui/ResultWidget.cpp \
+    common/ui/qradar.cpp \
     common/utils/XmlUtils.cpp \
     main.cpp \
     common/ui/MainWindow.cpp \
@@ -66,6 +67,7 @@ HEADERS += \
     common/ui/QuestionLiriWidget.h \
     common/ui/QuestionTorsonWidget.h \
     common/ui/ResultWidget.h \
+    common/ui/qradar.h \
     common/utils/XmlUtils.h \
     common/ui/MainMenuWidget.h
 

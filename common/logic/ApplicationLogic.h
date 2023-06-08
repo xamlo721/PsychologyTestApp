@@ -26,7 +26,9 @@ class ApplicationLogic : public QObject {
 
         void signalShowSectionDescription();//TODO: не уверен. что он нужен, ну на всякий случай
 
-        void signalShowResult(QString result);
+        void signalShowTorstonResult(QString result);
+
+        void signalShowLiriResult(int st1, int st2,int st3,int st4,int st5,int st6,int st7,int st8);
 
         void signalUpdateProgressBar(float completePercent);
 
@@ -56,7 +58,8 @@ class ApplicationLogic : public QObject {
         int rawTorston;
         int rawLiri;
 
-        QString calculateResult();
+        QString calculateTorstonResult();
+        void sendLiriResult();
 
 
 };
