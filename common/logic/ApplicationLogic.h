@@ -49,6 +49,8 @@ class ApplicationLogic : public QObject {
         Question currentQuest;
         QQueue<Question> questions;
 
+        int questionsSize;
+
         void calculateResult();
 
 

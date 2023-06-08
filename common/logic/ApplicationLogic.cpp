@@ -26,6 +26,8 @@ void ApplicationLogic::onTestSelected(EnumTestType testType) {
 
     }
 
+    questionsSize = this->questions.size();
+
 }
 
 void ApplicationLogic::onTestStarted() {
@@ -35,6 +37,8 @@ void ApplicationLogic::onTestStarted() {
     currentQuest = questions.takeFirst();
 
     emit signalAskQuestion(this->currentTest->getTestType(), currentQuest);
+
+    emit signalUpdateProgressBar(0);
 }
 
 void ApplicationLogic::onQuestAnsweredLiri(bool answer) {
@@ -45,10 +49,18 @@ void ApplicationLogic::onQuestAnsweredLiri(bool answer) {
     // в соответствии с правильными ответами, которые
     // по таблице переводятся в стандартные баллы.
 
+    if (questions.empty()) {
 
+        //emit signalShowResult();
+
+        return;
+    }
     currentQuest = questions.takeFirst();
 
     emit signalAskQuestion(this->currentTest->getTestType(), currentQuest);
+
+    emit signalUpdateProgressBar(1.0f - (float)this->questions.size() / (float)questionsSize );
+
 }
 
 void ApplicationLogic::onQuestAnsweredTorson(bool a1, bool a2, bool a3, bool a4 ,bool a5) {
@@ -60,9 +72,18 @@ void ApplicationLogic::onQuestAnsweredTorson(bool a1, bool a2, bool a3, bool a4 
     // по таблице переводятся в стандартные баллы.
 
 
+    if (questions.empty()) {
+
+        //emit signalShowResult();
+
+        return;
+    }
     currentQuest = questions.takeFirst();
 
     emit signalAskQuestion(this->currentTest->getTestType(),currentQuest);
+
+    emit signalUpdateProgressBar(1.0f - (float)this->questions.size() / (float)questionsSize);
+
 }
 
 void ApplicationLogic::onSectionEnded() {

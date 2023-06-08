@@ -37,5 +37,6 @@ void UIController::onShowResult(TestResult result) {
 }
 
 void UIController::onUpdateProgressBar(float completePercent) {
-    this->window->ui_window->questLiri->uiQuestionsLiri->progressBar->setValue(completePercent);
+    this->window->ui_window->questLiri->uiQuestionsLiri->progressBar->setValue(completePercent * 100);
+    this->window->ui_window->questTorson->uiQuestionsTorston->progressBar->setValue(completePercent * 100);
 }

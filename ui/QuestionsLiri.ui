@@ -223,7 +223,7 @@ p, li { white-space: pre-wrap; }
     <string notr="true"/>
    </property>
    <property name="value">
-    <number>24</number>
+    <number>0</number>
    </property>
   </widget>
  </widget>
