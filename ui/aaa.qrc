@@ -2,5 +2,54 @@
     <qresource prefix="/">
         <file>../pictures/back.png</file>
         <file>../pictures/face.png</file>
+        <file>../tests/Torston/images/Fig0.bmp</file>
+        <file>../tests/Torston/images/FIG1.bmp</file>
+        <file>../tests/Torston/images/FIG2.bmp</file>
+        <file>../tests/Torston/images/FIG3.bmp</file>
+        <file>../tests/Torston/images/FIG4.bmp</file>
+        <file>../tests/Torston/images/FIG5.bmp</file>
+        <file>../tests/Torston/images/FIG6.bmp</file>
+        <file>../tests/Torston/images/FIG7.bmp</file>
+        <file>../tests/Torston/images/FIG8.bmp</file>
+        <file>../tests/Torston/images/FIG9.bmp</file>
+        <file>../tests/Torston/images/FIG10.bmp</file>
+        <file>../tests/Torston/images/FIG11.bmp</file>
+        <file>../tests/Torston/images/FIG12.bmp</file>
+        <file>../tests/Torston/images/FIG13.bmp</file>
+        <file>../tests/Torston/images/FIG14.bmp</file>
+        <file>../tests/Torston/images/FIG15.bmp</file>
+        <file>../tests/Torston/images/FIG16.bmp</file>
+        <file>../tests/Torston/images/FIG17.bmp</file>
+        <file>../tests/Torston/images/FIG18.bmp</file>
+        <file>../tests/Torston/images/FIG19.bmp</file>
+        <file>../tests/Torston/images/FIG20.bmp</file>
+        <file>../tests/Torston/images/FIG21.bmp</file>
+        <file>../tests/Torston/images/FIG22.bmp</file>
+        <file>../tests/Torston/images/FIG23.bmp</file>
+        <file>../tests/Torston/images/FIG24.bmp</file>
+        <file>../tests/Torston/images/FIG25.bmp</file>
+        <file>../tests/Torston/images/FIG26.bmp</file>
+        <file>../tests/Torston/images/FIG27.bmp</file>
+        <file>../tests/Torston/images/FIG28.bmp</file>
+        <file>../tests/Torston/images/FIG29.bmp</file>
+        <file>../tests/Torston/images/FIG30.bmp</file>
+        <file>../tests/Torston/images/FIG31.bmp</file>
+        <file>../tests/Torston/images/FIG32.bmp</file>
+        <file>../tests/Torston/images/FIG33.bmp</file>
+        <file>../tests/Torston/images/FIG34.bmp</file>
+        <file>../tests/Torston/images/FIG35.bmp</file>
+        <file>../tests/Torston/images/FIG36.bmp</file>
+        <file>../tests/Torston/images/FIG37.bmp</file>
+        <file>../tests/Torston/images/FIG38.bmp</file>
+        <file>../tests/Torston/images/FIG39.bmp</file>
+        <file>../tests/Torston/images/FIG40.bmp</file>
+        <file>../tests/Torston/images/FIG41.bmp</file>
+        <file>../tests/Torston/images/FIG42.bmp</file>
+        <file>../tests/Torston/images/FIG43.bmp</file>
+        <file>../tests/Torston/images/FIG44.bmp</file>
+        <file>../tests/Torston/images/FIG45.bmp</file>
+        <file>../tests/Torston/images/FIG46.bmp</file>
+        <file>../tests/Torston/images/FIG47.bmp</file>
+        <file>../tests/Torston/images/FIG48.bmp</file>
     </qresource>
 </RCC>

@@ -86,7 +86,57 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 DISTFILES += \
     Database.xml \
     pictures/back.png \
-    pictures/face.png
+    pictures/face.png \
+    tests/Torston/images/FIG1.bmp \
+    tests/Torston/images/FIG10.bmp \
+    tests/Torston/images/FIG11.bmp \
+    tests/Torston/images/FIG12.bmp \
+    tests/Torston/images/FIG13.bmp \
+    tests/Torston/images/FIG14.bmp \
+    tests/Torston/images/FIG15.bmp \
+    tests/Torston/images/FIG16.bmp \
+    tests/Torston/images/FIG17.bmp \
+    tests/Torston/images/FIG18.bmp \
+    tests/Torston/images/FIG19.bmp \
+    tests/Torston/images/FIG2.bmp \
+    tests/Torston/images/FIG20.bmp \
+    tests/Torston/images/FIG21.bmp \
+    tests/Torston/images/FIG22.bmp \
+    tests/Torston/images/FIG23.bmp \
+    tests/Torston/images/FIG24.bmp \
+    tests/Torston/images/FIG25.bmp \
+    tests/Torston/images/FIG26.bmp \
+    tests/Torston/images/FIG27.bmp \
+    tests/Torston/images/FIG28.bmp \
+    tests/Torston/images/FIG29.bmp \
+    tests/Torston/images/FIG3.bmp \
+    tests/Torston/images/FIG30.bmp \
+    tests/Torston/images/FIG31.bmp \
+    tests/Torston/images/FIG32.bmp \
+    tests/Torston/images/FIG33.bmp \
+    tests/Torston/images/FIG34.bmp \
+    tests/Torston/images/FIG35.bmp \
+    tests/Torston/images/FIG36.bmp \
+    tests/Torston/images/FIG37.bmp \
+    tests/Torston/images/FIG38.bmp \
+    tests/Torston/images/FIG39.bmp \
+    tests/Torston/images/FIG4.bmp \
+    tests/Torston/images/FIG40.bmp \
+    tests/Torston/images/FIG41.bmp \
+    tests/Torston/images/FIG42.bmp \
+    tests/Torston/images/FIG43.bmp \
+    tests/Torston/images/FIG44.bmp \
+    tests/Torston/images/FIG45.bmp \
+    tests/Torston/images/FIG46.bmp \
+    tests/Torston/images/FIG47.bmp \
+    tests/Torston/images/FIG48.bmp \
+    tests/Torston/images/FIG5.bmp \
+    tests/Torston/images/FIG6.bmp \
+    tests/Torston/images/FIG7.bmp \
+    tests/Torston/images/FIG8.bmp \
+    tests/Torston/images/FIG9.bmp \
+    tests/Torston/images/Fig0.bmp \
+    tests/Torston/images/face.png
 
 RESOURCES += \
     ui/aaa.qrc

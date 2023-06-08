@@ -14,7 +14,7 @@
    <string>Form</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">QWidget#QuestionsLiri {
+   <string notr="true">QWidget#QuestionsTorston{
 	background-image: url(&quot;:/pictures/back.png&quot;);
 }</string>
   </property>
@@ -120,7 +120,7 @@ p, li { white-space: pre-wrap; }
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">QWidget {
+    <string notr="true">QWidget#SectionTorston {
 	border-radius: 10px;
 	background-color:rgba(217, 217, 217, 1);
 }</string>
@@ -128,10 +128,10 @@ p, li { white-space: pre-wrap; }
    <widget class="QLabel" name="label_question">
     <property name="geometry">
      <rect>
-      <x>0</x>
+      <x>190</x>
       <y>0</y>
-      <width>891</width>
-      <height>331</height>
+      <width>511</width>
+      <height>51</height>
      </rect>
     </property>
     <property name="text">
@@ -139,6 +139,21 @@ p, li { white-space: pre-wrap; }
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QWidget" name="widget_picture" native="true">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>120</y>
+      <width>588</width>
+      <height>94</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QWidget#widget_picture {
+	background-image: url(C:/workspace/PsychologyTestApp/tests/Torston/images/Fig0.bmp);
+}</string>
     </property>
    </widget>
   </widget>

@@ -28,7 +28,14 @@ void UIController::onAskQuestion(EnumTestType testType, Question q) {
         //TODO: Картинки молчат
     } else {
         this->window->ui_window->questTorson->uiQuestionsTorston->label_question->setText(q.getText());
-        //TODO: Картинки молчат
+
+        if (q.hasPicture()) {
+
+            QString stylesheet = "QWidget#widget_picture {"
+                                 "	background-image: url(:" + q.getPicturePath() +");\n"
+                                 "}";
+             this->window->ui_window->questTorson->uiQuestionsTorston->widget_picture->setStyleSheet(stylesheet);
+        }
     }
 
 }

@@ -1067,7 +1067,7 @@
                 <Questions>
                     <Question>
                         <Text>Найдите эталонную фигуру</Text>
-                        <ImagePath>путь к первой картинке</ImagePath>
+                        <ImagePath>/tests/Torston/images/FIG1.bmp</ImagePath>
                         <Answers>
                             <Answer>
                                 <Text></Text>
