@@ -131,7 +131,7 @@ QString ApplicationLogic::calculateTorstonResult() {
 
         int torsonPoitns =testLogic.convertTorsonRawState(this->rawTorston);
 
-        result.append("Поздравляем! Вы закончили тест Торстона!"
+        result.append("Спасибо большое за прохождение теста Торстона!"
                       "Ваш результат: ");
         switch (testLogic.getTorsonResult(torsonPoitns)) {
 

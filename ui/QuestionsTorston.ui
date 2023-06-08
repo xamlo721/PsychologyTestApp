@@ -154,18 +154,43 @@ p, li { white-space: pre-wrap; }
     </property>
    </widget>
    <widget class="QWidget" name="widget_picture" native="true">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
     <property name="geometry">
      <rect>
-      <x>160</x>
+      <x>140</x>
       <y>120</y>
-      <width>588</width>
-      <height>94</height>
+      <width>600</width>
+      <height>100</height>
      </rect>
     </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>600</width>
+      <height>100</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>600</width>
+      <height>100</height>
+     </size>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
     <property name="styleSheet">
-     <string notr="true">QWidget#widget_picture {
-	background-image: url(C:/workspace/PsychologyTestApp/tests/Torston/images/Fig0.bmp);
-}</string>
+     <string notr="true"/>
     </property>
    </widget>
   </widget>
@@ -173,14 +198,20 @@ p, li { white-space: pre-wrap; }
    <property name="geometry">
     <rect>
      <x>130</x>
-     <y>470</y>
+     <y>460</y>
      <width>761</width>
      <height>61</height>
     </rect>
    </property>
    <layout class="QHBoxLayout" name="choiceTorston">
     <item>
-     <widget class="QPushButton" name="button5">
+     <widget class="QPushButton" name="button1">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Ignored" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
       <property name="font">
        <font>
         <family>Montserrat Medium</family>
@@ -200,11 +231,13 @@ QPushButton:hover {
 QPushButton:checked {
         background-color: rgba(187, 147, 148);
 		color: rgb(255, 255, 255);
-}
-</string>
+}</string>
       </property>
       <property name="text">
        <string>01</string>
+      </property>
+      <property name="shortcut">
+       <string>1</string>
       </property>
       <property name="checkable">
        <bool>true</bool>
@@ -212,7 +245,7 @@ QPushButton:checked {
      </widget>
     </item>
     <item>
-     <widget class="QPushButton" name="button4">
+     <widget class="QPushButton" name="button2">
       <property name="font">
        <font>
         <family>Montserrat Medium</family>
@@ -236,6 +269,9 @@ QPushButton:checked {
       </property>
       <property name="text">
        <string>02</string>
+      </property>
+      <property name="shortcut">
+       <string>2</string>
       </property>
       <property name="checkable">
        <bool>true</bool>
@@ -268,13 +304,16 @@ QPushButton:checked {
       <property name="text">
        <string>03</string>
       </property>
+      <property name="shortcut">
+       <string>3</string>
+      </property>
       <property name="checkable">
        <bool>true</bool>
       </property>
      </widget>
     </item>
     <item>
-     <widget class="QPushButton" name="button2">
+     <widget class="QPushButton" name="button4">
       <property name="font">
        <font>
         <family>Montserrat Medium</family>
@@ -299,42 +338,8 @@ QPushButton:checked {
       <property name="text">
        <string>04</string>
       </property>
-      <property name="checkable">
-       <bool>true</bool>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QPushButton" name="button1">
-      <property name="sizePolicy">
-       <sizepolicy hsizetype="Ignored" vsizetype="Fixed">
-        <horstretch>0</horstretch>
-        <verstretch>0</verstretch>
-       </sizepolicy>
-      </property>
-      <property name="font">
-       <font>
-        <family>Montserrat Medium</family>
-        <pointsize>17</pointsize>
-        <weight>75</weight>
-        <bold>true</bold>
-       </font>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">QPushButton {
-	border-radius: 10px;
-	background-color: rgb(217, 217, 217);
-}
-QPushButton:hover {
-        background-color: rgba(216, 249, 255);
-}
-QPushButton:checked {
-        background-color: rgba(187, 147, 148);
-		color: rgb(255, 255, 255);
-}</string>
-      </property>
-      <property name="text">
-       <string>05</string>
+      <property name="shortcut">
+       <string>4</string>
       </property>
       <property name="checkable">
        <bool>true</bool>
@@ -371,7 +376,7 @@ QPushButton:checked {
    <property name="geometry">
     <rect>
      <x>130</x>
-     <y>530</y>
+     <y>520</y>
      <width>761</width>
      <height>26</height>
     </rect>
@@ -391,10 +396,18 @@ QPushButton:checked {
 QPushButton:hover {
         background-color: rgba(187, 147, 148);
 
+}
+
+QPushButton:pressed {
+        background-color: rgba(187, 147, 148);
+		color: rgb(255, 255, 255);
 }</string>
    </property>
    <property name="text">
     <string>Отправить ответ</string>
+   </property>
+   <property name="shortcut">
+    <string>Return</string>
    </property>
   </widget>
  </widget>

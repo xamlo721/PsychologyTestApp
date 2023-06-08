@@ -61,6 +61,9 @@
      <bold>true</bold>
     </font>
    </property>
+   <property name="contextMenuPolicy">
+    <enum>Qt::DefaultContextMenu</enum>
+   </property>
    <property name="styleSheet">
     <string notr="true">QPushButton {
 	border-radius: 10px;
@@ -68,10 +71,18 @@
 }
 QPushButton:hover {
         background-color: rgba(216, 249, 255);
+}
+
+QPushButton:pressed {
+        background-color: rgba(187, 147, 148);
+		color: rgb(255, 255, 255);
 }</string>
    </property>
    <property name="text">
     <string>01 - ДА</string>
+   </property>
+   <property name="shortcut">
+    <string>1</string>
    </property>
   </widget>
   <widget class="QPushButton" name="NO">
@@ -98,10 +109,17 @@ QPushButton:hover {
 }
 QPushButton:hover {
         background-color: rgba(216, 249, 255);
+}
+QPushButton:pressed {
+        background-color: rgba(187, 147, 148);
+		color: rgb(255, 255, 255);
 }</string>
    </property>
    <property name="text">
     <string>02 - НЕТ</string>
+   </property>
+   <property name="shortcut">
+    <string>2</string>
    </property>
   </widget>
   <widget class="QWidget" name="Title" native="true">

@@ -45,6 +45,9 @@ QPushButton:hover {
    <property name="text">
     <string>Перейти к прохождению тесту</string>
    </property>
+   <property name="shortcut">
+    <string>Return</string>
+   </property>
   </widget>
   <widget class="QWidget" name="instruction" native="true">
    <property name="geometry">

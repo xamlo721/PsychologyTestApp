@@ -142,6 +142,9 @@ QPushButton:hover {
    <property name="text">
     <string>Выход в главное меню</string>
    </property>
+   <property name="shortcut">
+    <string>Esc</string>
+   </property>
   </widget>
   <widget class="QWidget" name="SectionResult" native="true">
    <property name="geometry">

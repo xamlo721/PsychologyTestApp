@@ -1053,6 +1053,1054 @@
                     </Question>						
                 </Questions>
             </Section>
+			<Section>
+                <Description>Секция 5</Description>
+                <ImagePath></ImagePath>
+                <Questions>
+                    <Question>
+                        <Text>Любит давать советы</Text>
+                        <ImagePath></ImagePath>
+                        <Answers>
+                            <Answer>
+                                <Text>Ответ 1.1</Text>
+                                <ImagePath></ImagePath>
+                                <IsCorrect>true</IsCorrect>
+                            </Answer>
+                            <Answer>
+                                <Text>Ответ 1.2</Text>
+                                <imagePath></imagePath>
+                                <IsCorrect>false</IsCorrect>
+                            </Answer>
+                        </Answers>
+                    </Question>
+                    <Question>
+                        <Text>Производит впечатление значительности</Text>
+                        <ImagePath></ImagePath>
+                        <Answers>
+                            <Answer>
+                                <Text>Ответ 1.1</Text>
+                                <ImagePath></ImagePath>
+                                <IsCorrect>true</IsCorrect>
+                            </Answer>
+                            <Answer>
+                                <Text>Ответ 1.2</Text>
+                                <ImagePath></ImagePath>
+                                <IsCorrect>false</IsCorrect>
+                            </Answer>
+                        </Answers>
+                    </Question>
+					<Question>
+                        <Text>Начальственно-повелительный</Text>
+                        <ImagePath></ImagePath>
+                        <Answers>
+                            <Answer>
+                                <Text>Ответ 1.1</Text>
+                                <ImagePath></ImagePath>
+                                <IsCorrect>true</IsCorrect>
+                            </Answer>
+                            <Answer>
+                                <Text>Ответ 1.2</Text>
+                                <ImagePath></ImagePath>
+                                <IsCorrect>false</IsCorrect>
+                            </Answer>
+                        </Answers>
+                    </Question>
+					<Question>
+                        <Text>Властный</Text>
+                        <ImagePath></ImagePath>
+                        <Answers>
+                            <Answer>
+                                <Text>Ответ 1.1</Text>
+                                <ImagePath></ImagePath>
+                                <IsCorrect>true</IsCorrect>
+                            </Answer>
+                            <Answer>
+                                <Text>Ответ 1.2</Text>
+                                <ImagePath></ImagePath>
+                                <IsCorrect>false</IsCorrect>
+                            </Answer>
+                        </Answers>
+                    </Question>	
+					<Question>
+                        <Text>Хвастливый</Text>
+                        <ImagePath></ImagePath>
+                        <Answers>
+                            <Answer>
+                                <Text>Ответ 1.1</Text>
+                                <ImagePath></ImagePath>
+                                <IsCorrect>true</IsCorrect>
+                            </Answer>
+                            <Answer>
+                                <Text>Ответ 1.2</Text>
+                                <ImagePath></ImagePath>
+                                <IsCorrect>false</IsCorrect>
+                            </Answer>
+                        </Answers>
+                    </Question>	
+					<Question>
+                        <Text>Надменный и самодовольный</Text>
+                        <ImagePath></ImagePath>
+                        <Answers>
+                            <Answer>
+                                <Text>Ответ 1.1</Text>
+                                <ImagePath></ImagePath>
+                                <IsCorrect>true</IsCorrect>
+                            </Answer>
+                            <Answer>
+                                <Text>Ответ 1.2</Text>
+                                <ImagePath></ImagePath>
+                                <IsCorrect>false</IsCorrect>
+                            </Answer>
+                        </Answers>
+                    </Question>	
+					<Question>
+                        <Text>Думает только о себе</Text>
+                        <ImagePath></ImagePath>
+                        <Answers>
+                            <Answer>
+                                <Text>Ответ 1.1</Text>
+                                <ImagePath></ImagePath>
+                                <IsCorrect>true</IsCorrect>
+                            </Answer>
+                            <Answer>
+                                <Text>Ответ 1.2</Text>
+                                <ImagePath></ImagePath>
+                                <IsCorrect>false</IsCorrect>
+                            </Answer>
+                        </Answers>
+                    </Question>	
+					<Question>
+                        <Text>Хитрый</Text>
+                        <ImagePath></ImagePath>
+                        <Answers>
+                            <Answer>
+                                <Text>Ответ 1.1</Text>
+                                <ImagePath></ImagePath>
+                                <IsCorrect>true</IsCorrect>
+                            </Answer>
+                            <Answer>
+                                <Text>Ответ 1.2</Text>
+                                <ImagePath></ImagePath>
+                                <IsCorrect>false</IsCorrect>
+                            </Answer>
+                        </Answers>
+                    </Question>	
+					<Question>
+                        <Text>Нетерпимый к ошибкам других</Text>
+                        <ImagePath></ImagePath>
+                        <Answers>
+                            <Answer>
+                                <Text>Ответ 1.1</Text>
+                                <ImagePath></ImagePath>
+                                <IsCorrect>true</IsCorrect>
+                            </Answer>
+                            <Answer>
+                                <Text>Ответ 1.2</Text>
+                                <ImagePath></ImagePath>
+                                <IsCorrect>false</IsCorrect>
+                            </Answer>
+                        </Answers>
+                    </Question>	
+					<Question>
+                        <Text>Расчетливый</Text>
+                        <ImagePath></ImagePath>
+                        <Answers>
+                            <Answer>
+                                <Text>Ответ 1.1</Text>
+                                <ImagePath></ImagePath>
+                                <IsCorrect>true</IsCorrect>
+                            </Answer>
+                            <Answer>
+                                <Text>Ответ 1.2</Text>
+                                <ImagePath></ImagePath>
+                                <IsCorrect>false</IsCorrect>
+                            </Answer>
+                        </Answers>
+                    </Question>	
+					<Question>
+                        <Text>Откровенный</Text>
+                        <ImagePath></ImagePath>
+                        <Answers>
+                            <Answer>
+                                <Text>Ответ 1.1</Text>
+                                <ImagePath></ImagePath>
+                                <IsCorrect>true</IsCorrect>
+                            </Answer>
+                            <Answer>
+                                <Text>Ответ 1.2</Text>
+                                <ImagePath></ImagePath>
+                                <IsCorrect>false</IsCorrect>
+                            </Answer>
+                        </Answers>
+                    </Question>		
+					<Question>
+                        <Text>Часто недружелюбен</Text>
+                        <ImagePath></ImagePath>
+                        <Answers>
+                            <Answer>
+                                <Text>Ответ 1.1</Text>
+                                <ImagePath></ImagePath>
+                                <IsCorrect>true</IsCorrect>
+                            </Answer>
+                            <Answer>
+                                <Text>Ответ 1.2</Text>
+                                <ImagePath></ImagePath>
+                                <IsCorrect>false</IsCorrect>
+                            </Answer>
+                        </Answers>
+                    </Question>	
+					<Question>
+                        <Text>Озлоблен</Text>
+                        <ImagePath></ImagePath>
+                        <Answers>
+                            <Answer>
+                                <Text>Ответ 1.1</Text>
+                                <ImagePath></ImagePath>
+                                <IsCorrect>true</IsCorrect>
+                            </Answer>
+                            <Answer>
+                                <Text>Ответ 1.2</Text>
+                                <ImagePath></ImagePath>
+                                <IsCorrect>false</IsCorrect>
+                            </Answer>
+                        </Answers>
+                    </Question>	
+					<Question>
+                        <Text>Жалобщик</Text>
+                        <ImagePath></ImagePath>
+                        <Answers>
+                            <Answer>
+                                <Text>Ответ 1.1</Text>
+                                <ImagePath></ImagePath>
+                                <IsCorrect>true</IsCorrect>
+                            </Answer>
+                            <Answer>
+                                <Text>Ответ 1.2</Text>
+                                <ImagePath></ImagePath>
+                                <IsCorrect>false</IsCorrect>
+                            </Answer>
+                        </Answers>
+                    </Question>	
+					<Question>
+                        <Text>Ревнивый</Text>
+                        <ImagePath></ImagePath>
+                        <Answers>
+                            <Answer>
+                                <Text>Ответ 1.1</Text>
+                                <ImagePath></ImagePath>
+                                <IsCorrect>true</IsCorrect>
+                            </Answer>
+                            <Answer>
+                                <Text>Ответ 1.2</Text>
+                                <ImagePath></ImagePath>
+                                <IsCorrect>false</IsCorrect>
+                            </Answer>
+                        </Answers>
+                    </Question>
+					<Question>
+                        <Text>Долго помнит обиды</Text>
+                        <ImagePath></ImagePath>
+                        <Answers>
+                            <Answer>
+                                <Text>Ответ 1.1</Text>
+                                <ImagePath></ImagePath>
+                                <IsCorrect>true</IsCorrect>
+                            </Answer>
+                            <Answer>
+                                <Text>Ответ 1.2</Text>
+                                <ImagePath></ImagePath>
+                                <IsCorrect>false</IsCorrect>
+                            </Answer>
+                        </Answers>
+                    </Question>						
+                </Questions>
+            </Section>
+			<Section>
+                <Description>Секция 6</Description>
+                <ImagePath></ImagePath>
+                <Questions>
+                    <Question>
+                        <Text>Самобичующий</Text>
+                        <ImagePath></ImagePath>
+                        <Answers>
+                            <Answer>
+                                <Text>Ответ 1.1</Text>
+                                <ImagePath></ImagePath>
+                                <IsCorrect>true</IsCorrect>
+                            </Answer>
+                            <Answer>
+                                <Text>Ответ 1.2</Text>
+                                <imagePath></imagePath>
+                                <IsCorrect>false</IsCorrect>
+                            </Answer>
+                        </Answers>
+                    </Question>
+                    <Question>
+                        <Text>Застенчивый</Text>
+                        <ImagePath></ImagePath>
+                        <Answers>
+                            <Answer>
+                                <Text>Ответ 1.1</Text>
+                                <ImagePath></ImagePath>
+                                <IsCorrect>true</IsCorrect>
+                            </Answer>
+                            <Answer>
+                                <Text>Ответ 1.2</Text>
+                                <ImagePath></ImagePath>
+                                <IsCorrect>false</IsCorrect>
+                            </Answer>
+                        </Answers>
+                    </Question>
+					<Question>
+                        <Text>Безынициативный</Text>
+                        <ImagePath></ImagePath>
+                        <Answers>
+                            <Answer>
+                                <Text>Ответ 1.1</Text>
+                                <ImagePath></ImagePath>
+                                <IsCorrect>true</IsCorrect>
+                            </Answer>
+                            <Answer>
+                                <Text>Ответ 1.2</Text>
+                                <ImagePath></ImagePath>
+                                <IsCorrect>false</IsCorrect>
+                            </Answer>
+                        </Answers>
+                    </Question>
+					<Question>
+                        <Text>Кроткий</Text>
+                        <ImagePath></ImagePath>
+                        <Answers>
+                            <Answer>
+                                <Text>Ответ 1.1</Text>
+                                <ImagePath></ImagePath>
+                                <IsCorrect>true</IsCorrect>
+                            </Answer>
+                            <Answer>
+                                <Text>Ответ 1.2</Text>
+                                <ImagePath></ImagePath>
+                                <IsCorrect>false</IsCorrect>
+                            </Answer>
+                        </Answers>
+                    </Question>	
+					<Question>
+                        <Text>Зависимый, несамостоятельный</Text>
+                        <ImagePath></ImagePath>
+                        <Answers>
+                            <Answer>
+                                <Text>Ответ 1.1</Text>
+                                <ImagePath></ImagePath>
+                                <IsCorrect>true</IsCorrect>
+                            </Answer>
+                            <Answer>
+                                <Text>Ответ 1.2</Text>
+                                <ImagePath></ImagePath>
+                                <IsCorrect>false</IsCorrect>
+                            </Answer>
+                        </Answers>
+                    </Question>	
+					<Question>
+                        <Text>Любит подчиняться</Text>
+                        <ImagePath></ImagePath>
+                        <Answers>
+                            <Answer>
+                                <Text>Ответ 1.1</Text>
+                                <ImagePath></ImagePath>
+                                <IsCorrect>true</IsCorrect>
+                            </Answer>
+                            <Answer>
+                                <Text>Ответ 1.2</Text>
+                                <ImagePath></ImagePath>
+                                <IsCorrect>false</IsCorrect>
+                            </Answer>
+                        </Answers>
+                    </Question>	
+					<Question>
+                        <Text>Предоставляет другим принимать решения</Text>
+                        <ImagePath></ImagePath>
+                        <Answers>
+                            <Answer>
+                                <Text>Ответ 1.1</Text>
+                                <ImagePath></ImagePath>
+                                <IsCorrect>true</IsCorrect>
+                            </Answer>
+                            <Answer>
+                                <Text>Ответ 1.2</Text>
+                                <ImagePath></ImagePath>
+                                <IsCorrect>false</IsCorrect>
+                            </Answer>
+                        </Answers>
+                    </Question>	
+					<Question>
+                        <Text>Легко попадает впросак</Text>
+                        <ImagePath></ImagePath>
+                        <Answers>
+                            <Answer>
+                                <Text>Ответ 1.1</Text>
+                                <ImagePath></ImagePath>
+                                <IsCorrect>true</IsCorrect>
+                            </Answer>
+                            <Answer>
+                                <Text>Ответ 1.2</Text>
+                                <ImagePath></ImagePath>
+                                <IsCorrect>false</IsCorrect>
+                            </Answer>
+                        </Answers>
+                    </Question>	
+					<Question>
+                        <Text>Легко поддается влиянию друзей</Text>
+                        <ImagePath></ImagePath>
+                        <Answers>
+                            <Answer>
+                                <Text>Ответ 1.1</Text>
+                                <ImagePath></ImagePath>
+                                <IsCorrect>true</IsCorrect>
+                            </Answer>
+                            <Answer>
+                                <Text>Ответ 1.2</Text>
+                                <ImagePath></ImagePath>
+                                <IsCorrect>false</IsCorrect>
+                            </Answer>
+                        </Answers>
+                    </Question>	
+					<Question>
+                        <Text>Готов довериться любому</Text>
+                        <ImagePath></ImagePath>
+                        <Answers>
+                            <Answer>
+                                <Text>Ответ 1.1</Text>
+                                <ImagePath></ImagePath>
+                                <IsCorrect>true</IsCorrect>
+                            </Answer>
+                            <Answer>
+                                <Text>Ответ 1.2</Text>
+                                <ImagePath></ImagePath>
+                                <IsCorrect>false</IsCorrect>
+                            </Answer>
+                        </Answers>
+                    </Question>	
+					<Question>
+                        <Text>Благорасположен ко всем без разбора</Text>
+                        <ImagePath></ImagePath>
+                        <Answers>
+                            <Answer>
+                                <Text>Ответ 1.1</Text>
+                                <ImagePath></ImagePath>
+                                <IsCorrect>true</IsCorrect>
+                            </Answer>
+                            <Answer>
+                                <Text>Ответ 1.2</Text>
+                                <ImagePath></ImagePath>
+                                <IsCorrect>false</IsCorrect>
+                            </Answer>
+                        </Answers>
+                    </Question>		
+					<Question>
+                        <Text>Всем симпатизирует</Text>
+                        <ImagePath></ImagePath>
+                        <Answers>
+                            <Answer>
+                                <Text>Ответ 1.1</Text>
+                                <ImagePath></ImagePath>
+                                <IsCorrect>true</IsCorrect>
+                            </Answer>
+                            <Answer>
+                                <Text>Ответ 1.2</Text>
+                                <ImagePath></ImagePath>
+                                <IsCorrect>false</IsCorrect>
+                            </Answer>
+                        </Answers>
+                    </Question>	
+					<Question>
+                        <Text>Прощает все</Text>
+                        <ImagePath></ImagePath>
+                        <Answers>
+                            <Answer>
+                                <Text>Ответ 1.1</Text>
+                                <ImagePath></ImagePath>
+                                <IsCorrect>true</IsCorrect>
+                            </Answer>
+                            <Answer>
+                                <Text>Ответ 1.2</Text>
+                                <ImagePath></ImagePath>
+                                <IsCorrect>false</IsCorrect>
+                            </Answer>
+                        </Answers>
+                    </Question>	
+					<Question>
+                        <Text>Переполнен чрезмерным сочувствием</Text>
+                        <ImagePath></ImagePath>
+                        <Answers>
+                            <Answer>
+                                <Text>Ответ 1.1</Text>
+                                <ImagePath></ImagePath>
+                                <IsCorrect>true</IsCorrect>
+                            </Answer>
+                            <Answer>
+                                <Text>Ответ 1.2</Text>
+                                <ImagePath></ImagePath>
+                                <IsCorrect>false</IsCorrect>
+                            </Answer>
+                        </Answers>
+                    </Question>	
+					<Question>
+                        <Text>Великодушен и терпим к недостаткам</Text>
+                        <ImagePath></ImagePath>
+                        <Answers>
+                            <Answer>
+                                <Text>Ответ 1.1</Text>
+                                <ImagePath></ImagePath>
+                                <IsCorrect>true</IsCorrect>
+                            </Answer>
+                            <Answer>
+                                <Text>Ответ 1.2</Text>
+                                <ImagePath></ImagePath>
+                                <IsCorrect>false</IsCorrect>
+                            </Answer>
+                        </Answers>
+                    </Question>
+					<Question>
+                        <Text>Стремится помочь каждому</Text>
+                        <ImagePath></ImagePath>
+                        <Answers>
+                            <Answer>
+                                <Text>Ответ 1.1</Text>
+                                <ImagePath></ImagePath>
+                                <IsCorrect>true</IsCorrect>
+                            </Answer>
+                            <Answer>
+                                <Text>Ответ 1.2</Text>
+                                <ImagePath></ImagePath>
+                                <IsCorrect>false</IsCorrect>
+                            </Answer>
+                        </Answers>
+                    </Question>						
+                </Questions>
+            </Section>
+			<Section>
+                <Description>Секция 7</Description>
+                <ImagePath></ImagePath>
+                <Questions>
+                    <Question>
+                        <Text>Стремящийся к успеху</Text>
+                        <ImagePath></ImagePath>
+                        <Answers>
+                            <Answer>
+                                <Text>Ответ 1.1</Text>
+                                <ImagePath></ImagePath>
+                                <IsCorrect>true</IsCorrect>
+                            </Answer>
+                            <Answer>
+                                <Text>Ответ 1.2</Text>
+                                <imagePath></imagePath>
+                                <IsCorrect>false</IsCorrect>
+                            </Answer>
+                        </Answers>
+                    </Question>
+                    <Question>
+                        <Text>Ожидает восхищения от каждого</Text>
+                        <ImagePath></ImagePath>
+                        <Answers>
+                            <Answer>
+                                <Text>Ответ 1.1</Text>
+                                <ImagePath></ImagePath>
+                                <IsCorrect>true</IsCorrect>
+                            </Answer>
+                            <Answer>
+                                <Text>Ответ 1.2</Text>
+                                <ImagePath></ImagePath>
+                                <IsCorrect>false</IsCorrect>
+                            </Answer>
+                        </Answers>
+                    </Question>
+					<Question>
+                        <Text>Распоряжается другими</Text>
+                        <ImagePath></ImagePath>
+                        <Answers>
+                            <Answer>
+                                <Text>Ответ 1.1</Text>
+                                <ImagePath></ImagePath>
+                                <IsCorrect>true</IsCorrect>
+                            </Answer>
+                            <Answer>
+                                <Text>Ответ 1.2</Text>
+                                <ImagePath></ImagePath>
+                                <IsCorrect>false</IsCorrect>
+                            </Answer>
+                        </Answers>
+                    </Question>
+					<Question>
+                        <Text>Деспотичный</Text>
+                        <ImagePath></ImagePath>
+                        <Answers>
+                            <Answer>
+                                <Text>Ответ 1.1</Text>
+                                <ImagePath></ImagePath>
+                                <IsCorrect>true</IsCorrect>
+                            </Answer>
+                            <Answer>
+                                <Text>Ответ 1.2</Text>
+                                <ImagePath></ImagePath>
+                                <IsCorrect>false</IsCorrect>
+                            </Answer>
+                        </Answers>
+                    </Question>	
+					<Question>
+                        <Text>Относится к окружающим с чувством превосходства</Text>
+                        <ImagePath></ImagePath>
+                        <Answers>
+                            <Answer>
+                                <Text>Ответ 1.1</Text>
+                                <ImagePath></ImagePath>
+                                <IsCorrect>true</IsCorrect>
+                            </Answer>
+                            <Answer>
+                                <Text>Ответ 1.2</Text>
+                                <ImagePath></ImagePath>
+                                <IsCorrect>false</IsCorrect>
+                            </Answer>
+                        </Answers>
+                    </Question>	
+					<Question>
+                        <Text>Тщеславный</Text>
+                        <ImagePath></ImagePath>
+                        <Answers>
+                            <Answer>
+                                <Text>Ответ 1.1</Text>
+                                <ImagePath></ImagePath>
+                                <IsCorrect>true</IsCorrect>
+                            </Answer>
+                            <Answer>
+                                <Text>Ответ 1.2</Text>
+                                <ImagePath></ImagePath>
+                                <IsCorrect>false</IsCorrect>
+                            </Answer>
+                        </Answers>
+                    </Question>	
+					<Question>
+                        <Text>Эгоистичный</Text>
+                        <ImagePath></ImagePath>
+                        <Answers>
+                            <Answer>
+                                <Text>Ответ 1.1</Text>
+                                <ImagePath></ImagePath>
+                                <IsCorrect>true</IsCorrect>
+                            </Answer>
+                            <Answer>
+                                <Text>Ответ 1.2</Text>
+                                <ImagePath></ImagePath>
+                                <IsCorrect>false</IsCorrect>
+                            </Answer>
+                        </Answers>
+                    </Question>	
+					<Question>
+                        <Text>Холодный, черствый</Text>
+                        <ImagePath></ImagePath>
+                        <Answers>
+                            <Answer>
+                                <Text>Ответ 1.1</Text>
+                                <ImagePath></ImagePath>
+                                <IsCorrect>true</IsCorrect>
+                            </Answer>
+                            <Answer>
+                                <Text>Ответ 1.2</Text>
+                                <ImagePath></ImagePath>
+                                <IsCorrect>false</IsCorrect>
+                            </Answer>
+                        </Answers>
+                    </Question>	
+					<Question>
+                        <Text>Язвительный, насмешливый</Text>
+                        <ImagePath></ImagePath>
+                        <Answers>
+                            <Answer>
+                                <Text>Ответ 1.1</Text>
+                                <ImagePath></ImagePath>
+                                <IsCorrect>true</IsCorrect>
+                            </Answer>
+                            <Answer>
+                                <Text>Ответ 1.2</Text>
+                                <ImagePath></ImagePath>
+                                <IsCorrect>false</IsCorrect>
+                            </Answer>
+                        </Answers>
+                    </Question>	
+					<Question>
+                        <Text>Злой, жестокий</Text>
+                        <ImagePath></ImagePath>
+                        <Answers>
+                            <Answer>
+                                <Text>Ответ 1.1</Text>
+                                <ImagePath></ImagePath>
+                                <IsCorrect>true</IsCorrect>
+                            </Answer>
+                            <Answer>
+                                <Text>Ответ 1.2</Text>
+                                <ImagePath></ImagePath>
+                                <IsCorrect>false</IsCorrect>
+                            </Answer>
+                        </Answers>
+                    </Question>	
+					<Question>
+                        <Text>Часто гневлив</Text>
+                        <ImagePath></ImagePath>
+                        <Answers>
+                            <Answer>
+                                <Text>Ответ 1.1</Text>
+                                <ImagePath></ImagePath>
+                                <IsCorrect>true</IsCorrect>
+                            </Answer>
+                            <Answer>
+                                <Text>Ответ 1.2</Text>
+                                <ImagePath></ImagePath>
+                                <IsCorrect>false</IsCorrect>
+                            </Answer>
+                        </Answers>
+                    </Question>		
+					<Question>
+                        <Text>Бесчувственный, равнодушный</Text>
+                        <ImagePath></ImagePath>
+                        <Answers>
+                            <Answer>
+                                <Text>Ответ 1.1</Text>
+                                <ImagePath></ImagePath>
+                                <IsCorrect>true</IsCorrect>
+                            </Answer>
+                            <Answer>
+                                <Text>Ответ 1.2</Text>
+                                <ImagePath></ImagePath>
+                                <IsCorrect>false</IsCorrect>
+                            </Answer>
+                        </Answers>
+                    </Question>	
+					<Question>
+                        <Text>Злопамятный</Text>
+                        <ImagePath></ImagePath>
+                        <Answers>
+                            <Answer>
+                                <Text>Ответ 1.1</Text>
+                                <ImagePath></ImagePath>
+                                <IsCorrect>true</IsCorrect>
+                            </Answer>
+                            <Answer>
+                                <Text>Ответ 1.2</Text>
+                                <ImagePath></ImagePath>
+                                <IsCorrect>false</IsCorrect>
+                            </Answer>
+                        </Answers>
+                    </Question>	
+					<Question>
+                        <Text>Проникнут духом противоречия</Text>
+                        <ImagePath></ImagePath>
+                        <Answers>
+                            <Answer>
+                                <Text>Ответ 1.1</Text>
+                                <ImagePath></ImagePath>
+                                <IsCorrect>true</IsCorrect>
+                            </Answer>
+                            <Answer>
+                                <Text>Ответ 1.2</Text>
+                                <ImagePath></ImagePath>
+                                <IsCorrect>false</IsCorrect>
+                            </Answer>
+                        </Answers>
+                    </Question>	
+					<Question>
+                        <Text>Упрямый</Text>
+                        <ImagePath></ImagePath>
+                        <Answers>
+                            <Answer>
+                                <Text>Ответ 1.1</Text>
+                                <ImagePath></ImagePath>
+                                <IsCorrect>true</IsCorrect>
+                            </Answer>
+                            <Answer>
+                                <Text>Ответ 1.2</Text>
+                                <ImagePath></ImagePath>
+                                <IsCorrect>false</IsCorrect>
+                            </Answer>
+                        </Answers>
+                    </Question>
+					<Question>
+                        <Text>Недоверчивый и подозрительный</Text>
+                        <ImagePath></ImagePath>
+                        <Answers>
+                            <Answer>
+                                <Text>Ответ 1.1</Text>
+                                <ImagePath></ImagePath>
+                                <IsCorrect>true</IsCorrect>
+                            </Answer>
+                            <Answer>
+                                <Text>Ответ 1.2</Text>
+                                <ImagePath></ImagePath>
+                                <IsCorrect>false</IsCorrect>
+                            </Answer>
+                        </Answers>
+                    </Question>						
+                </Questions>
+            </Section>
+			<Section>
+                <Description>Секция 8</Description>
+                <ImagePath></ImagePath>
+                <Questions>
+                    <Question>
+                        <Text>Робкий</Text>
+                        <ImagePath></ImagePath>
+                        <Answers>
+                            <Answer>
+                                <Text>Ответ 1.1</Text>
+                                <ImagePath></ImagePath>
+                                <IsCorrect>true</IsCorrect>
+                            </Answer>
+                            <Answer>
+                                <Text>Ответ 1.2</Text>
+                                <imagePath></imagePath>
+                                <IsCorrect>false</IsCorrect>
+                            </Answer>
+                        </Answers>
+                    </Question>
+                    <Question>
+                        <Text>Стыдливый</Text>
+                        <ImagePath></ImagePath>
+                        <Answers>
+                            <Answer>
+                                <Text>Ответ 1.1</Text>
+                                <ImagePath></ImagePath>
+                                <IsCorrect>true</IsCorrect>
+                            </Answer>
+                            <Answer>
+                                <Text>Ответ 1.2</Text>
+                                <ImagePath></ImagePath>
+                                <IsCorrect>false</IsCorrect>
+                            </Answer>
+                        </Answers>
+                    </Question>
+					<Question>
+                        <Text>Услужливый</Text>
+                        <ImagePath></ImagePath>
+                        <Answers>
+                            <Answer>
+                                <Text>Ответ 1.1</Text>
+                                <ImagePath></ImagePath>
+                                <IsCorrect>true</IsCorrect>
+                            </Answer>
+                            <Answer>
+                                <Text>Ответ 1.2</Text>
+                                <ImagePath></ImagePath>
+                                <IsCorrect>false</IsCorrect>
+                            </Answer>
+                        </Answers>
+                    </Question>
+					<Question>
+                        <Text>Мягкотелый</Text>
+                        <ImagePath></ImagePath>
+                        <Answers>
+                            <Answer>
+                                <Text>Ответ 1.1</Text>
+                                <ImagePath></ImagePath>
+                                <IsCorrect>true</IsCorrect>
+                            </Answer>
+                            <Answer>
+                                <Text>Ответ 1.2</Text>
+                                <ImagePath></ImagePath>
+                                <IsCorrect>false</IsCorrect>
+                            </Answer>
+                        </Answers>
+                    </Question>	
+					<Question>
+                        <Text>Почти никому не возражает</Text>
+                        <ImagePath></ImagePath>
+                        <Answers>
+                            <Answer>
+                                <Text>Ответ 1.1</Text>
+                                <ImagePath></ImagePath>
+                                <IsCorrect>true</IsCorrect>
+                            </Answer>
+                            <Answer>
+                                <Text>Ответ 1.2</Text>
+                                <ImagePath></ImagePath>
+                                <IsCorrect>false</IsCorrect>
+                            </Answer>
+                        </Answers>
+                    </Question>	
+					<Question>
+                        <Text>Навязчивый</Text>
+                        <ImagePath></ImagePath>
+                        <Answers>
+                            <Answer>
+                                <Text>Ответ 1.1</Text>
+                                <ImagePath></ImagePath>
+                                <IsCorrect>true</IsCorrect>
+                            </Answer>
+                            <Answer>
+                                <Text>Ответ 1.2</Text>
+                                <ImagePath></ImagePath>
+                                <IsCorrect>false</IsCorrect>
+                            </Answer>
+                        </Answers>
+                    </Question>	
+					<Question>
+                        <Text>Любит, чтобы его опекали</Text>
+                        <ImagePath></ImagePath>
+                        <Answers>
+                            <Answer>
+                                <Text>Ответ 1.1</Text>
+                                <ImagePath></ImagePath>
+                                <IsCorrect>true</IsCorrect>
+                            </Answer>
+                            <Answer>
+                                <Text>Ответ 1.2</Text>
+                                <ImagePath></ImagePath>
+                                <IsCorrect>false</IsCorrect>
+                            </Answer>
+                        </Answers>
+                    </Question>	
+					<Question>
+                        <Text>Чрезмерно доверчив</Text>
+                        <ImagePath></ImagePath>
+                        <Answers>
+                            <Answer>
+                                <Text>Ответ 1.1</Text>
+                                <ImagePath></ImagePath>
+                                <IsCorrect>true</IsCorrect>
+                            </Answer>
+                            <Answer>
+                                <Text>Ответ 1.2</Text>
+                                <ImagePath></ImagePath>
+                                <IsCorrect>false</IsCorrect>
+                            </Answer>
+                        </Answers>
+                    </Question>	
+					<Question>
+                        <Text>Стремится снискать расположение каждого</Text>
+                        <ImagePath></ImagePath>
+                        <Answers>
+                            <Answer>
+                                <Text>Ответ 1.1</Text>
+                                <ImagePath></ImagePath>
+                                <IsCorrect>true</IsCorrect>
+                            </Answer>
+                            <Answer>
+                                <Text>Ответ 1.2</Text>
+                                <ImagePath></ImagePath>
+                                <IsCorrect>false</IsCorrect>
+                            </Answer>
+                        </Answers>
+                    </Question>	
+					<Question>
+                        <Text>Со всеми соглашается</Text>
+                        <ImagePath></ImagePath>
+                        <Answers>
+                            <Answer>
+                                <Text>Ответ 1.1</Text>
+                                <ImagePath></ImagePath>
+                                <IsCorrect>true</IsCorrect>
+                            </Answer>
+                            <Answer>
+                                <Text>Ответ 1.2</Text>
+                                <ImagePath></ImagePath>
+                                <IsCorrect>false</IsCorrect>
+                            </Answer>
+                        </Answers>
+                    </Question>	
+					<Question>
+                        <Text>Всегда со всеми дружелюбен</Text>
+                        <ImagePath></ImagePath>
+                        <Answers>
+                            <Answer>
+                                <Text>Ответ 1.1</Text>
+                                <ImagePath></ImagePath>
+                                <IsCorrect>true</IsCorrect>
+                            </Answer>
+                            <Answer>
+                                <Text>Ответ 1.2</Text>
+                                <ImagePath></ImagePath>
+                                <IsCorrect>false</IsCorrect>
+                            </Answer>
+                        </Answers>
+                    </Question>		
+					<Question>
+                        <Text>Всех любит</Text>
+                        <ImagePath></ImagePath>
+                        <Answers>
+                            <Answer>
+                                <Text>Ответ 1.1</Text>
+                                <ImagePath></ImagePath>
+                                <IsCorrect>true</IsCorrect>
+                            </Answer>
+                            <Answer>
+                                <Text>Ответ 1.2</Text>
+                                <ImagePath></ImagePath>
+                                <IsCorrect>false</IsCorrect>
+                            </Answer>
+                        </Answers>
+                    </Question>	
+					<Question>
+                        <Text>Слишком снисходителен к окружающим</Text>
+                        <ImagePath></ImagePath>
+                        <Answers>
+                            <Answer>
+                                <Text>Ответ 1.1</Text>
+                                <ImagePath></ImagePath>
+                                <IsCorrect>true</IsCorrect>
+                            </Answer>
+                            <Answer>
+                                <Text>Ответ 1.2</Text>
+                                <ImagePath></ImagePath>
+                                <IsCorrect>false</IsCorrect>
+                            </Answer>
+                        </Answers>
+                    </Question>	
+					<Question>
+                        <Text>Старается утешить каждого</Text>
+                        <ImagePath></ImagePath>
+                        <Answers>
+                            <Answer>
+                                <Text>Ответ 1.1</Text>
+                                <ImagePath></ImagePath>
+                                <IsCorrect>true</IsCorrect>
+                            </Answer>
+                            <Answer>
+                                <Text>Ответ 1.2</Text>
+                                <ImagePath></ImagePath>
+                                <IsCorrect>false</IsCorrect>
+                            </Answer>
+                        </Answers>
+                    </Question>	
+					<Question>
+                        <Text>Заботится о других</Text>
+                        <ImagePath></ImagePath>
+                        <Answers>
+                            <Answer>
+                                <Text>Ответ 1.1</Text>
+                                <ImagePath></ImagePath>
+                                <IsCorrect>true</IsCorrect>
+                            </Answer>
+                            <Answer>
+                                <Text>Ответ 1.2</Text>
+                                <ImagePath></ImagePath>
+                                <IsCorrect>false</IsCorrect>
+                            </Answer>
+                        </Answers>
+                    </Question>
+					<Question>
+                        <Text>Портит людей чрезмерной добротой</Text>
+                        <ImagePath></ImagePath>
+                        <Answers>
+                            <Answer>
+                                <Text>Ответ 1.1</Text>
+                                <ImagePath></ImagePath>
+                                <IsCorrect>true</IsCorrect>
+                            </Answer>
+                            <Answer>
+                                <Text>Ответ 1.2</Text>
+                                <ImagePath></ImagePath>
+                                <IsCorrect>false</IsCorrect>
+                            </Answer>
+                        </Answers>
+                    </Question>						
+                </Questions>
+            </Section>
         </Sections>
         <Result>Какой-то результат. Формат придумай сама </Result>
     </Test>
