@@ -53,10 +53,10 @@ class ApplicationLogic : public QObject {
         Question currentQuest;
         QQueue<Question> questions;
 
-        int questionsSize;
+        int questionsSize = 0;
 
-        int rawTorston;
-        int rawLiri;
+        int rawTorston = 0;
+        int rawLiri = 0;
 
         QString calculateTorstonResult();
         void sendLiriResult();

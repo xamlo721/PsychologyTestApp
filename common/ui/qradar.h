@@ -18,9 +18,6 @@ public:
     explicit QRadarChart(QWidget *parent = 0);
     virtual ~QRadarChart();
     void setRange(qreal t_min, qreal t_max) const;
-
-    void updateStat(const int index, qreal t_value) const;
-
     void addStat(const QString&t_label,qreal t_value) const;
     void drawChart();
     void configAreaColor(

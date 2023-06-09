@@ -2,7 +2,7 @@
 
 class QRadarImpl
 {
-public://FIXME
+private:
     struct angular
     {
         QString label;
@@ -232,11 +232,6 @@ inline void QRadarImpl::setRange(qreal t_min, qreal t_max)
 inline void QRadarImpl::addAngular(const QString& t_label, qreal t_value)
 {
     m_Angulars.append({ t_label, t_value });
-}
-
-void QRadarChart::updateStat(const int index, qreal t_value) const
-{
-    m_impl->m_Angulars[index].value = t_value;
 }
 
 void QRadarChart::setRange(qreal t_min, qreal t_max) const

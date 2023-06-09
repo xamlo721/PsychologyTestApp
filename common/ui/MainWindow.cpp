@@ -18,6 +18,7 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui_window(new Ui:
 void MainWindow::showResult(QString result) {
     this->ui_window->stackedWidget->setCurrentIndex(EnumAvailableWidgets::Result);
     this->ui_window->questResult->uiResult->label->setText(result);
+    this->ui_window->questResult->hideRadar();
 }
 
 
@@ -50,7 +51,6 @@ void MainWindow::onTestComplete() {
     this->ui_window->stackedWidget->setCurrentIndex(EnumAvailableWidgets::MainMenu);
 
 }
-
 
 MainWindow::~MainWindow() {
     delete ui_window;
