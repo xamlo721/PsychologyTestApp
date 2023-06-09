@@ -2,7 +2,7 @@
     <qresource prefix="/">
         <file>../pictures/back.png</file>
         <file>../pictures/face.png</file>
-        <file>../tests/Torston/images/Fig0.bmp</file>
+        <file>../tests/Torston/images/FIG0.bmp</file>
         <file>../tests/Torston/images/FIG1.bmp</file>
         <file>../tests/Torston/images/FIG2.bmp</file>
         <file>../tests/Torston/images/FIG3.bmp</file>
