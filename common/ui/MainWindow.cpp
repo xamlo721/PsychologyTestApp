@@ -12,13 +12,13 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui_window(new Ui:
     QObject::connect(this->ui_window->infoTorson->uiInstructionTorston->tothetest, &QPushButton::clicked, this, &MainWindow::onInfoTorsonTestButtonClicked);
 
     QObject::connect(this->ui_window->questResult->uiResult->tothemain, &QPushButton::clicked, this, &MainWindow::onTestComplete);
+    QObject::connect(this->ui_window->resultTorston->ui->tothemain, &QPushButton::clicked, this, &MainWindow::onTestComplete);
 
 }
 
 void MainWindow::showResult(QString result) {
-    this->ui_window->stackedWidget->setCurrentIndex(EnumAvailableWidgets::Result);
-    this->ui_window->questResult->uiResult->label->setText(result);
-    this->ui_window->questResult->hideRadar();
+    this->ui_window->stackedWidget->setCurrentIndex(EnumAvailableWidgets::ResultTorston);
+    this->ui_window->resultTorston->ui->label->setText(result);
 }
 
 

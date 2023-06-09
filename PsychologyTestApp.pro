@@ -39,7 +39,10 @@ SOURCES += \
     common/utils/XmlUtils.cpp \
     main.cpp \
     common/ui/MainWindow.cpp \
-    common/ui/MainMenuWidget.cpp
+    common/ui/MainMenuWidget.cpp \
+    common/ui/ResultTorson.cpp
+
+RC_FILE     = resources.rc
 
 HEADERS += \
     api/ITextElement.h \
@@ -69,7 +72,8 @@ HEADERS += \
     common/ui/ResultWidget.h \
     common/ui/qradar.h \
     common/utils/XmlUtils.h \
-    common/ui/MainMenuWidget.h
+    common/ui/MainMenuWidget.h \
+    common/ui/ResultTorson.h
 
 FORMS += \
     ui/InstructionLiri.ui \
@@ -78,7 +82,8 @@ FORMS += \
     ui/MainWindow.ui \
     ui/QuestionsLiri.ui \
     ui/QuestionsTorston.ui \
-    ui/Result.ui
+    ui/Result.ui \
+    ui/ResultTorson.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

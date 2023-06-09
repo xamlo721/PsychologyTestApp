@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>Result</class>
- <widget class="QWidget" name="Result">
+ <class>ResultTorson</class>
+ <widget class="QWidget" name="ResultTorson">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -164,9 +164,9 @@ QPushButton:hover {
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>510</x>
+      <x>0</x>
       <y>0</y>
-      <width>381</width>
+      <width>891</width>
       <height>391</height>
      </rect>
     </property>
@@ -177,32 +177,14 @@ QPushButton:hover {
      </font>
     </property>
     <property name="text">
-     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;1. Авторитарный&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;2. Эгоистичный&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;3. Агрессивный&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;4. Подозрительный&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;5. Починяемый&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;6. Зависимый&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;7. Дружелюбный&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;8. Альтруистический&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;1. Авторитарный&lt;/p&gt;&lt;p&gt;2. Эгоистичный&lt;/p&gt;&lt;p&gt;3. Агрессивный&lt;/p&gt;&lt;p&gt;4. Подозрительный&lt;/p&gt;&lt;p&gt;5. Починяемый&lt;/p&gt;&lt;p&gt;6. Зависимый&lt;/p&gt;&lt;p&gt;7. Дружелюбный&lt;/p&gt;&lt;p&gt;8. Альтруистический&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
     <property name="alignment">
-     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-    </property>
-   </widget>
-   <widget class="QRadarChart" name="radar" native="true">
-    <property name="geometry">
-     <rect>
-      <x>40</x>
-      <y>10</y>
-      <width>360</width>
-      <height>360</height>
-     </rect>
+     <set>Qt::AlignCenter</set>
     </property>
    </widget>
   </widget>
  </widget>
- <customwidgets>
-  <customwidget>
-   <class>QRadarChart</class>
-   <extends>QWidget</extends>
-   <header>common/ui/qradar.h</header>
-   <container>1</container>
-  </customwidget>
- </customwidgets>
  <resources/>
  <connections/>
 </ui>

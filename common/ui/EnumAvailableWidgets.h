@@ -13,7 +13,9 @@ enum EnumAvailableWidgets : int {
 
     QuestTorson = 4,
 
-    Result = 5
+    ResultLiri = 5,
+
+    ResultTorston = 6
 
 };
 #endif // ENUMAVAILABLEWIDGETS_H

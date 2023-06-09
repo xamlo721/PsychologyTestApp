@@ -47,7 +47,7 @@ void UIController::onShowTorstonResult(QString result) {
 
 }
 void UIController::onShowLiriResult(int st1, int st2,int st3,int st4,int st5,int st6,int st7,int st8) {
-    this->window->ui_window->stackedWidget->setCurrentIndex(EnumAvailableWidgets::Result);//Костыль
+    this->window->ui_window->stackedWidget->setCurrentIndex(EnumAvailableWidgets::ResultLiri);//Костыль
     this->window->ui_window->questResult->displayRadar(st1, st2,st3,st4,st5,st6,st7,st8);
 }
 

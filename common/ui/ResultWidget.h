@@ -26,7 +26,6 @@ class ResultWidget : public QWidget {
 
     public:
         Ui::Result *uiResult;
-        QRadarChart * w = 0;
         QColor blue = QColor(66, 66, 255, 128);
         QColor yellow = QColor(255, 255, 255, 255);
 

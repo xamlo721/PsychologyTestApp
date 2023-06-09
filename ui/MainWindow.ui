@@ -72,6 +72,7 @@
       <widget class="QuestionLiriWidget" name="questLiri"/>
       <widget class="QuestionTorsonWidget" name="questTorson"/>
       <widget class="ResultWidget" name="questResult"/>
+      <widget class="ResultTorson" name="resultTorston"/>
      </widget>
     </item>
    </layout>
@@ -112,6 +113,12 @@
    <class>InstructionLiriWidget</class>
    <extends>QWidget</extends>
    <header>common/ui/InstructionLiriWidget.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>ResultTorson</class>
+   <extends>QWidget</extends>
+   <header>common/ui/ResultTorson.h</header>
    <container>1</container>
   </customwidget>
  </customwidgets>
