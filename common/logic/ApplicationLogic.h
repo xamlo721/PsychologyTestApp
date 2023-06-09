@@ -58,6 +58,17 @@ class ApplicationLogic : public QObject {
         int rawTorston = 0;
         int rawLiri = 0;
 
+        //Блок очень странных маркеров для теста Лири
+        int liriQuestionNumber = 1;
+        int param1 = 0;
+        int param2 = 0;
+        int param3 = 0;
+        int param4 = 0;
+        int param5 = 0;
+        int param6 = 0;
+        int param7 = 0;
+        int param8 = 0;
+
         QString calculateTorstonResult();
         void sendLiriResult();
 

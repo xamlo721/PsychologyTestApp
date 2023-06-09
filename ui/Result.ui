@@ -177,7 +177,7 @@ QPushButton:hover {
      </font>
     </property>
     <property name="text">
-     <string>TextLabel</string>
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;1. Авторитарный&lt;/p&gt;&lt;p&gt;2. Эгоистичный&lt;/p&gt;&lt;p&gt;3. Агрессивный&lt;/p&gt;&lt;p&gt;4. Подозрительный&lt;/p&gt;&lt;p&gt;5. Починяемый&lt;/p&gt;&lt;p&gt;6. Зависимый&lt;/p&gt;&lt;p&gt;7. Дружелюбный&lt;/p&gt;&lt;p&gt;8. Альтруистический&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
