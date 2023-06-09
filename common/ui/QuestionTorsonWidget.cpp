@@ -19,3 +19,11 @@ void QuestionTorsonWidget::onButtonAnswerClicked() {
                         this->uiQuestionsTorston->button4->isChecked()
                         );
 }
+
+void QuestionTorsonWidget::keyPressEvent(QKeyEvent *event) {
+
+    if (event->key() == Qt::Key_Escape) {
+        emit signalAborted();
+    }
+
+}

@@ -4,6 +4,7 @@
 
 MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui_window(new Ui::MainWindow) {
     ui_window->setupUi(this);
+    this->installEventFilter(this);
 
     QObject::connect(this->ui_window->mainMenu->ui->TestLiri, &QPushButton::clicked, this, &MainWindow::onMainMenuLiriTestButtonClicked);
     QObject::connect(this->ui_window->mainMenu->ui->TestTorston, &QPushButton::clicked, this, &MainWindow::onMainMenuTorsonTestButtonClicked);
@@ -46,11 +47,27 @@ void MainWindow::onInfoTorsonTestButtonClicked() {
 
 }
 
+void MainWindow::onTestAborted() {
+    this->ui_window->stackedWidget->setCurrentIndex(EnumAvailableWidgets::MainMenu);
+    emit signalTestAborted();
+
+}
+
+
 void MainWindow::onTestComplete() {
     emit signalTestComplete();
     this->ui_window->stackedWidget->setCurrentIndex(EnumAvailableWidgets::MainMenu);
 
 }
+
+void MainWindow::   keyPressEvent(QKeyEvent *event) {
+
+    if (event->key() == Qt::Key_F1) {
+        //TODO: открыть справку. Кто-то знает как она выглядит??
+    }
+
+}
+
 
 MainWindow::~MainWindow() {
     delete ui_window;

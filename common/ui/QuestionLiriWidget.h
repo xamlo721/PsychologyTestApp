@@ -2,6 +2,8 @@
 #define QUESTIONLIRIWIDGET_H
 
 #include <QWidget>
+#include <QKeyEvent>
+#include <Qt>
 
 #include "ui_QuestionsLiri.h"
 
@@ -20,6 +22,7 @@ class QuestionLiriWidget : public QWidget {
 
     signals:
         void signalAnswerd(bool answer);
+        void signalAborted();
 
     public:
         Ui::QuestionsLiri *uiQuestionsLiri;
@@ -28,6 +31,9 @@ class QuestionLiriWidget : public QWidget {
     private slots:
         void onYesButtonClicked();
         void onNoButtonClicked();
+
+    protected:
+        virtual void keyPressEvent(QKeyEvent *event) override;
 
 };
 

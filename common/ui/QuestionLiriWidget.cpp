@@ -17,3 +17,11 @@ void QuestionLiriWidget::onYesButtonClicked() {
 void QuestionLiriWidget::onNoButtonClicked() {
     emit signalAnswerd(true);
 }
+
+void QuestionLiriWidget::keyPressEvent(QKeyEvent *event) {
+
+    if (event->key() == Qt::Key_Escape) {
+        emit signalAborted();
+    }
+
+}

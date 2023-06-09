@@ -30,16 +30,21 @@ class MainWindow : public QMainWindow {
         void onInfoLiriTestButtonClicked();
         void onInfoTorsonTestButtonClicked();
 
+        void onTestAborted();
+
     signals:
         void signalSelectTest(EnumTestType testType);
         void signalTestStarted(EnumTestType testType);
         void signalTestComplete();
+        void signalTestAborted();
 
     public://FIXME
         Ui::MainWindow *ui_window;
 
         void onTestComplete();
 
+    public:
+        virtual void keyPressEvent(QKeyEvent *event) override;
 
 
 };
