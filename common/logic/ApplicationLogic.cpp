@@ -99,10 +99,6 @@ void ApplicationLogic::onQuestAnsweredLiri(bool answer) {
 }
 
 void ApplicationLogic::onQuestAnsweredTorson(bool a1, bool a2, bool a3, bool a4 ) {
-
-    //TODO:Сделать что-то с ответом
-
-
     QMap<int, Answer> answers = currentQuest.getAnswers();
 
     Answer answer1 =answers.value(0);

@@ -4,7 +4,6 @@
 
 MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui_window(new Ui::MainWindow) {
     ui_window->setupUi(this);
-    this->installEventFilter(this);
 
     QObject::connect(this->ui_window->mainMenu->ui->TestLiri, &QPushButton::clicked, this, &MainWindow::onMainMenuLiriTestButtonClicked);
     QObject::connect(this->ui_window->mainMenu->ui->TestTorston, &QPushButton::clicked, this, &MainWindow::onMainMenuTorsonTestButtonClicked);
@@ -18,18 +17,6 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui_window(new Ui:
     QObject::connect(this->ui_window->questLiri, &QuestionLiriWidget::signalAborted, this, &MainWindow::onTestAborted);
     QObject::connect(this->ui_window->questTorson, &QuestionTorsonWidget::signalAborted, this, &MainWindow::onTestAborted);
 
-
-    QObject::connect(this->ui_window->infoLiri->uiInstructionLiri->pushButton_F1, &QPushButton::clicked, this, &MainWindow::onHelpOpened);
-    QObject::connect(this->ui_window->infoTorson->uiInstructionTorston->pushButton_F1, &QPushButton::clicked, this, &MainWindow::onHelpOpened);
-    QObject::connect(this->ui_window->mainMenu->ui->pushButton_F1, &QPushButton::clicked, this, &MainWindow::onHelpOpened);
-    QObject::connect(this->ui_window->questLiri->uiQuestionsLiri->pushButton_F1, &QPushButton::clicked, this, &MainWindow::onHelpOpened);
-    QObject::connect(this->ui_window->questTorson->uiQuestionsTorston->pushButton_F1, &QPushButton::clicked, this, &MainWindow::onHelpOpened);
-    QObject::connect(this->ui_window->resultTorston->ui->pushButton_F1, &QPushButton::clicked, this, &MainWindow::onHelpOpened);
-    QObject::connect(this->ui_window->questResult->uiResult->pushButton_F1, &QPushButton::clicked, this, &MainWindow::onHelpOpened);
-
-//    this->setFocusPolicy(Qt::NoFocus);
-//    this->installEventFilter(this);
-//    this->update();
 
 }
 
@@ -80,9 +67,12 @@ void MainWindow::onHelpOpened() {
 
 
 void MainWindow::keyPressEvent(QKeyEvent *event) {
+    qDebug() << "KeyPressed!";
 
     if (event->key() == Qt::Key_F1) {
         //TODO: открыть справку. Кто-то знает как она выглядит??
+        qDebug() << "KeyPressed!";
+
     }
 
 }

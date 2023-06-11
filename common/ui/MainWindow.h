@@ -2,11 +2,9 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include <QPainter>
 
 #include "ui_MainWindow.h"
 #include "common/items/EnumTestType.h"
-#include <QApplication>
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -45,7 +43,7 @@ class MainWindow : public QMainWindow {
 
         void onTestComplete();
 
-    public:
+    protected:
         virtual void keyPressEvent(QKeyEvent *event) override;
         virtual bool eventFilter(QObject *obj, QEvent *event) override;
 

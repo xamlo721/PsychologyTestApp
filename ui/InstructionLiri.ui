@@ -180,41 +180,6 @@ p, li { white-space: pre-wrap; }
     <string>Справка - F1</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_F1">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>1</width>
-     <height>1</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <family>Montserrat Medium</family>
-     <pointsize>22</pointsize>
-     <weight>75</weight>
-     <bold>true</bold>
-     <kerning>false</kerning>
-    </font>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">QPushButton {
-border-radius: 10px;
-background-color: rgb(255, 255, 255);
-drop-shadow: (0px 10px 10px rgba(0, 0, 0, 0.5));
-}
-QPushButton:hover {
-        background-color: rgba(216, 249, 255);
-}</string>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="shortcut">
-    <string>F1</string>
-   </property>
-  </widget>
  </widget>
  <resources/>
  <connections/>
