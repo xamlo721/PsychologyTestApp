@@ -1,6 +1,7 @@
 # This file is used to ignore files which are generated
 # ----------------------------------------------------------------------------
 !icon.ico
+!resources.rc
 *~
 *.autosave
 *.a
@@ -31,7 +32,7 @@ ui_*.h
 qrc_*.cpp
 Thumbs.db
 *.res
-
+*.rc
 /.qmake.cache
 /.qmake.stash
 
