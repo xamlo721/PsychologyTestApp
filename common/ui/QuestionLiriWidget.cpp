@@ -4,6 +4,9 @@ QuestionLiriWidget::QuestionLiriWidget(QWidget *parent) : QWidget(parent), uiQue
     uiQuestionsLiri->setupUi(this);
     QObject::connect(this->uiQuestionsLiri->NO, &QPushButton::clicked, this, &QuestionLiriWidget::onNoButtonClicked);
     QObject::connect(this->uiQuestionsLiri->YES, &QPushButton::clicked, this, &QuestionLiriWidget::onYesButtonClicked);
+    QObject::connect(this->uiQuestionsLiri->ESC, &QPushButton::clicked, this, &QuestionLiriWidget::signalAborted);
+    this->setFocusPolicy(Qt::StrongFocus);
+
 }
 
 void QuestionLiriWidget::setQuestion(QString question) {

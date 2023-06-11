@@ -51,5 +51,6 @@
         <file>../tests/Torston/images/FIG46.bmp</file>
         <file>../tests/Torston/images/FIG47.bmp</file>
         <file>../tests/Torston/images/FIG48.bmp</file>
+        <file>../Database.xml</file>
     </qresource>
 </RCC>

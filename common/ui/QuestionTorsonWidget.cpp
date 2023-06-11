@@ -4,6 +4,8 @@ QuestionTorsonWidget::QuestionTorsonWidget(QWidget *parent) : QWidget(parent), u
     uiQuestionsTorston->setupUi(this);
 
     QObject::connect(this->uiQuestionsTorston->pushButton_nextQuestion, &QPushButton::clicked, this, &QuestionTorsonWidget::onButtonAnswerClicked);
+    QObject::connect(this->uiQuestionsTorston->ESC, &QPushButton::clicked, this, &QuestionTorsonWidget::signalAborted);
+
 }
 
 void QuestionTorsonWidget::onButtonAnswerClicked() {

@@ -6,6 +6,7 @@
 
 #include "ui_MainWindow.h"
 #include "common/items/EnumTestType.h"
+#include <QApplication>
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -31,6 +32,7 @@ class MainWindow : public QMainWindow {
         void onInfoTorsonTestButtonClicked();
 
         void onTestAborted();
+        void onHelpOpened();
 
     signals:
         void signalSelectTest(EnumTestType testType);
@@ -45,6 +47,7 @@ class MainWindow : public QMainWindow {
 
     public:
         virtual void keyPressEvent(QKeyEvent *event) override;
+        virtual bool eventFilter(QObject *obj, QEvent *event) override;
 
 
 };
