@@ -50,6 +50,7 @@ HEADERS += \
     common/controller/UIController.h \
     common/items/AbstractTextElement.h \
     common/items/Answer.h \
+    common/items/EnumTorsonResult.h \
     common/items/TestInstruction.h \
     common/logic/ApplicationLogic.h \
     common/logic/Database.h \

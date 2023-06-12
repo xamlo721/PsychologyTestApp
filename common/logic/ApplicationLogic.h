@@ -9,6 +9,7 @@
 #include "common/items/Answer.h"
 #include "common/items/TestResult.h"
 #include "common/items/Question.h"
+#include "common/items/EnumTorsonResult.h"
 
 #include "common/logic/LogicConstants.h"
 
@@ -26,7 +27,7 @@ class ApplicationLogic : public QObject {
 
         void signalShowSectionDescription();//TODO: не уверен. что он нужен, ну на всякий случай
 
-        void signalShowTorstonResult(QString result);
+        void signalShowTorstonResult(EnumTorsonResult result);
 
         void signalShowLiriResult(int st1, int st2,int st3,int st4,int st5,int st6,int st7,int st8);
 
@@ -69,7 +70,7 @@ class ApplicationLogic : public QObject {
         int param7 = 0;
         int param8 = 0;
 
-        QString calculateTorstonResult();
+        EnumTorsonResult calculateTorstonResult();
         void sendLiriResult();
 
 

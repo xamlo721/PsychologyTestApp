@@ -20,9 +20,9 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui_window(new Ui:
 
 }
 
-void MainWindow::showResult(QString result) {
+void MainWindow::showResult(EnumTorsonResult result) {
     this->ui_window->stackedWidget->setCurrentIndex(EnumAvailableWidgets::ResultTorston);
-    this->ui_window->resultTorston->ui->label->setText(result);
+    this->ui_window->resultTorston->showResult(result);
 }
 
 

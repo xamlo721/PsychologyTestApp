@@ -5,6 +5,7 @@
 
 #include "ui_MainWindow.h"
 #include "common/items/EnumTestType.h"
+#include "common/items/EnumTorsonResult.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -20,7 +21,7 @@ class MainWindow : public QMainWindow {
         MainWindow(QWidget *parent = nullptr);
         ~MainWindow();
 
-        void showResult(QString result);
+        void showResult(EnumTorsonResult result);
 
     public slots:
         void onMainMenuLiriTestButtonClicked();

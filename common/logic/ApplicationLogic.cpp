@@ -1,4 +1,5 @@
 #include "ApplicationLogic.h"
+#include <QDebug>
 
 ApplicationLogic::ApplicationLogic(QObject *parent) : QObject(parent) {
 
@@ -116,7 +117,7 @@ void ApplicationLogic::onQuestAnsweredTorson(bool a1, bool a2, bool a3, bool a4 
     // по таблице переводятся в стандартные баллы.
 
     if (questions.empty()) {
-
+        qDebug() << "calculating torson";
         emit signalShowTorstonResult(calculateTorstonResult());
 
         return;
@@ -148,51 +149,10 @@ void ApplicationLogic::onTestEnded() {
 
 }
 
-QString ApplicationLogic::calculateTorstonResult() {
-
-    QString result;// = this->currentTest->getTestResult().getText();
+EnumTorsonResult ApplicationLogic::calculateTorstonResult() {
     LogicConstants testLogic;
-
-    if (this->currentTest->getTestType() == EnumTestType::Liri) {
-
-    } else {
-
-        int torsonPoitns =testLogic.convertTorsonRawState(this->rawTorston);
-
-        result.append("Спасибо большое за прохождение теста Торстона!"
-                      "Ваш результат: ");
-        switch (testLogic.getTorsonResult(torsonPoitns)) {
-
-            case LogicConstants::EnumTorsonResult::VeryLow : {
-                result.append("Очень низкий");
-                break;
-            }
-
-            case LogicConstants::EnumTorsonResult::Low : {
-                result.append("Низкий");
-                break;
-            }
-
-            case LogicConstants::EnumTorsonResult::Medium : {
-                result.append("Средний");
-                break;
-            }
-
-            case LogicConstants::EnumTorsonResult::High : {
-                result.append("Высокий");
-                break;
-            }
-
-            case LogicConstants::EnumTorsonResult::VeryHigh : {
-                result.append("Очень высокий");
-                break;
-            }
-
-        }
-
-    }
-
-    return result;
+    int torsonPoitns =testLogic.convertTorsonRawState(this->rawTorston);
+    return testLogic.getTorsonResult(torsonPoitns);
 }
 
 void ApplicationLogic::sendLiriResult() {

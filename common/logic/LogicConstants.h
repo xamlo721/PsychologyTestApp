@@ -8,6 +8,7 @@
 
 #include <QString>
 
+#include "common/items/EnumTorsonResult.h"
 
 
 class LogicConstants {
@@ -17,19 +18,7 @@ class LogicConstants {
     public:
     int torsonRawTable[196] = {};
 
-        enum EnumTorsonResult : int {
 
-            VeryLow,
-
-            Low,
-
-            Medium,
-
-            High,
-
-            VeryHigh
-
-        };
 
         LogicConstants() {
 
@@ -273,7 +262,7 @@ class LogicConstants {
                 return EnumTorsonResult::Medium;
             } else if (converted < 71) {
                 return EnumTorsonResult::High;
-            } else if (converted < 81) {
+            } else if (converted < 88) {
                 return EnumTorsonResult::VeryHigh;
             } else {
                 throw std::runtime_error(QString("[ApplicationLogic] Error loading Test!").toLocal8Bit().constData());

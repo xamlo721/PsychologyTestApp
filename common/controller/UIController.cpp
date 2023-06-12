@@ -41,7 +41,7 @@ void UIController::onAskQuestion(EnumTestType testType, Question q) {
 
 }
 
-void UIController::onShowTorstonResult(QString result) {
+void UIController::onShowTorstonResult(EnumTorsonResult result) {
 
     this->window->showResult(result);
 
