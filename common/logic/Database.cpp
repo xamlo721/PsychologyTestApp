@@ -25,7 +25,7 @@ void Database::load() {
         }
         case EnumDatabaseType::XML : {
             //По сути просто тесты читаем
-            tests = XMLHelper::readTests(":/Database.xml"); //TODO: Подтянуть файл из настроек
+            tests = XMLHelper::readTests(":/Database.xml");
             break;
         }
         default: {

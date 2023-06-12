@@ -1,6 +1,10 @@
 #include "MainWindow.h"
 #include "common/ui/EnumAvailableWidgets.h"
 #include <QDesktopServices>
+#include <QResource>
+#include <QProcess>
+#include <QTemporaryFile>
+#include <QDir>
 
 MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui_window(new Ui::MainWindow) {
     ui_window->setupUi(this);
@@ -62,44 +66,34 @@ void MainWindow::onTestComplete() {
 }
 
 void MainWindow::onHelpOpened() {
-    qDebug() << "Open help";
-    // Определите путь к файлу справки
-    QString helpPath = "help.html";
-    QString fullPath = "C:/workspace/PsychologyTestApp/Test2.chm";
 
-    // Откройте файл справки в браузере
-    QDesktopServices::openUrl(QUrl::fromLocalFile(fullPath));
+    QFile resourceFile(":/help/PsychologyTest.chm");
+    QString tempPath = QDir::tempPath() + "/PsychologyTest.chm";
+
+    if (QFile::exists(tempPath)) {
+        if (QFile::remove(tempPath)) {// если файл удален успешно
+            qDebug() << "File removed successfully.";
+        } else {// если произошла ошибка при удалении
+            qDebug() << "Failed to remove the file."; //Я не понимаю почему,но он не удаляет ничего
+        }
+    }
+
+    if (!resourceFile.copy(tempPath)) {
+        qDebug() << "Failed to copy the file to temporary directory.";
+        qDebug() << tempPath;
+    }
+
+    QDesktopServices::openUrl(QUrl::fromLocalFile(tempPath));//Костыль.
 
 }
 
 
 void MainWindow::keyPressEvent(QKeyEvent *event) {
-    qDebug() << "KeyPressed!";
 
     if (event->key() == Qt::Key_F1) {
-        //TODO: открыть справку. Кто-то знает как она выглядит??
-        qDebug() << "F1 pressed!";
         this->onHelpOpened();
-
     }
 
-}
-
-
-bool MainWindow::eventFilter(QObject *obj, QEvent *event) {
-    if (event->type() == QEvent::KeyPress) {
-        auto *keyEvent = static_cast<QKeyEvent *>(event);
-        int key = keyEvent->key();
-        // Return true to reject the key-presses
-        if  (key == Qt::Key_Left || key == Qt::Key_Right || key == Qt::Key_Up || key == Qt::Key_Down)
-        {
-            //process event here somehow, or instruct your class to do it later
-            return true; //filter the event
-        }
-    } else {
-        // standard event processing
-        return QMainWindow::eventFilter(obj, event);
-    }
 }
 
 MainWindow::~MainWindow() {

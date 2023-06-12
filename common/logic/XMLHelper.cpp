@@ -17,7 +17,7 @@ QList<Test *> XMLHelper::readTests(QString databasePath) {
         return tests;
     }
 
-    QFile file(databasePath);
+    QFile file(":/Database.xml");
     file.open(QFile::ReadOnly | QFile::Text);
 
     QDomDocument doc;

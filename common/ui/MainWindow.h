@@ -46,7 +46,6 @@ class MainWindow : public QMainWindow {
 
     protected:
         virtual void keyPressEvent(QKeyEvent *event) override;
-        virtual bool eventFilter(QObject *obj, QEvent *event) override;
 
 
 };

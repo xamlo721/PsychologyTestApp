@@ -52,5 +52,6 @@
         <file>../tests/Torston/images/FIG47.bmp</file>
         <file>../tests/Torston/images/FIG48.bmp</file>
         <file>../Database.xml</file>
+        <file>../help/PsychologyTest.chm</file>
     </qresource>
 </RCC>
