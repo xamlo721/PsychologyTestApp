@@ -26,7 +26,7 @@ class ResultWidget : public QWidget {
 
     public:
         Ui::Result *uiResult;
-        QColor blue = QColor(66, 66, 255, 128);
+        QColor blue = QColor(150, 255, 128, 128);
         QColor yellow = QColor(255, 255, 255, 255);
 
 };

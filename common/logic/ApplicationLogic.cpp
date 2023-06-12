@@ -136,7 +136,7 @@ void ApplicationLogic::onSectionEnded() {
 
 
 void ApplicationLogic::onTestAborted() {
-
+    this->questions.clear();
    //TODO: Сбросить выполнение и перейти в режим готовности
 
 }

@@ -1,6 +1,6 @@
 #include "MainWindow.h"
 #include "common/ui/EnumAvailableWidgets.h"
-
+#include <QDesktopServices>
 
 MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui_window(new Ui::MainWindow) {
     ui_window->setupUi(this);
@@ -63,6 +63,13 @@ void MainWindow::onTestComplete() {
 
 void MainWindow::onHelpOpened() {
     qDebug() << "Open help";
+    // Определите путь к файлу справки
+    QString helpPath = "help.html";
+    QString fullPath = "C:/workspace/PsychologyTestApp/Test2.chm";
+
+    // Откройте файл справки в браузере
+    QDesktopServices::openUrl(QUrl::fromLocalFile(fullPath));
+
 }
 
 
@@ -71,7 +78,8 @@ void MainWindow::keyPressEvent(QKeyEvent *event) {
 
     if (event->key() == Qt::Key_F1) {
         //TODO: открыть справку. Кто-то знает как она выглядит??
-        qDebug() << "KeyPressed!";
+        qDebug() << "F1 pressed!";
+        this->onHelpOpened();
 
     }
 

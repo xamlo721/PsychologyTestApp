@@ -92,6 +92,7 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 DISTFILES += \
     Database.xml \
+    help.html \
     pictures/back.png \
     pictures/face.png \
     tests/Torston/images/FIG1.bmp \
