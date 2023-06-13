@@ -54,77 +54,9 @@
    <enum>QTabWidget::Rounded</enum>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <layout class="QHBoxLayout" name="horizontalLayout">
-    <item>
-     <widget class="QStackedWidget" name="stackedWidget">
-      <property name="styleSheet">
-       <string notr="true">QWidget#page {
-            background-image: url(&quot;:/pictures/back.png&quot;);
-}</string>
-      </property>
-      <property name="currentIndex">
-       <number>0</number>
-      </property>
-      <widget class="MainMenuWidget" name="mainMenu">
-       <property name="styleSheet">
-        <string notr="true"/>
-       </property>
-      </widget>
-      <widget class="InstructionLiriWidget" name="infoLiri"/>
-      <widget class="InstrutionTorsonWidget" name="infoTorson"/>
-      <widget class="QuestionLiriWidget" name="questLiri"/>
-      <widget class="QuestionTorsonWidget" name="questTorson"/>
-      <widget class="ResultWidget" name="questResult"/>
-      <widget class="ResultTorson" name="resultTorston"/>
-     </widget>
-    </item>
-   </layout>
+   <layout class="QHBoxLayout" name="horizontalLayout"/>
   </widget>
  </widget>
- <customwidgets>
-  <customwidget>
-   <class>MainMenuWidget</class>
-   <extends>QWidget</extends>
-   <header>common/ui/MainMenuWidget.h</header>
-   <container>1</container>
-  </customwidget>
-  <customwidget>
-   <class>ResultWidget</class>
-   <extends>QWidget</extends>
-   <header>common/ui/ResultWidget.h</header>
-   <container>1</container>
-  </customwidget>
-  <customwidget>
-   <class>QuestionTorsonWidget</class>
-   <extends>QWidget</extends>
-   <header>common/ui/QuestionTorsonWidget.h</header>
-   <container>1</container>
-  </customwidget>
-  <customwidget>
-   <class>QuestionLiriWidget</class>
-   <extends>QWidget</extends>
-   <header>common/ui/QuestionLiriWidget.h</header>
-   <container>1</container>
-  </customwidget>
-  <customwidget>
-   <class>InstrutionTorsonWidget</class>
-   <extends>QWidget</extends>
-   <header>common/ui/InstrutionTorsonWidget.h</header>
-   <container>1</container>
-  </customwidget>
-  <customwidget>
-   <class>InstructionLiriWidget</class>
-   <extends>QWidget</extends>
-   <header>common/ui/InstructionLiriWidget.h</header>
-   <container>1</container>
-  </customwidget>
-  <customwidget>
-   <class>ResultTorson</class>
-   <extends>QWidget</extends>
-   <header>common/ui/ResultTorson.h</header>
-   <container>1</container>
-  </customwidget>
- </customwidgets>
  <resources>
   <include location="aaa.qrc"/>
  </resources>

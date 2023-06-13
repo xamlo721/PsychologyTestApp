@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>Result</class>
- <widget class="QWidget" name="Result">
+ <class>ResultTorson</class>
+ <widget class="QWidget" name="ResultTorson">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -14,7 +14,7 @@
    <string>Form</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">QWidget#Result {
+   <string notr="true">QWidget#ResultTorson {
 	background-image: url(&quot;:/pictures/back.png&quot;);
 }</string>
   </property>
@@ -34,7 +34,7 @@
     </font>
    </property>
    <property name="text">
-    <string>*Для выхода нажмитие &lt;Esc&gt;</string>
+    <string>*Для выхода нажмите &lt;Esc&gt;</string>
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>
@@ -161,48 +161,36 @@ QPushButton:hover {
 	background-color:rgba(217, 217, 217, 1);
 }</string>
    </property>
-   <widget class="QLabel" name="label">
+   <widget class="QTextEdit" name="textEdit">
     <property name="geometry">
      <rect>
-      <x>510</x>
+      <x>10</x>
       <y>0</y>
-      <width>381</width>
+      <width>871</width>
       <height>391</height>
      </rect>
     </property>
-    <property name="font">
-     <font>
-      <family>Montserrat Medium</family>
-      <pointsize>16</pointsize>
-     </font>
+    <property name="verticalScrollBarPolicy">
+     <enum>Qt::ScrollBarAlwaysOff</enum>
     </property>
-    <property name="text">
-     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;1. Авторитарный&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;2. Эгоистичный&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;3. Агрессивный&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;4. Подозрительный&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;5. Подчиняемый&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;6. Зависимый&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;7. Дружелюбный&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;8. Альтруистический&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    <property name="horizontalScrollBarPolicy">
+     <enum>Qt::ScrollBarAlwaysOff</enum>
     </property>
-    <property name="alignment">
-     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+    <property name="readOnly">
+     <bool>true</bool>
     </property>
-   </widget>
-   <widget class="QRadarChart" name="radar" native="true">
-    <property name="geometry">
-     <rect>
-      <x>40</x>
-      <y>10</y>
-      <width>360</width>
-      <height>360</height>
-     </rect>
+    <property name="html">
+     <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:150%;&quot;&gt;&lt;span style=&quot; font-family:'Montserrat Medium'; font-size:16pt; color:#000000;&quot;&gt;	Вы не самый социально-активный человек, больше проявляете интерес к теории и достижению цели. &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:150%;&quot;&gt;&lt;span style=&quot; font-family:'Montserrat Medium'; font-size:16pt; color:#000000;&quot;&gt;	Для Вас характерна преимущественная ориентация на внутренние эталоны упорядочивания внешних впечатлений в условиях, когда навязываются неадекватные формы отражения внешнего мира. Вам свойственна устойчивость и адекватное восприятие предметного мира. Вы независимы от общества в большинстве ситуаций, а при выборе своей цели игнорируете окружение. &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:150%;&quot;&gt;&lt;span style=&quot; font-family:'Montserrat Medium'; font-size:16pt; color:#000000;&quot;&gt;	Для Вас характерна высокая аналитичность, позволяющая Вам легко структурировать окружающую среду, и большая склонность полагаться на свои собственные оценки, мнения, впечатления.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
   </widget>
  </widget>
- <customwidgets>
-  <customwidget>
-   <class>QRadarChart</class>
-   <extends>QWidget</extends>
-   <header>common/ui/qradar.h</header>
-   <container>1</container>
-  </customwidget>
- </customwidgets>
  <resources/>
  <connections/>
 </ui>

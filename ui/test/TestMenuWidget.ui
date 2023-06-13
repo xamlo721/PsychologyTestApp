@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>MainMenuWidget</class>
- <widget class="QWidget" name="MainMenuWidget">
+ <class>TestMenuWidget</class>
+ <widget class="QWidget" name="TestMenuWidget">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -14,7 +14,7 @@
    <string>Form</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">QWidget#MainMenuWidget {
+   <string notr="true">QWidget#TestMenuWidget {
             background-image: url(&quot;:/pictures/back.png&quot;);
 }</string>
   </property>

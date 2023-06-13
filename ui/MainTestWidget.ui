@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainTestWidget</class>
+ <widget class="QWidget" name="MainTestWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1000</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget#MainTestWidget {
+            background-image: url(&quot;:/pictures/back.png&quot;);
+}</string>
+  </property>
+  <layout class="QHBoxLayout" name="horizontalLayout">
+   <item>
+    <widget class="QStackedWidget" name="stackedWidget">
+     <property name="styleSheet">
+      <string notr="true">QWidget#stackedWidget {
+            background-image: url(&quot;:/pictures/back.png&quot;);
+}</string>
+     </property>
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="TestMenuWidget" name="mainMenu">
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+     </widget>
+     <widget class="InstructionLiriWidget" name="infoLiri"/>
+     <widget class="InstrutionTorsonWidget" name="infoTorson"/>
+     <widget class="QuestionLiriWidget" name="questLiri"/>
+     <widget class="QuestionTorsonWidget" name="questTorson"/>
+     <widget class="ResultWidget" name="questResult"/>
+     <widget class="ResultTorson" name="resultTorston"/>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>TestMenuWidget</class>
+   <extends>QWidget</extends>
+   <header>common/ui/test/TestMenuWidget.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>ResultWidget</class>
+   <extends>QWidget</extends>
+   <header>common/ui/test/ResultWidget.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>QuestionTorsonWidget</class>
+   <extends>QWidget</extends>
+   <header>common/ui/test/QuestionTorsonWidget.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>QuestionLiriWidget</class>
+   <extends>QWidget</extends>
+   <header>common/ui/test/QuestionLiriWidget.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>InstrutionTorsonWidget</class>
+   <extends>QWidget</extends>
+   <header>common/ui/test/InstrutionTorsonWidget.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>InstructionLiriWidget</class>
+   <extends>QWidget</extends>
+   <header>common/ui/test/InstructionLiriWidget.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>ResultTorson</class>
+   <extends>QWidget</extends>
+   <header>common/ui/test/ResultTorson.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

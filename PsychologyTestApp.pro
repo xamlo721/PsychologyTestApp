@@ -30,17 +30,18 @@ SOURCES += \
     common/items/TestResult.cpp \
     common/items/TestSection.cpp \
     common/logic/XMLHelper.cpp \
-    common/ui/InstructionLiriWidget.cpp \
-    common/ui/InstrutionTorsonWidget.cpp \
-    common/ui/QuestionLiriWidget.cpp \
-    common/ui/QuestionTorsonWidget.cpp \
-    common/ui/ResultWidget.cpp \
-    common/ui/qradar.cpp \
+    common/ui/test/InstructionLiriWidget.cpp \
+    common/ui/test/InstrutionTorsonWidget.cpp \
+    common/ui/test/QuestionLiriWidget.cpp \
+    common/ui/test/QuestionTorsonWidget.cpp \
+    common/ui/test/ResultWidget.cpp \
+    common/ui/test/TestMenuWidget.cpp \
+    common/ui/test/qradar.cpp \
     common/utils/XmlUtils.cpp \
     main.cpp \
     common/ui/MainWindow.cpp \
-    common/ui/MainMenuWidget.cpp \
-    common/ui/ResultTorson.cpp
+    common/ui/test/ResultTorson.cpp \
+    common/ui/MainTestWidget.cpp
 
 RC_FILE     = resources.rc
 
@@ -64,27 +65,29 @@ HEADERS += \
     common/items/TestResult.h \
     common/items/TestSection.h \
     common/logic/XMLHelper.h \
-    common/ui/EnumAvailableWidgets.h \
-    common/ui/InstructionLiriWidget.h \
-    common/ui/InstrutionTorsonWidget.h \
+    common/ui/test/EnumAvailableWidgets.h \
+    common/ui/test/InstructionLiriWidget.h \
+    common/ui/test/InstrutionTorsonWidget.h \
     common/ui/MainWindow.h \
-    common/ui/QuestionLiriWidget.h \
-    common/ui/QuestionTorsonWidget.h \
-    common/ui/ResultWidget.h \
-    common/ui/qradar.h \
+    common/ui/test/QuestionLiriWidget.h \
+    common/ui/test/QuestionTorsonWidget.h \
+    common/ui/test/ResultWidget.h \
+    common/ui/test/TestMenuWidget.h \
+    common/ui/test/qradar.h \
     common/utils/XmlUtils.h \
-    common/ui/MainMenuWidget.h \
-    common/ui/ResultTorson.h
+    common/ui/test/ResultTorson.h \
+    common/ui/MainTestWidget.h
 
 FORMS += \
-    ui/InstructionLiri.ui \
-    ui/InstructionTorston.ui \
-    ui/MainMenuWidget.ui \
+    ui/MainTestWidget.ui \
+    ui/test/InstructionLiri.ui \
+    ui/test/InstructionTorston.ui \
     ui/MainWindow.ui \
-    ui/QuestionsLiri.ui \
-    ui/QuestionsTorston.ui \
-    ui/Result.ui \
-    ui/ResultTorson.ui
+    ui/test/QuestionsLiri.ui \
+    ui/test/QuestionsTorston.ui \
+    ui/test/Result.ui \
+    ui/test/ResultTorson.ui \
+    ui/test/TestMenuWidget.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
@@ -93,7 +96,6 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 DISTFILES += \
     Database.xml \
-    help.html \
     pictures/back.png \
     pictures/face.png \
     tests/Torston/images/FIG1.bmp \

@@ -38,7 +38,7 @@
     </font>
    </property>
    <property name="text">
-    <string>*Можно использовать клавиши клавиатуры (1 и 2), для выхода нажмитие &lt;Esc&gt;</string>
+    <string>*Можно использовать клавиши клавиатуры (1 и 2), для выхода нажмите &lt;Esc&gt;</string>
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>

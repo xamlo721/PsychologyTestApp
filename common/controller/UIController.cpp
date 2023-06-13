@@ -1,5 +1,5 @@
 #include "UIController.h"
-#include "common/ui/EnumAvailableWidgets.h"
+#include "common/ui/test/EnumAvailableWidgets.h"
 
 UIController::UIController(QObject *parent) : QObject(parent) {
 
