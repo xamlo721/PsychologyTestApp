@@ -20,7 +20,7 @@ class MainWindow : public QMainWindow {
         ~MainWindow();
 
     public://FIXME
-        Ui::MainWindow *ui_window;
+        Ui::MainWindow *ui;
 
         void onHelpOpened();
 

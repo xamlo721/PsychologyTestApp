@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainAuthWidget</class>
+ <widget class="QWidget" name="MainAuthWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1000</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget#MainAuthWidget {
+            background-image: url(&quot;:/pictures/back.png&quot;);
+}</string>
+  </property>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

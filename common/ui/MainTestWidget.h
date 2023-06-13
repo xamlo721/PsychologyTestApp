@@ -37,7 +37,7 @@ class MainTestWidget : public QWidget {
         void signalTestComplete();
         void signalTestAborted();
 
-    private:
+    public://FIXME
         Ui::MainTestWidget *ui;
         void onTestComplete();
 

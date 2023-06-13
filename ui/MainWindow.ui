@@ -54,9 +54,45 @@
    <enum>QTabWidget::Rounded</enum>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <layout class="QHBoxLayout" name="horizontalLayout"/>
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <property name="spacing">
+     <number>0</number>
+    </property>
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <item>
+     <widget class="QStackedWidget" name="stackedWidget">
+      <widget class="MainTestWidget" name="testWidget"/>
+      <widget class="MainAuthWidget" name="authWidget"/>
+     </widget>
+    </item>
+   </layout>
   </widget>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>MainTestWidget</class>
+   <extends>QWidget</extends>
+   <header>common/ui/MainTestWidget.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>MainAuthWidget</class>
+   <extends>QWidget</extends>
+   <header>common/ui/MainAuthWidget.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
  <resources>
   <include location="aaa.qrc"/>
  </resources>

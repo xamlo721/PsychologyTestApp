@@ -9,8 +9,8 @@
 #include <QUrl>
 #include <QKeyEvent>
 
-MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui_window(new Ui::MainWindow) {
-    ui_window->setupUi(this);
+MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWindow) {
+    ui->setupUi(this);
 
 }
 
@@ -46,6 +46,6 @@ void MainWindow::keyPressEvent(QKeyEvent *event) {
 
 
 MainWindow::~MainWindow() {
-    delete ui_window;
+    delete ui;
 }
 

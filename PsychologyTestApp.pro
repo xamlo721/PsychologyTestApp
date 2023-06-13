@@ -30,6 +30,7 @@ SOURCES += \
     common/items/TestResult.cpp \
     common/items/TestSection.cpp \
     common/logic/XMLHelper.cpp \
+    common/ui/MainAuthWidget.cpp \
     common/ui/test/InstructionLiriWidget.cpp \
     common/ui/test/InstrutionTorsonWidget.cpp \
     common/ui/test/QuestionLiriWidget.cpp \
@@ -65,6 +66,7 @@ HEADERS += \
     common/items/TestResult.h \
     common/items/TestSection.h \
     common/logic/XMLHelper.h \
+    common/ui/MainAuthWidget.h \
     common/ui/test/EnumAvailableWidgets.h \
     common/ui/test/InstructionLiriWidget.h \
     common/ui/test/InstrutionTorsonWidget.h \
@@ -79,10 +81,11 @@ HEADERS += \
     common/ui/MainTestWidget.h
 
 FORMS += \
+    ui/MainWindow.ui \
+    ui/MainAuthWidget.ui \
     ui/MainTestWidget.ui \
     ui/test/InstructionLiri.ui \
     ui/test/InstructionTorston.ui \
-    ui/MainWindow.ui \
     ui/test/QuestionsLiri.ui \
     ui/test/QuestionsTorston.ui \
     ui/test/Result.ui \
