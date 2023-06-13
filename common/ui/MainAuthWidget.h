@@ -17,6 +17,14 @@ class MainAuthWidget : public QWidget {
         explicit MainAuthWidget(QWidget *parent = nullptr);
         ~MainAuthWidget();
 
+    public slots:
+        void onRespButtonPressed();
+        void onPsychoButtonPressed();
+        void onExitButton();
+
+    signals:
+        void signalApplicationClose();
+
     private:
         Ui::MainAuthWidget *ui;
 

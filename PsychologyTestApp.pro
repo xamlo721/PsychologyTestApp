@@ -42,7 +42,8 @@ SOURCES += \
     main.cpp \
     common/ui/MainWindow.cpp \
     common/ui/test/ResultTorson.cpp \
-    common/ui/MainTestWidget.cpp
+    common/ui/MainTestWidget.cpp \
+    ui/auth/UserAuthWidget.cpp
 
 RC_FILE     = resources.rc
 
@@ -78,12 +79,14 @@ HEADERS += \
     common/ui/test/qradar.h \
     common/utils/XmlUtils.h \
     common/ui/test/ResultTorson.h \
-    common/ui/MainTestWidget.h
+    common/ui/MainTestWidget.h \
+    ui/auth/UserAuthWidget.h
 
 FORMS += \
     ui/MainWindow.ui \
     ui/MainAuthWidget.ui \
     ui/MainTestWidget.ui \
+    ui/auth/UserAuthWidget.ui \
     ui/test/InstructionLiri.ui \
     ui/test/InstructionTorston.ui \
     ui/test/QuestionsLiri.ui \
