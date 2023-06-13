@@ -18,160 +18,44 @@
             background-image: url(&quot;:/pictures/back.png&quot;);
 }</string>
   </property>
-  <widget class="QLabel" name="name">
-   <property name="geometry">
-    <rect>
-     <x>300</x>
-     <y>0</y>
-     <width>391</width>
-     <height>51</height>
-    </rect>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <property name="spacing">
+    <number>0</number>
    </property>
-   <property name="font">
-    <font>
-     <family>MS Shell Dlg 2</family>
-     <pointsize>24</pointsize>
-    </font>
+   <property name="leftMargin">
+    <number>0</number>
    </property>
-   <property name="styleSheet">
-    <string notr="true">color: rgb(255, 255, 255);</string>
+   <property name="topMargin">
+    <number>0</number>
    </property>
-   <property name="text">
-    <string>Выберите пользователя!</string>
+   <property name="rightMargin">
+    <number>0</number>
    </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
+   <property name="bottomMargin">
+    <number>0</number>
    </property>
-  </widget>
-  <widget class="QPushButton" name="openPsycho_pushButton">
-   <property name="geometry">
-    <rect>
-     <x>330</x>
-     <y>510</y>
-     <width>320</width>
-     <height>75</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <family>Montserrat Medium</family>
-     <pointsize>22</pointsize>
-     <weight>75</weight>
-     <bold>true</bold>
-     <kerning>false</kerning>
-    </font>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">QPushButton {
-border-radius: 10px;
-background-color: rgb(255, 255, 255);
-}
-QPushButton:hover {
-        background-color: rgba(216, 249, 255);
-}</string>
-   </property>
-   <property name="text">
-    <string>Психолог</string>
-   </property>
-  </widget>
-  <widget class="QWidget" name="image" native="true">
-   <property name="geometry">
-    <rect>
-     <x>800</x>
-     <y>0</y>
-     <width>200</width>
-     <height>195</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">QWidget#image {
-           image: url(&quot;:/pictures/face.png&quot;);
-}</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="info">
-   <property name="geometry">
-    <rect>
-     <x>10</x>
-     <y>0</y>
-     <width>131</width>
-     <height>24</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <family>Montserrat Medium</family>
-     <pointsize>14</pointsize>
-    </font>
-   </property>
-   <property name="text">
-    <string>Справка - F1</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="openRespond_pushButton">
-   <property name="geometry">
-    <rect>
-     <x>10</x>
-     <y>510</y>
-     <width>310</width>
-     <height>75</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <family>Montserrat Medium</family>
-     <pointsize>22</pointsize>
-     <weight>75</weight>
-     <bold>true</bold>
-     <kerning>false</kerning>
-    </font>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">QPushButton {
-border-radius: 10px;
-background-color: rgb(255, 255, 255);
-drop-shadow: (0px 10px 10px rgba(0, 0, 0, 0.5));
-}
-QPushButton:hover {
-        background-color: rgba(216, 249, 255);
-}</string>
-   </property>
-   <property name="text">
-    <string>Респондент</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="exit_pushButton">
-   <property name="geometry">
-    <rect>
-     <x>660</x>
-     <y>510</y>
-     <width>310</width>
-     <height>75</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <family>Montserrat Medium</family>
-     <pointsize>22</pointsize>
-     <weight>75</weight>
-     <bold>true</bold>
-     <kerning>false</kerning>
-    </font>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">QPushButton {
-border-radius: 10px;
-background-color: rgb(255, 255, 255);
-}
-QPushButton:hover {
-        background-color: rgba(216, 249, 255);
-}</string>
-   </property>
-   <property name="text">
-    <string>Выход</string>
-   </property>
-  </widget>
+   <item>
+    <widget class="QStackedWidget" name="stackedWidget">
+     <widget class="WelcomeAuthWidget" name="welcomePage"/>
+     <widget class="UserAuthWidget" name="authPage"/>
+    </widget>
+   </item>
+  </layout>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>WelcomeAuthWidget</class>
+   <extends>QWidget</extends>
+   <header>common/ui/auth/WelcomeAuthWidget.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>UserAuthWidget</class>
+   <extends>QWidget</extends>
+   <header>common/ui/auth/UserAuthWidget.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections/>
 </ui>

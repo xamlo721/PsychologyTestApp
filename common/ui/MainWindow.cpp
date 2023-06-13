@@ -11,7 +11,7 @@
 
 MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWindow) {
     ui->setupUi(this);
-
+    this->ui->stackedWidget->setCurrentIndex(1);
 }
 
 void MainWindow::onHelpOpened() {

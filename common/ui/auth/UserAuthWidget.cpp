@@ -10,6 +10,10 @@ UserAuthWidget::UserAuthWidget(QWidget *parent) : QWidget(parent), ui(new Ui::Us
 }
 
 
+void UserAuthWidget::showUserAccounts() {//TODO: Добавить лист
+
+}
+
 void UserAuthWidget::onAuthButtonPressed() {
 
 }
@@ -27,6 +31,18 @@ void UserAuthWidget::onRemoveButtonPressed() {
 }
 
 void UserAuthWidget::onCancelButtonPressed() {
+    emit signalCancel();
+}
+
+void UserAuthWidget::onUserAccountClicked() {
+
+}
+
+QPushButton * UserAuthWidget::findPressedAccount() {
+
+}
+
+void UserAuthWidget::clearAccountsList() {
 
 }
 

@@ -43,7 +43,8 @@ SOURCES += \
     common/ui/MainWindow.cpp \
     common/ui/test/ResultTorson.cpp \
     common/ui/MainTestWidget.cpp \
-    ui/auth/UserAuthWidget.cpp
+    common/ui/auth/UserAuthWidget.cpp \
+    common/ui/auth/WelcomeAuthWidget.cpp
 
 RC_FILE     = resources.rc
 
@@ -80,13 +81,15 @@ HEADERS += \
     common/utils/XmlUtils.h \
     common/ui/test/ResultTorson.h \
     common/ui/MainTestWidget.h \
-    ui/auth/UserAuthWidget.h
+    common/ui/auth/UserAuthWidget.h \
+    common/ui/auth/WelcomeAuthWidget.h
 
 FORMS += \
     ui/MainWindow.ui \
     ui/MainAuthWidget.ui \
     ui/MainTestWidget.ui \
     ui/auth/UserAuthWidget.ui \
+    ui/auth/WelcomeAuthWidget.ui \
     ui/test/InstructionLiri.ui \
     ui/test/InstructionTorston.ui \
     ui/test/QuestionsLiri.ui \

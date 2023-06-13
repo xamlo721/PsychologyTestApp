@@ -13,9 +13,14 @@ class UserAuthWidget : public QWidget {
 
     Q_OBJECT
 
+    private:
+        Ui::UserAuthWidget *ui;
+
     public:
         explicit UserAuthWidget(QWidget *parent = nullptr);
         ~UserAuthWidget();
+
+        void showUserAccounts();//TODO: Добавить лист
 
     public slots:
         void onAuthButtonPressed();
@@ -24,8 +29,19 @@ class UserAuthWidget : public QWidget {
         void onRemoveButtonPressed();
         void onCancelButtonPressed();
 
+    private slots:
+        void onUserAccountClicked();
+
+    signals:
+        void signalAuthUser();
+        void signalAddUser();
+        void signalEditUser();
+        void signalDeleteUser();
+        void signalCancel();
+
     private:
-        Ui::UserAuthWidget *ui;
+        QPushButton * findPressedAccount();
+        void clearAccountsList();
 
 };
 

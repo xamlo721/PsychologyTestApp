@@ -22,9 +22,6 @@ class MainAuthWidget : public QWidget {
         void onPsychoButtonPressed();
         void onExitButton();
 
-    signals:
-        void signalApplicationClose();
-
     private:
         Ui::MainAuthWidget *ui;
 
