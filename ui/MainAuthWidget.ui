@@ -39,6 +39,8 @@
      <widget class="WelcomeAuthWidget" name="welcomePage"/>
      <widget class="UserAuthWidget" name="authPage"/>
      <widget class="PsychoResultWidget" name="psychoResults"/>
+     <widget class="UserResultLiriWidget" name="userResultLiri"/>
+     <widget class="UserResultTorstonWidget" name="userResultTorston"/>
     </widget>
    </item>
   </layout>
@@ -60,6 +62,18 @@
    <class>PsychoResultWidget</class>
    <extends>QWidget</extends>
    <header>common/ui/auth/PsychoResultWidget.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>UserResultLiriWidget</class>
+   <extends>QWidget</extends>
+   <header>common/ui/auth/UserResultLiriWidget.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>UserResultTorstonWidget</class>
+   <extends>QWidget</extends>
+   <header>common/ui/auth/UserResultTorstonWidget.h</header>
    <container>1</container>
   </customwidget>
  </customwidgets>

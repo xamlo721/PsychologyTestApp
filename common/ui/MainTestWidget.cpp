@@ -6,7 +6,7 @@
 #include <QTemporaryFile>
 #include <QDir>
 
-#include "common/ui/test/EnumAvailableWidgets.h"
+#include "common/ui/test/EnumAvailableTestWidgets.h"
 
 
 MainTestWidget::MainTestWidget(QWidget *parent) : QWidget(parent),  ui(new Ui::MainTestWidget) {
@@ -32,44 +32,44 @@ MainTestWidget::MainTestWidget(QWidget *parent) : QWidget(parent),  ui(new Ui::M
 
 
 void MainTestWidget::showResult(EnumTorsonResult result) {
-    this->ui->stackedWidget->setCurrentIndex(EnumAvailableWidgets::ResultTorston);
+    this->ui->stackedWidget->setCurrentIndex(EnumAvailableTestWidgets::ResultTorston);
     this->ui->resultTorston->showResult(result);
 }
 
 
 void MainTestWidget::onMainMenuLiriTestButtonClicked() {
     emit signalSelectTest(EnumTestType::Liri);
-    this->ui->stackedWidget->setCurrentIndex(EnumAvailableWidgets::InfoLiri);
+    this->ui->stackedWidget->setCurrentIndex(EnumAvailableTestWidgets::InfoLiri);
 
 }
 
 void MainTestWidget::onMainMenuTorsonTestButtonClicked() {
     emit signalSelectTest(EnumTestType::Torston);
     //TODO:
-    this->ui->stackedWidget->setCurrentIndex(EnumAvailableWidgets::InfoTorson);
+    this->ui->stackedWidget->setCurrentIndex(EnumAvailableTestWidgets::InfoTorson);
 
 }
 
 void MainTestWidget::onInfoLiriTestButtonClicked() {
     emit signalTestStarted(EnumTestType::Liri);
-    this->ui->stackedWidget->setCurrentIndex(EnumAvailableWidgets::QuestLiri);
+    this->ui->stackedWidget->setCurrentIndex(EnumAvailableTestWidgets::QuestLiri);
 }
 
 void MainTestWidget::onInfoTorsonTestButtonClicked() {
     emit signalTestStarted(EnumTestType::Torston);
-    this->ui->stackedWidget->setCurrentIndex(EnumAvailableWidgets::QuestTorson);
+    this->ui->stackedWidget->setCurrentIndex(EnumAvailableTestWidgets::QuestTorson);
 
 }
 
 void MainTestWidget::onTestAborted() {
-    this->ui->stackedWidget->setCurrentIndex(EnumAvailableWidgets::MainMenu);
+    this->ui->stackedWidget->setCurrentIndex(EnumAvailableTestWidgets::MainMenu);
     emit signalTestAborted();
 }
 
 
 void MainTestWidget::onTestComplete() {
     emit signalTestComplete();
-    this->ui->stackedWidget->setCurrentIndex(EnumAvailableWidgets::MainMenu);
+    this->ui->stackedWidget->setCurrentIndex(EnumAvailableTestWidgets::MainMenu);
 }
 
 

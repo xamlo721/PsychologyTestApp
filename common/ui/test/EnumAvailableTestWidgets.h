@@ -1,7 +1,7 @@
-#ifndef ENUMAVAILABLEWIDGETS_H
-#define ENUMAVAILABLEWIDGETS_H
+#ifndef ENUMAVAILABLETESTWIDGETS_H
+#define ENUMAVAILABLETESTWIDGETS_H
 
-enum EnumAvailableWidgets : int {
+enum EnumAvailableTestWidgets : int {
 
     MainMenu = 0,
 
@@ -18,4 +18,4 @@ enum EnumAvailableWidgets : int {
     ResultTorston = 6
 
 };
-#endif // ENUMAVAILABLEWIDGETS_H
+#endif // ENUMAVAILABLETESTWIDGETS_H
