@@ -12,7 +12,7 @@ class UserDialog : public QDialog {
     Q_OBJECT
 
     public:
-        explicit UserDialog(QWidget *parent = nullptr);
+        explicit UserDialog(QString username = "", QWidget *parent = nullptr);
         ~UserDialog();
 
     public slots:

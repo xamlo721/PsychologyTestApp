@@ -4,6 +4,8 @@
 #include <QWidget>
 
 #include "ui_UserAuthWidget.h"
+#include "common/ui/auth/UserAccountPutton.h"
+#include <QMap>
 
 namespace Ui {
     class UserAuthWidget;
@@ -30,7 +32,7 @@ class UserAuthWidget : public QWidget {
         void onCancelButtonPressed();
 
     private slots:
-        void onUserAccountClicked();
+        void onUserAccountClicked(QString account);
         void onNewUserAccont(QString account);
 
     signals:
@@ -43,6 +45,8 @@ class UserAuthWidget : public QWidget {
     private:
         QPushButton * findPressedAccount();
         void clearAccountsList();
+        QMap <QString, UserAccountPutton * > accounts;
+        QString selectedAccount;
 
 };
 

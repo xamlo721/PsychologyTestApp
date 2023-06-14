@@ -35,6 +35,10 @@ void UserAuthWidget::onAddButtonPressed() {
 
 void UserAuthWidget::onEditButtonPressed() {
     //TODO: Вызвать диалоговое окно ввода имени
+    //TODO: Вызвать диалоговое окно ввода имени
+    UserDialog * nameDialog = new UserDialog();
+    nameDialog->show();
+    QObject::connect(nameDialog, &UserDialog::signalOnAnswered, this, &UserAuthWidget::onNewUserAccont);//TODO: Не туда коннектим
 }
 
 void UserAuthWidget::onRemoveButtonPressed() {
@@ -45,7 +49,17 @@ void UserAuthWidget::onCancelButtonPressed() {
     emit signalCancel();
 }
 
-void UserAuthWidget::onUserAccountClicked() {
+void UserAuthWidget::onUserAccountClicked(QString account) {
+    qDebug() << account;
+
+    this->selectedAccount = account;
+
+    for(UserAccountPutton * b : this->accounts.values()) {
+        b->setChecked(false);
+    }
+
+    UserAccountPutton * selectedAccount = accounts.value(account);
+    selectedAccount->setChecked(true);
 
 }
 
@@ -56,10 +70,10 @@ void UserAuthWidget::onNewUserAccont(QString account) {
         return;
     }
 
-    QPushButton * button = new QPushButton();
-    button->setText(account);
-    button->setCheckable(true);
+    UserAccountPutton * button = new UserAccountPutton(account);
     this->ui->scrollArea->layout()->addWidget(button);
+    accounts.insert(account, button);
+    QObject::connect(button, &UserAccountPutton::signalSelected, this, &UserAuthWidget::onUserAccountClicked);//TODO: Не туда коннектим
 }
 
 QPushButton * UserAuthWidget::findPressedAccount() {

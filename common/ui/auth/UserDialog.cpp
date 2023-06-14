@@ -1,8 +1,9 @@
 #include "UserDialog.h"
 #include "ui_UserDialog.h"
 
-UserDialog::UserDialog(QWidget *parent) : QDialog(parent), ui(new Ui::UserDialog) {
+UserDialog::UserDialog(QString username, QWidget *parent) : QDialog(parent), ui(new Ui::UserDialog) {
     ui->setupUi(this);
+    this->ui->lineEdit->setText(username);
     QObject::connect(this->ui->buttonBox, &QDialogButtonBox::accepted, this, &UserDialog::onOkButtonClicked);
 
 }
