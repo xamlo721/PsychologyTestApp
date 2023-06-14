@@ -15,7 +15,12 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWi
     ui->setupUi(this);
     this->ui->stackedWidget->setCurrentIndex(EnumUIMode::Auth);
     QObject::connect(this->ui->authWidget, &MainAuthWidget::signalReadyForTest, this, &MainWindow::onTestReady);
+    QObject::connect(this->ui->testWidget, &MainTestWidget::signalTestComplete, this, &MainWindow::onTestComplete);
 
+}
+
+void MainWindow::onTestComplete() {
+    this->ui->stackedWidget->setCurrentIndex(EnumUIMode::Auth);
 }
 
 void MainWindow::onTestReady() {

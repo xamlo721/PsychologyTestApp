@@ -25,6 +25,7 @@ class MainWindow : public QMainWindow {
         void onHelpOpened();
 
     public slots:
+        void onTestComplete();
         void onTestReady();
 
     protected:

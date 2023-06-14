@@ -34,6 +34,7 @@ void MainAuthWidget::openTorstonResult() {
 void MainAuthWidget::onUserAuth() {
     //TODO: Запомнить что за юзер тестируется
     emit signalReadyForTest();
+    this->openWelcomePage();
 }
 
 void MainAuthWidget::onRespButtonPressed() {
