@@ -31,6 +31,7 @@ class UserAuthWidget : public QWidget {
 
     private slots:
         void onUserAccountClicked();
+        void onNewUserAccont(QString account);
 
     signals:
         void signalAuthUser();

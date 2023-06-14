@@ -1,4 +1,6 @@
 #include "UserAuthWidget.h"
+#include "common/ui/auth/UserDialog.h"
+#include <QDebug>
 
 UserAuthWidget::UserAuthWidget(QWidget *parent) : QWidget(parent), ui(new Ui::UserAuthWidget) {
     ui->setupUi(this);
@@ -7,6 +9,10 @@ UserAuthWidget::UserAuthWidget(QWidget *parent) : QWidget(parent), ui(new Ui::Us
     QObject::connect(this->ui->edit_pushButton, &QPushButton::clicked, this, &UserAuthWidget::onEditButtonPressed);
     QObject::connect(this->ui->remove_pushButton, &QPushButton::clicked, this, &UserAuthWidget::onRemoveButtonPressed);
     QObject::connect(this->ui->cancel_pushButton, &QPushButton::clicked, this, &UserAuthWidget::onCancelButtonPressed);
+
+    ui->scrollArea->setLayout(new QVBoxLayout());
+    ui->scrollArea->layout()->setAlignment(Qt::AlignTop);
+
 }
 
 
@@ -21,6 +27,10 @@ void UserAuthWidget::onAuthButtonPressed() {
 
 void UserAuthWidget::onAddButtonPressed() {
     //TODO: Вызвать диалоговое окно ввода имени
+    UserDialog * nameDialog = new UserDialog();
+    nameDialog->show();
+    QObject::connect(nameDialog, &UserDialog::signalOnAnswered, this, &UserAuthWidget::onNewUserAccont);
+
 }
 
 void UserAuthWidget::onEditButtonPressed() {
@@ -37,6 +47,19 @@ void UserAuthWidget::onCancelButtonPressed() {
 
 void UserAuthWidget::onUserAccountClicked() {
 
+}
+
+void UserAuthWidget::onNewUserAccont(QString account) {
+    qDebug() << account;
+    if (account.isEmpty()) {
+        //TODO: сделать что-иньбудь
+        return;
+    }
+
+    QPushButton * button = new QPushButton();
+    button->setText(account);
+    button->setCheckable(true);
+    this->ui->scrollArea->layout()->addWidget(button);
 }
 
 QPushButton * UserAuthWidget::findPressedAccount() {
