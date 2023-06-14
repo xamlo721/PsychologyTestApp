@@ -71,6 +71,7 @@ HEADERS += \
     common/items/TestResult.h \
     common/items/TestSection.h \
     common/logic/XMLHelper.h \
+    common/ui/EnumUIMode.h \
     common/ui/MainAuthWidget.h \
     common/ui/auth/EnumAvailableAuthWidgets.h \
     common/ui/auth/PsychoResultWidget.h \

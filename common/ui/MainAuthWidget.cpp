@@ -7,6 +7,7 @@ MainAuthWidget::MainAuthWidget(QWidget *parent) : QWidget(parent),  ui(new Ui::M
     QObject::connect(this->ui->welcomePage, &WelcomeAuthWidget::signalRespOpen, this, &MainAuthWidget::onRespButtonPressed);
     QObject::connect(this->ui->welcomePage, &WelcomeAuthWidget::signalPsychoOpen, this, &MainAuthWidget::onPsychoButtonPressed);
     QObject::connect(this->ui->welcomePage, &WelcomeAuthWidget::signalApplicationClose, this, &MainAuthWidget::onExitButton);
+    QObject::connect(this->ui->authPage, &UserAuthWidget::signalAuthUser, this, &MainAuthWidget::onUserAuth);
 
 }
 
@@ -28,6 +29,11 @@ void MainAuthWidget::openUserLiriResult() {
 
 void MainAuthWidget::openTorstonResult() {
     this->ui->stackedWidget->setCurrentIndex(EnumAvailableAuthWidgets::UserResultTorston);
+}
+
+void MainAuthWidget::onUserAuth() {
+    //TODO: Запомнить что за юзер тестируется
+    emit signalReadyForTest();
 }
 
 void MainAuthWidget::onRespButtonPressed() {

@@ -24,6 +24,9 @@ class MainWindow : public QMainWindow {
 
         void onHelpOpened();
 
+    public slots:
+        void onTestReady();
+
     protected:
         virtual void keyPressEvent(QKeyEvent *event) override;
 

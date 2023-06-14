@@ -15,19 +15,20 @@ void UserAuthWidget::showUserAccounts() {//TODO: Добавить лист
 }
 
 void UserAuthWidget::onAuthButtonPressed() {
-
+    //TODO: Выбрать аккаунт, по которому кликали и кинуть сигнал вверху
+    emit signalAuthUser();
 }
 
 void UserAuthWidget::onAddButtonPressed() {
-
+    //TODO: Вызвать диалоговое окно ввода имени
 }
 
 void UserAuthWidget::onEditButtonPressed() {
-
+    //TODO: Вызвать диалоговое окно ввода имени
 }
 
 void UserAuthWidget::onRemoveButtonPressed() {
-
+    //TODO: Вызвать диалоговое окно подтверждения
 }
 
 void UserAuthWidget::onCancelButtonPressed() {
@@ -43,7 +44,15 @@ QPushButton * UserAuthWidget::findPressedAccount() {
 }
 
 void UserAuthWidget::clearAccountsList() {
-
+    QWidget * m_view = this->ui->scrollArea;
+    if ( m_view->layout() != NULL ) {
+        QLayoutItem* item;
+        while ( ( item = m_view->layout()->takeAt( 0 ) ) != NULL ) {
+            delete item->widget();
+            delete item;
+        }
+        //delete m_view->layout();
+    }
 }
 
 UserAuthWidget::~UserAuthWidget() {

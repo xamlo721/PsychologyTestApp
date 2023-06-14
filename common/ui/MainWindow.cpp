@@ -9,9 +9,17 @@
 #include <QUrl>
 #include <QKeyEvent>
 
+#include "common/ui/EnumUIMode.h"
+
 MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWindow) {
     ui->setupUi(this);
-    this->ui->stackedWidget->setCurrentIndex(1);
+    this->ui->stackedWidget->setCurrentIndex(EnumUIMode::Auth);
+    QObject::connect(this->ui->authWidget, &MainAuthWidget::signalReadyForTest, this, &MainWindow::onTestReady);
+
+}
+
+void MainWindow::onTestReady() {
+    this->ui->stackedWidget->setCurrentIndex(EnumUIMode::Test);
 }
 
 void MainWindow::onHelpOpened() {
