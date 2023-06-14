@@ -1,4 +1,5 @@
 #include "MainAuthWidget.h"
+#include "common/ui/auth/EnumAvailableAuthWidgets.h"
 
 MainAuthWidget::MainAuthWidget(QWidget *parent) : QWidget(parent),  ui(new Ui::MainAuthWidget) {
     ui->setupUi(this);
@@ -9,16 +10,36 @@ MainAuthWidget::MainAuthWidget(QWidget *parent) : QWidget(parent),  ui(new Ui::M
 
 }
 
+void MainAuthWidget::openWelcomePage() {
+    this->ui->stackedWidget->setCurrentIndex(EnumAvailableAuthWidgets::Welcome);
+}
+
+void MainAuthWidget::openUserAuthPage() {
+    this->ui->stackedWidget->setCurrentIndex(EnumAvailableAuthWidgets::UserAuth);
+}
+
+void MainAuthWidget::openPsychoPage() {
+    this->ui->stackedWidget->setCurrentIndex(EnumAvailableAuthWidgets::PsychoAuth);
+}
+
+void MainAuthWidget::openUserLiriResult() {
+    this->ui->stackedWidget->setCurrentIndex(EnumAvailableAuthWidgets::UserResultLiri);
+}
+
+void MainAuthWidget::openTorstonResult() {
+    this->ui->stackedWidget->setCurrentIndex(EnumAvailableAuthWidgets::UserResultTorston);
+}
+
 void MainAuthWidget::onRespButtonPressed() {
-    this->ui->stackedWidget->setCurrentIndex(1);
+    this->openUserAuthPage();
 }
 
 void MainAuthWidget::onPsychoButtonPressed() {
-    this->ui->stackedWidget->setCurrentIndex(2);
+    this->openPsychoPage();
 }
 
 void MainAuthWidget::onExitButton() {
-    //emit signalApplicationClose();
+    emit signalWindowClose();
 }
 
 MainAuthWidget::~MainAuthWidget() {

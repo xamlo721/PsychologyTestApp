@@ -72,7 +72,7 @@ HEADERS += \
     common/items/TestSection.h \
     common/logic/XMLHelper.h \
     common/ui/MainAuthWidget.h \
-    common/ui/auth/EnumAvailableAuthWidget.h \
+    common/ui/auth/EnumAvailableAuthWidgets.h \
     common/ui/auth/PsychoResultWidget.h \
     common/ui/auth/UserResultLiriWidget.h \
     common/ui/auth/UserResultTorstonWidget.h \

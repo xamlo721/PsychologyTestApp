@@ -1,5 +1,5 @@
-#ifndef ENUMAVAILABLEAUTHWIDGET_H
-#define ENUMAVAILABLEAUTHWIDGET_H
+#ifndef ENUMAVAILABLEAUTHWIDGETS_H
+#define ENUMAVAILABLEAUTHWIDGETS_H
 
 enum EnumAvailableAuthWidgets : int {
 
@@ -15,4 +15,4 @@ enum EnumAvailableAuthWidgets : int {
 
 };
 
-#endif // ENUMAVAILABLEAUTHWIDGET_H
+#endif // ENUMAVAILABLEAUTHWIDGETS_H
