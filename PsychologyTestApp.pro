@@ -31,6 +31,7 @@ SOURCES += \
     common/items/TestSection.cpp \
     common/logic/XMLHelper.cpp \
     common/ui/MainAuthWidget.cpp \
+    common/ui/auth/PsychoResultWidget.cpp \
     common/ui/test/InstructionLiriWidget.cpp \
     common/ui/test/InstrutionTorsonWidget.cpp \
     common/ui/test/QuestionLiriWidget.cpp \
@@ -69,6 +70,7 @@ HEADERS += \
     common/items/TestSection.h \
     common/logic/XMLHelper.h \
     common/ui/MainAuthWidget.h \
+    common/ui/auth/PsychoResultWidget.h \
     common/ui/test/EnumAvailableWidgets.h \
     common/ui/test/InstructionLiriWidget.h \
     common/ui/test/InstrutionTorsonWidget.h \
@@ -85,6 +87,7 @@ HEADERS += \
     common/ui/auth/WelcomeAuthWidget.h
 
 FORMS += \
+    ui/auth/PsychoResultWidget.ui \
     ui/MainWindow.ui \
     ui/MainAuthWidget.ui \
     ui/MainTestWidget.ui \

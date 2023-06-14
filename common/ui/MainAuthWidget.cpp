@@ -14,7 +14,7 @@ void MainAuthWidget::onRespButtonPressed() {
 }
 
 void MainAuthWidget::onPsychoButtonPressed() {
-
+    this->ui->stackedWidget->setCurrentIndex(2);
 }
 
 void MainAuthWidget::onExitButton() {

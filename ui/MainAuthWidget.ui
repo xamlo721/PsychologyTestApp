@@ -38,6 +38,7 @@
     <widget class="QStackedWidget" name="stackedWidget">
      <widget class="WelcomeAuthWidget" name="welcomePage"/>
      <widget class="UserAuthWidget" name="authPage"/>
+     <widget class="PsychoResultWidget" name="psychoResults"/>
     </widget>
    </item>
   </layout>
@@ -53,6 +54,12 @@
    <class>UserAuthWidget</class>
    <extends>QWidget</extends>
    <header>common/ui/auth/UserAuthWidget.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>PsychoResultWidget</class>
+   <extends>QWidget</extends>
+   <header>common/ui/auth/PsychoResultWidget.h</header>
    <container>1</container>
   </customwidget>
  </customwidgets>
