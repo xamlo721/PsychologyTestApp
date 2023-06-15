@@ -38,7 +38,7 @@ class UserAuthWidget : public QWidget {
         void onEditUserAccont(QString account);
 
     signals:
-        void signalAuthUser();
+        void signalAuthUser(QString account);
         void signalAddUser();
         void signalEditUser();
         void signalDeleteUser();

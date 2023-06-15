@@ -31,8 +31,9 @@ void ApplicationLogic::onTestSelected(EnumTestType testType) {
 
 }
 
-void ApplicationLogic::onTestStarted() {
+void ApplicationLogic::onTestStarted(QString user) {
 
+    this->currentUser = user;
     //TODO:
 
     rawTorston = 0;
@@ -157,7 +158,7 @@ EnumTorsonResult ApplicationLogic::calculateTorstonResult() {
 
 void ApplicationLogic::sendLiriResult() {
 
-    emit signalShowLiriResult(
+    emit signalShowLiriResult(LiriResult(
                 param1 * 100.f/16,
                 param2 * 100.f/16,
                 param3 * 100.f/16,
@@ -165,5 +166,5 @@ void ApplicationLogic::sendLiriResult() {
                 param5 * 100.f/16,
                 param6 * 100.f/16,
                 param7 * 100.f/16,
-                param8 * 100.f/16);
+                param8 * 100.f/16));
 }

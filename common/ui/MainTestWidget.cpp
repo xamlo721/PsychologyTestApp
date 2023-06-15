@@ -51,12 +51,12 @@ void MainTestWidget::onMainMenuTorsonTestButtonClicked() {
 }
 
 void MainTestWidget::onInfoLiriTestButtonClicked() {
-    emit signalTestStarted(EnumTestType::Liri);
+    emit signalTestStarted();
     this->ui->stackedWidget->setCurrentIndex(EnumAvailableTestWidgets::QuestLiri);
 }
 
 void MainTestWidget::onInfoTorsonTestButtonClicked() {
-    emit signalTestStarted(EnumTestType::Torston);
+    emit signalTestStarted();
     this->ui->stackedWidget->setCurrentIndex(EnumAvailableTestWidgets::QuestTorson);
 
 }

@@ -10,6 +10,7 @@
 #include "common/items/TestResult.h"
 #include "common/items/Question.h"
 #include "common/items/EnumTorsonResult.h"
+#include "common/items/LiriResult.h"
 
 #include "common/logic/LogicConstants.h"
 
@@ -29,14 +30,14 @@ class ApplicationLogic : public QObject {
 
         void signalShowTorstonResult(EnumTorsonResult result);
 
-        void signalShowLiriResult(int st1, int st2,int st3,int st4,int st5,int st6,int st7,int st8);
+        void signalShowLiriResult(LiriResult result);
 
         void signalUpdateProgressBar(float completePercent);
 
     public slots:
         void onTestSelected(EnumTestType testType);
 
-        void onTestStarted();
+        void onTestStarted(QString user);
 
         void onQuestAnsweredLiri(bool asnwer);
 
@@ -69,6 +70,8 @@ class ApplicationLogic : public QObject {
         int param6 = 0;
         int param7 = 0;
         int param8 = 0;
+
+        QString currentUser;
 
         EnumTorsonResult calculateTorstonResult();
         void sendLiriResult();

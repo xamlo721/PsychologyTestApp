@@ -24,13 +24,13 @@ class MainAuthWidget : public QWidget {
         void openTorstonResult();
 
     public slots:
-        void onUserAuth();
+        void onUserAuth(QString user);
         void onRespButtonPressed();
         void onPsychoButtonPressed();
         void onExitButton();
 
     signals:
-        void signalReadyForTest();
+        void signalReadyForTest(QString user);
         void signalWindowClose();
 
     private:

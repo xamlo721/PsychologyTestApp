@@ -33,7 +33,7 @@ class MainTestWidget : public QWidget {
 
     signals:
         void signalSelectTest(EnumTestType testType);
-        void signalTestStarted(EnumTestType testType);
+        void signalTestStarted();
         void signalTestComplete();
         void signalTestAborted();
 

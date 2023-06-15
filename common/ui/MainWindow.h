@@ -4,6 +4,7 @@
 #include <QMainWindow>
 
 #include "ui_MainWindow.h"
+#include "common/items/LiriResult.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -26,10 +27,24 @@ class MainWindow : public QMainWindow {
 
     public slots:
         void onTestComplete();
-        void onTestReady();
+        void onTestReady(QString user);
+        void displayLiriResult(LiriResult result);
+        void displayTorstonResult();
+
+    signals:
+        void signalTestStarted(QString user);
 
     protected:
         virtual void keyPressEvent(QKeyEvent *event) override;
+
+    private:
+        QString activeUser;
+
+    private slots:
+
+        void onTestStarted();
+
+
 
 };
 

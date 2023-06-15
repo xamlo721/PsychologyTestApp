@@ -10,12 +10,14 @@
 #include <QKeyEvent>
 
 #include "common/ui/EnumUIMode.h"
+#include "common/ui/test/EnumAvailableTestWidgets.h"
 
 MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWindow) {
     ui->setupUi(this);
     this->ui->stackedWidget->setCurrentIndex(EnumUIMode::Auth);
     QObject::connect(this->ui->authWidget, &MainAuthWidget::signalReadyForTest, this, &MainWindow::onTestReady);
     QObject::connect(this->ui->testWidget, &MainTestWidget::signalTestComplete, this, &MainWindow::onTestComplete);
+    QObject::connect(this->ui->testWidget, &MainTestWidget::signalTestStarted, this, &MainWindow::onTestStarted);
 
 }
 
@@ -23,10 +25,18 @@ void MainWindow::onTestComplete() {
     this->ui->stackedWidget->setCurrentIndex(EnumUIMode::Auth);
 }
 
-void MainWindow::onTestReady() {
+void MainWindow::onTestReady(QString user) {
+    this->activeUser = user;
     this->ui->stackedWidget->setCurrentIndex(EnumUIMode::Test);
 }
+void MainWindow::displayLiriResult(LiriResult result) {
+    this->ui->testWidget->ui->stackedWidget->setCurrentIndex(EnumAvailableTestWidgets::ResultLiri);//Костыль
+    this->ui->testWidget->ui->questResult->displayRadar(result.st1, result.st2,result.st3,result.st4,result.st5,result.st6,result.st7,result.st8);
 
+}
+void MainWindow::displayTorstonResult() {
+
+}
 void MainWindow::onHelpOpened() {
 
     QFile resourceFile(":/help/PsychologyTest.chm");
@@ -55,6 +65,10 @@ void MainWindow::keyPressEvent(QKeyEvent *event) {
         this->onHelpOpened();
     }
 
+}
+
+void MainWindow::onTestStarted() {
+    emit signalTestStarted(this->activeUser);
 }
 
 

@@ -33,9 +33,9 @@ void MainAuthWidget::openTorstonResult() {
     this->ui->stackedWidget->setCurrentIndex(EnumAvailableAuthWidgets::UserResultTorston);
 }
 
-void MainAuthWidget::onUserAuth() {
+void MainAuthWidget::onUserAuth(QString user) {
     //TODO: Запомнить что за юзер тестируется
-    emit signalReadyForTest();
+    emit signalReadyForTest(user);
     this->openWelcomePage();
 }
 

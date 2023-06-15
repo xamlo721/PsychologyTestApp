@@ -29,7 +29,7 @@ void UserAuthWidget::showUserAccounts(QList <QString> accounts) {
 
 void UserAuthWidget::onAuthButtonPressed() {
     //TODO: Выбрать аккаунт, по которому кликали и кинуть сигнал вверху
-    emit signalAuthUser();
+    emit signalAuthUser(this->selectedAccount);
 }
 
 void UserAuthWidget::onAddButtonPressed() {
