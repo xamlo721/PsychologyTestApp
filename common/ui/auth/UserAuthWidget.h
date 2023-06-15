@@ -17,12 +17,13 @@ class UserAuthWidget : public QWidget {
 
     private:
         Ui::UserAuthWidget *ui;
+        QMap <QString, UserAccountPutton * > accounts;
+        QString selectedAccount;
 
     public:
         explicit UserAuthWidget(QWidget *parent = nullptr);
         ~UserAuthWidget();
 
-        void showUserAccounts();//TODO: Добавить лист
 
     public slots:
         void onAuthButtonPressed();
@@ -34,6 +35,7 @@ class UserAuthWidget : public QWidget {
     private slots:
         void onUserAccountClicked(QString account);
         void onNewUserAccont(QString account);
+        void onEditUserAccont(QString account);
 
     signals:
         void signalAuthUser();
@@ -43,10 +45,11 @@ class UserAuthWidget : public QWidget {
         void signalCancel();
 
     private:
-        QPushButton * findPressedAccount();
         void clearAccountsList();
-        QMap <QString, UserAccountPutton * > accounts;
-        QString selectedAccount;
+        void showUserAccounts(QList <QString> accounts);//TODO: Добавить лист
+        void onSelectAccount();
+        void onUnselectAccount();
+
 
 };
 
