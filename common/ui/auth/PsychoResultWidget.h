@@ -7,16 +7,22 @@ namespace Ui {
 class PsychoResultWidget;
 }
 
-class PsychoResultWidget : public QWidget
-{
+class PsychoResultWidget : public QWidget {
+
     Q_OBJECT
 
-public:
-    explicit PsychoResultWidget(QWidget *parent = nullptr);
-    ~PsychoResultWidget();
+    public:
+        explicit PsychoResultWidget(QWidget *parent = nullptr);
+        ~PsychoResultWidget();
 
-private:
-    Ui::PsychoResultWidget *ui;
+    signals:
+        void signalCancelButtonPressed();
+
+    private slots:
+            void onCancelButtonPressed();
+
+    private:
+        Ui::PsychoResultWidget *ui;
 };
 
 #endif // PSYCHORESULTWIDGET_H
