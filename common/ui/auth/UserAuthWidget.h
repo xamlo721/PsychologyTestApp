@@ -5,6 +5,7 @@
 
 #include "ui_UserAuthWidget.h"
 #include "common/ui/auth/UserAccountPutton.h"
+#include "common/items/UserAccount.h"
 #include <QMap>
 
 namespace Ui {
@@ -17,39 +18,40 @@ class UserAuthWidget : public QWidget {
 
     private:
         Ui::UserAuthWidget *ui;
-        QMap <QString, UserAccountPutton * > accounts;
-        QString selectedAccount;
+        QMap <UserAccount, UserAccountPutton * > accounts;
+        UserAccount selectedAccount;
+        bool hasSelectedAccount;
 
     public:
         explicit UserAuthWidget(QWidget *parent = nullptr);
         ~UserAuthWidget();
 
+        void changeAccountName(UserAccount account);
+        void displayNewAccount(UserAccount account);
+        void removeDisplayedAccount(UserAccount account);
 
-    public slots:
+    private slots:
+        void onUserAccountClicked(UserAccount account);
+        void onEditUserAccount(UserAccount account);
+
         void onAuthButtonPressed();
         void onAddButtonPressed();
         void onEditButtonPressed();
         void onRemoveButtonPressed();
         void onCancelButtonPressed();
 
-    private slots:
-        void onUserAccountClicked(QString account);
-        void onNewUserAccont(QString account);
-        void onEditUserAccont(QString account);
-
     signals:
-        void signalAuthUser(QString account);
-        void signalAddUser();
-        void signalEditUser();
-        void signalDeleteUser();
+        void signalAuthUser(UserAccount account);
+        void signalAddUser(QString account);
+        void signalEditUser(UserAccount account);
+        void signalDeleteUser(UserAccount account);
         void signalCancel();
 
     private:
-        void clearAccountsList();
-        void showUserAccounts(QList <QString> accounts);//TODO: Добавить лист
+        void clearAccountsListWidgets();
+        void displayUserAccounts(QList <UserAccount> accounts);
         void onSelectAccount();
         void onUnselectAccount();
-
 
 };
 

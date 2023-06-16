@@ -63,6 +63,7 @@ HEADERS += \
     common/items/LiriResult.h \
     common/items/TestInstruction.h \
     common/items/TorstonResult.h \
+    common/items/UserAccount.h \
     common/logic/ApplicationLogic.h \
     common/logic/Database.h \
     common/items/EnumDatabaseType.h \

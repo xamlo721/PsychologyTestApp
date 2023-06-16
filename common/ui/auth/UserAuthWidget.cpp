@@ -19,59 +19,88 @@ UserAuthWidget::UserAuthWidget(QWidget *parent) : QWidget(parent), ui(new Ui::Us
 
 }
 
-
-void UserAuthWidget::showUserAccounts(QList <QString> accounts) {
-
-    for (QString account : accounts) {
-        this->onNewUserAccont(account);//Говнокод
+void UserAuthWidget::changeAccountName(UserAccount account) {
+    if (!this->accounts.contains(account)) {
+        //TODO: Ваай, зайки, так у нас программа с багами
+        return;
     }
+    UserAccountPutton * button = this->accounts.take(this->selectedAccount);
+    this->selectedAccount = account;
+    this->accounts.insert(account, button);
 }
 
+void UserAuthWidget::displayNewAccount(UserAccount account) {
+
+    if (accounts.contains(account)) {
+        //TODO: сделать что-иньбудь
+        return;
+    }
+
+    UserAccountPutton * button = new UserAccountPutton(account);
+    this->ui->scrollArea->layout()->addWidget(button);
+    accounts.insert(account, button);
+    QObject::connect(button, &UserAccountPutton::signalSelected, this, &UserAuthWidget::onUserAccountClicked);
+
+}
+
+void UserAuthWidget::displayUserAccounts(QList <UserAccount> accounts) {
+
+    for (UserAccount account : accounts) {
+        this->displayNewAccount(account);
+    }
+
+}
+
+void UserAuthWidget::removeDisplayedAccount(UserAccount account) {
+    this->clearAccountsListWidgets();
+    this->accounts.remove(account);
+    QList<UserAccount> accountsNames = this->accounts.keys();
+    this->accounts.clear();
+    this->displayUserAccounts(accountsNames);
+    this->onUnselectAccount();
+}
+
+//=================================================================================================
 void UserAuthWidget::onAuthButtonPressed() {
-    //TODO: Выбрать аккаунт, по которому кликали и кинуть сигнал вверху
-    emit signalAuthUser(this->selectedAccount);
+    //Выбрать аккаунт, по которому кликали и кинуть сигнал вверху
+    if(this->hasSelectedAccount) {
+        emit signalAuthUser(this->selectedAccount);
+    }
 }
 
 void UserAuthWidget::onAddButtonPressed() {
     //TODO: Вызвать диалоговое окно ввода имени
     UserDialog * nameDialog = new UserDialog();
     nameDialog->show();
-    QObject::connect(nameDialog, &UserDialog::signalOnAnswered, this, &UserAuthWidget::onNewUserAccont);
-
+    QObject::connect(nameDialog, &UserDialog::signalCreateNewUser, this, &UserAuthWidget::signalAddUser);
 }
 
 void UserAuthWidget::onEditButtonPressed() {
     //TODO: Вызвать диалоговое окно ввода имени
-    //TODO: Вызвать диалоговое окно ввода имени
-    UserDialog * nameDialog = new UserDialog();
+    UserDialog * nameDialog = new UserDialog(this->selectedAccount);
     nameDialog->show();
-    QObject::connect(nameDialog, &UserDialog::signalOnAnswered, this, &UserAuthWidget::onEditUserAccont);//TODO: Не туда коннектим
-}
-void UserAuthWidget::onEditUserAccont(QString account) {
-
-    UserAccountPutton * button = this->accounts.take(this->selectedAccount);
-    button->setText(account);
-    this->selectedAccount = account;
-    this->accounts.insert(account, button);
+    QObject::connect(nameDialog, &UserDialog::signalEditUserName, this, &UserAuthWidget::onEditUserAccount);//TODO: Не туда коннектим
 }
 
 
 void UserAuthWidget::onRemoveButtonPressed() {
-    this->clearAccountsList();
-    this->accounts.take(this->selectedAccount);
-    QList<QString> accountsNames = this->accounts.keys();
-    this->accounts.clear();
-    this->selectedAccount = "";
-    this->onUnselectAccount();
-    this->showUserAccounts(accountsNames);
+    if (hasSelectedAccount) {
+        emit signalDeleteUser(this->selectedAccount);
+    }
 }
 
 void UserAuthWidget::onCancelButtonPressed() {
     emit signalCancel();
 }
 
-void UserAuthWidget::onUserAccountClicked(QString account) {
-    qDebug() << account;
+void UserAuthWidget::onEditUserAccount(UserAccount account) {
+    if (hasSelectedAccount) {
+        emit signalEditUser(account);
+    }
+}
+//=================================================================================================
+
+void UserAuthWidget::onUserAccountClicked(UserAccount account) {
 
     this->selectedAccount = account;
 
@@ -86,25 +115,7 @@ void UserAuthWidget::onUserAccountClicked(QString account) {
 
 }
 
-void UserAuthWidget::onNewUserAccont(QString account) {
-    qDebug() << account;
-    if (account.isEmpty()) {
-        //TODO: сделать что-иньбудь
-        return;
-    }
-
-    if (accounts.contains(account)) {
-        //TODO: сделать что-иньбудь
-        return;
-    }
-
-    UserAccountPutton * button = new UserAccountPutton(account);
-    this->ui->scrollArea->layout()->addWidget(button);
-    accounts.insert(account, button);
-    QObject::connect(button, &UserAccountPutton::signalSelected, this, &UserAuthWidget::onUserAccountClicked);//TODO: Не туда коннектим
-}
-
-void UserAuthWidget::clearAccountsList() {
+void UserAuthWidget::clearAccountsListWidgets() {
     QWidget * m_view = this->ui->scrollArea;
     if ( m_view->layout() != NULL ) {
         QLayoutItem* item;
@@ -120,12 +131,14 @@ void UserAuthWidget::onSelectAccount() {
     this->ui->auth_pushButton->setDisabled(false);
     this->ui->edit_pushButton->setDisabled(false);
     this->ui->remove_pushButton->setDisabled(false);
+    this->hasSelectedAccount = true;
 }
 
 void UserAuthWidget::onUnselectAccount() {
     this->ui->auth_pushButton->setDisabled(true);
     this->ui->edit_pushButton->setDisabled(true);
     this->ui->remove_pushButton->setDisabled(true);
+    this->hasSelectedAccount = false;
 }
 
 UserAuthWidget::~UserAuthWidget() {

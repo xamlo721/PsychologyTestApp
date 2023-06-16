@@ -2,6 +2,7 @@
 #define USERACCOUNTPUTTON_H
 
 #include <QPushButton>
+#include "common/items/UserAccount.h"
 
 namespace Ui {
     class UserAccountPutton;
@@ -12,17 +13,18 @@ class UserAccountPutton : public QPushButton {
     Q_OBJECT
 
     public:
-        explicit UserAccountPutton(QString name, QPushButton *parent = nullptr);
+        explicit UserAccountPutton(UserAccount name, QPushButton *parent = nullptr);
         ~UserAccountPutton();
 
     signals:
-        void signalSelected(QString user);
+        void signalSelected(UserAccount user);
 
     private slots:
         void onButtonClicked();
 
     private:
         Ui::UserAccountPutton *ui;
+        UserAccount user;
 
 };
 
