@@ -9,6 +9,33 @@ void ApplicationLogic::setAvailableTests(QMap<EnumTestType, Test *> tests) {
     this->tests = tests;
 }
 
+void ApplicationLogic::onAuthUser(UserAccount user) {
+    this->currentUser = user;
+
+
+
+    //emit signalAuthUser(user);
+}
+
+void ApplicationLogic::onAddUser(QString user) {
+
+    //emit signalAddUser(user);
+
+}
+
+void ApplicationLogic::onEditUser(UserAccount user) {
+
+    //emit signalEditUser(user);
+
+}
+
+void ApplicationLogic::onDeleteUser(UserAccount user) {
+
+    //emit signalDeleteUser(user);
+
+}
+
+
 void ApplicationLogic::onTestSelected(EnumTestType testType) {
 
     if (!tests.contains(testType)) {
@@ -19,7 +46,6 @@ void ApplicationLogic::onTestSelected(EnumTestType testType) {
 
     //Запихнуть тест в очередь вопросов
     for (int s = 0; s < currentTest->getSections().size(); s++) {
-
         TestSection section = currentTest->getSections().value(s);
         for (int i = 0; i < section.getQuestions().size(); i ++) {
             this->questions.append(section.getQuestions().value(i));
@@ -31,9 +57,7 @@ void ApplicationLogic::onTestSelected(EnumTestType testType) {
 
 }
 
-void ApplicationLogic::onTestStarted(QString user) {
-
-    this->currentUser = user;
+void ApplicationLogic::onTestStarted() {
     //TODO:
 
     rawTorston = 0;

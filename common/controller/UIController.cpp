@@ -9,9 +9,14 @@ void UIController::init() {
     //TODO: Проверить на наличие окна
 
     QObject::connect(window->ui->testWidget, &MainTestWidget::signalSelectTest, this, &UIController::signalOpenTest);
-    QObject::connect(window, &MainWindow::signalTestStarted, this, &UIController::signalStartTest);
     QObject::connect(window->ui->testWidget, &MainTestWidget::signalTestComplete, this, &UIController::signalCompleteTest);
     QObject::connect(window->ui->testWidget, &MainTestWidget::signalTestAborted, this, &UIController::signalAbortTest);
+
+    QObject::connect(window, &MainWindow::signalTestStarted, this, &UIController::signalStartTest);
+    QObject::connect(window, &MainWindow::signalAuthUser, this, &UIController::onAuthUser);
+    QObject::connect(window, &MainWindow::signalAddUser, this, &UIController::onAddUser);
+    QObject::connect(window, &MainWindow::signalEditUser, this, &UIController::onEditUser);
+    QObject::connect(window, &MainWindow::signalDeleteUser, this, &UIController::onDeleteUser);
 
     QObject::connect(window->ui->testWidget->ui->questLiri, &QuestionLiriWidget::signalAnswerd, this, &UIController::signalQuestAnsweredLiri);
     QObject::connect(window->ui->testWidget->ui->questTorson, &QuestionTorsonWidget::signalAnswered, this, &UIController::signalQuestAnsweredTorson);
@@ -20,6 +25,26 @@ void UIController::init() {
 void UIController::setUI(MainWindow * window) {
     this->window = window;
 }
+
+void UIController::onAuthUser(UserAccount user) {
+    emit signalAuthUser(user);
+}
+
+void UIController::onAddUser(QString user) {
+    emit signalAddUser(user);
+
+}
+
+void UIController::onEditUser(UserAccount user) {
+    emit signalEditUser(user);
+
+}
+
+void UIController::onDeleteUser(UserAccount user) {
+    emit signalDeleteUser(user);
+
+}
+
 
 void UIController::onAskQuestion(EnumTestType testType, Question q) {
 

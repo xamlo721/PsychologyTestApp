@@ -27,7 +27,7 @@ class UIController : public QObject {
         ///Сигнал о том, что был выбран тест
         void signalOpenTest(EnumTestType testType);
 
-        void signalStartTest(QString user);
+        void signalStartTest();
 
         void signalQuestAnsweredLiri(bool asnwer);
 
@@ -36,6 +36,11 @@ class UIController : public QObject {
         void signalAbortTest();
 
         void signalCompleteTest();
+
+        void signalAuthUser(UserAccount user);
+        void signalAddUser(QString user);
+        void signalEditUser(UserAccount user);
+        void signalDeleteUser(UserAccount user);
 
     public slots:
 
@@ -47,7 +52,11 @@ class UIController : public QObject {
 
         void onUpdateProgressBar(float completePercent);
 
-
+    private slots:
+        void onAuthUser(UserAccount user);
+        void onAddUser(QString user);
+        void onEditUser(UserAccount user);
+        void onDeleteUser(UserAccount user);
 
 
 };

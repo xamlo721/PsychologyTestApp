@@ -66,12 +66,10 @@ void MainTestWidget::onTestAborted() {
     emit signalTestAborted();
 }
 
-
 void MainTestWidget::onTestComplete() {
     emit signalTestComplete();
     this->ui->stackedWidget->setCurrentIndex(EnumAvailableTestWidgets::MainMenu);
 }
-
 
 void MainTestWidget::onHelpOpened() {
 
@@ -102,7 +100,6 @@ void MainTestWidget::keyPressEvent(QKeyEvent *event) {
     }
 
 }
-
 
 MainTestWidget::~MainTestWidget() {
     delete ui;

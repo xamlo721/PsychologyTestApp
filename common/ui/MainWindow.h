@@ -27,24 +27,30 @@ class MainWindow : public QMainWindow {
 
     public slots:
         void onTestComplete();
-        void onTestReady(QString user);
+        void onTestReady();
         void displayLiriResult(LiriResult result);
         void displayTorstonResult();
 
     signals:
-        void signalTestStarted(QString user);
+        void signalTestStarted();
+
+        void signalAuthUser(UserAccount user);
+        void signalAddUser(QString user);
+        void signalEditUser(UserAccount user);
+        void signalDeleteUser(UserAccount user);
 
     protected:
         virtual void keyPressEvent(QKeyEvent *event) override;
 
     private:
-        QString activeUser;
 
     private slots:
-
         void onTestStarted();
 
-
+        void onAuthUser(UserAccount user);
+        void onAddUser(QString user);
+        void onEditUser(UserAccount user);
+        void onDeleteUser(UserAccount user);
 
 };
 

@@ -5,6 +5,7 @@ UserDialog::UserDialog(UserAccount user, QWidget *parent) : QDialog(parent), ui(
     ui->setupUi(this);
     this->displayedAccount = user;
     this->ui->lineEdit->setText(user.getName());
+    this->hasAccount = true;
     QObject::connect(this->ui->buttonBox, &QDialogButtonBox::accepted, this, &UserDialog::onOkButtonClicked);
 
 }
@@ -12,6 +13,7 @@ UserDialog::UserDialog(UserAccount user, QWidget *parent) : QDialog(parent), ui(
 UserDialog::UserDialog(QWidget *parent): QDialog(parent), ui(new Ui::UserDialog) {
     ui->setupUi(this);
     this->ui->lineEdit->setText("Введите имя пользователя");
+    this->hasAccount = false;
     QObject::connect(this->ui->buttonBox, &QDialogButtonBox::accepted, this, &UserDialog::onOkButtonClicked);
 
 }

@@ -14,6 +14,9 @@
 
 #include "common/logic/LogicConstants.h"
 
+#include "common/items/UserAccount.h"
+
+
 class ApplicationLogic : public QObject {
 
     Q_OBJECT
@@ -37,7 +40,7 @@ class ApplicationLogic : public QObject {
     public slots:
         void onTestSelected(EnumTestType testType);
 
-        void onTestStarted(QString user);
+        void onTestStarted();
 
         void onQuestAnsweredLiri(bool asnwer);
 
@@ -48,6 +51,14 @@ class ApplicationLogic : public QObject {
         void onTestAborted();//В россии без абортов никуда
 
         void onTestEnded();
+
+        void onAuthUser(UserAccount user);
+
+        void onAddUser(QString user);
+
+        void onEditUser(UserAccount user);
+
+        void onDeleteUser(UserAccount user);
 
     private:
         QMap<EnumTestType, Test *> tests;
@@ -71,7 +82,9 @@ class ApplicationLogic : public QObject {
         int param7 = 0;
         int param8 = 0;
 
-        QString currentUser;
+        UserAccount currentUser;
+
+        int availableUserId = 0;
 
         EnumTorsonResult calculateTorstonResult();
         void sendLiriResult();

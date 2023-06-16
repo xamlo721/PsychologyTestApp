@@ -24,14 +24,24 @@ class MainAuthWidget : public QWidget {
         void openTorstonResult();
 
     public slots:
-        void onUserAuth(QString user);
         void onRespButtonPressed();
         void onPsychoButtonPressed();
-        void onExitButton();
+
 
     signals:
-        void signalReadyForTest(QString user);
+        void signalAuthUser(UserAccount user);
+        void signalAddUser(QString user);
+        void signalEditUser(UserAccount user);
+        void signalDeleteUser(UserAccount user);
+        void signalReadyForTest();
         void signalWindowClose();
+
+    private slots:
+        void onAuthUser(UserAccount user);
+        void onAddUser(QString user);
+        void onEditUser(UserAccount user);
+        void onDeleteUser(UserAccount user);
+        void onExitButton();
 
     private:
         Ui::MainAuthWidget *ui;

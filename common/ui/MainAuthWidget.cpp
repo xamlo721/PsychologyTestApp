@@ -7,7 +7,10 @@ MainAuthWidget::MainAuthWidget(QWidget *parent) : QWidget(parent),  ui(new Ui::M
     QObject::connect(this->ui->welcomePage, &WelcomeAuthWidget::signalRespOpen, this, &MainAuthWidget::onRespButtonPressed);
     QObject::connect(this->ui->welcomePage, &WelcomeAuthWidget::signalPsychoOpen, this, &MainAuthWidget::onPsychoButtonPressed);
     QObject::connect(this->ui->welcomePage, &WelcomeAuthWidget::signalApplicationClose, this, &MainAuthWidget::onExitButton);
-    QObject::connect(this->ui->authPage, &UserAuthWidget::signalAuthUser, this, &MainAuthWidget::onUserAuth);
+    QObject::connect(this->ui->authPage, &UserAuthWidget::signalAuthUser, this, &MainAuthWidget::onAuthUser);
+    QObject::connect(this->ui->authPage, &UserAuthWidget::signalAddUser, this, &MainAuthWidget::onAddUser);
+    QObject::connect(this->ui->authPage, &UserAuthWidget::signalEditUser, this, &MainAuthWidget::onEditUser);
+    QObject::connect(this->ui->authPage, &UserAuthWidget::signalDeleteUser, this, &MainAuthWidget::onDeleteUser);
     QObject::connect(this->ui->authPage, &UserAuthWidget::signalCancel, this, &MainAuthWidget::openWelcomePage);
     QObject::connect(this->ui->psychoResults, &PsychoResultWidget::signalCancelButtonPressed, this, &MainAuthWidget::openWelcomePage);
 
@@ -33,10 +36,26 @@ void MainAuthWidget::openTorstonResult() {
     this->ui->stackedWidget->setCurrentIndex(EnumAvailableAuthWidgets::UserResultTorston);
 }
 
-void MainAuthWidget::onUserAuth(QString user) {
-    //TODO: Запомнить что за юзер тестируется
-    emit signalReadyForTest(user);
+void MainAuthWidget::onAuthUser(UserAccount user) {
+    emit signalAuthUser(user);
     this->openWelcomePage();
+}
+#include <QDebug>
+
+void MainAuthWidget::onAddUser(QString user) {
+    qDebug() << user;
+    emit signalAddUser(user);
+
+}
+
+void MainAuthWidget::onEditUser(UserAccount user) {
+    emit signalEditUser(user);
+
+}
+
+void MainAuthWidget::onDeleteUser(UserAccount user) {
+    emit signalDeleteUser(user);
+
 }
 
 void MainAuthWidget::onRespButtonPressed() {

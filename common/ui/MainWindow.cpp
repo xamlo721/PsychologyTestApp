@@ -19,14 +19,18 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWi
     QObject::connect(this->ui->testWidget, &MainTestWidget::signalTestComplete, this, &MainWindow::onTestComplete);
     QObject::connect(this->ui->testWidget, &MainTestWidget::signalTestStarted, this, &MainWindow::onTestStarted);
 
+    QObject::connect(this->ui->authWidget, &MainAuthWidget::signalAuthUser, this, &MainWindow::onAuthUser);
+    QObject::connect(this->ui->authWidget, &MainAuthWidget::signalAddUser, this, &MainWindow::onAddUser);
+    QObject::connect(this->ui->authWidget, &MainAuthWidget::signalEditUser, this, &MainWindow::onEditUser);
+    QObject::connect(this->ui->authWidget, &MainAuthWidget::signalDeleteUser, this, &MainWindow::onDeleteUser);
+
 }
 
 void MainWindow::onTestComplete() {
     this->ui->stackedWidget->setCurrentIndex(EnumUIMode::Auth);
 }
 
-void MainWindow::onTestReady(QString user) {
-    this->activeUser = user;
+void MainWindow::onTestReady() {
     this->ui->stackedWidget->setCurrentIndex(EnumUIMode::Test);
 }
 void MainWindow::displayLiriResult(LiriResult result) {
@@ -37,6 +41,26 @@ void MainWindow::displayLiriResult(LiriResult result) {
 void MainWindow::displayTorstonResult() {
 
 }
+
+void MainWindow::onAuthUser(UserAccount user) {
+    emit signalAuthUser(user);
+}
+
+void MainWindow::onAddUser(QString user) {
+    emit signalAddUser(user);
+
+}
+
+void MainWindow::onEditUser(UserAccount user) {
+    emit signalEditUser(user);
+
+}
+
+void MainWindow::onDeleteUser(UserAccount user) {
+    emit signalDeleteUser(user);
+
+}
+
 void MainWindow::onHelpOpened() {
 
     QFile resourceFile(":/help/PsychologyTest.chm");
@@ -68,7 +92,7 @@ void MainWindow::keyPressEvent(QKeyEvent *event) {
 }
 
 void MainWindow::onTestStarted() {
-    emit signalTestStarted(this->activeUser);
+    emit signalTestStarted();
 }
 
 
