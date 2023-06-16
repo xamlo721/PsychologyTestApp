@@ -93,6 +93,11 @@ void UserAuthWidget::onNewUserAccont(QString account) {
         return;
     }
 
+    if (accounts.contains(account)) {
+        //TODO: сделать что-иньбудь
+        return;
+    }
+
     UserAccountPutton * button = new UserAccountPutton(account);
     this->ui->scrollArea->layout()->addWidget(button);
     accounts.insert(account, button);
