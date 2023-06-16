@@ -37,6 +37,8 @@ class ApplicationLogic : public QObject {
 
         void signalUpdateProgressBar(float completePercent);
 
+        void signalUpdateUserList(QList<UserAccount> users);
+
     public slots:
         void onTestSelected(EnumTestType testType);
 
@@ -88,6 +90,8 @@ class ApplicationLogic : public QObject {
 
         EnumTorsonResult calculateTorstonResult();
         void sendLiriResult();
+
+        QList<UserAccount> users;
 
 
 };

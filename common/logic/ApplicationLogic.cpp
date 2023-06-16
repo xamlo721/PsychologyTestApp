@@ -19,20 +19,43 @@ void ApplicationLogic::onAuthUser(UserAccount user) {
 
 void ApplicationLogic::onAddUser(QString user) {
 
-    //emit signalAddUser(user);
+
+    for (int i = 0; i < users.size(); i++) {
+        UserAccount account = users.at(i);
+        if (account.getName() == user) {
+            return;
+        }
+    }
+
+    this->users.append(UserAccount(this->availableUserId++, user));
+
+    emit signalUpdateUserList(this->users);
 
 }
 
 void ApplicationLogic::onEditUser(UserAccount user) {
 
-    //emit signalEditUser(user);
+    if (!users.contains(user)) {
+        //TODO:
+        return;
+    }
 
+    this->users.append(user);
+
+    emit signalUpdateUserList(this->users);
 }
 
 void ApplicationLogic::onDeleteUser(UserAccount user) {
 
-    //emit signalDeleteUser(user);
 
+    if (!users.contains(user)) {
+        //TODO:
+        return;
+    }
+
+    this->users.removeOne(user);
+
+    emit signalUpdateUserList(this->users);
 }
 
 
