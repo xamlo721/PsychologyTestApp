@@ -1,12 +1,12 @@
 #ifndef LIRIRESULT_H
 #define LIRIRESULT_H
 
-#include <QString>
+#include "common/items/UserAccount.h"
 
 class LiriResult {
 
     public:
-        QString user;
+        UserAccount user;
         int st1;
         int st2;
         int st3;
@@ -20,7 +20,8 @@ class LiriResult {
 
         }
 
-        LiriResult(int st1, int st2,int st3,int st4,int st5,int st6,int st7,int st8) {
+        LiriResult(UserAccount user, int st1, int st2,int st3,int st4,int st5,int st6,int st7,int st8) {
+            this->user = user;
             this->st1 =st1;
             this->st2 =st2;
             this->st3 =st3;
@@ -30,7 +31,6 @@ class LiriResult {
             this->st7 =st7;
             this->st8 =st8;
         }
-
 
 };
 

@@ -3,18 +3,19 @@
 
 #include <QString>
 #include "common/items/EnumTorsonResult.h"
+#include "common/items/UserAccount.h"
 
 class TorstonResult {
 
     public:
-        QString user;
+        UserAccount user;
         EnumTorsonResult result;
 
         TorstonResult() {
 
         }
 
-        TorstonResult(QString user, EnumTorsonResult result) {
+        TorstonResult(UserAccount user, EnumTorsonResult result) {
             this->user = user;
             this->result = result;
         }

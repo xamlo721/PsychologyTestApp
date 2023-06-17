@@ -201,7 +201,7 @@ EnumTorsonResult ApplicationLogic::calculateTorstonResult() {
 
 void ApplicationLogic::sendLiriResult() {
 
-    emit signalShowLiriResult(LiriResult(
+    emit signalShowLiriResult(LiriResult(this->currentUser,
                 param1 * 100.f/16,
                 param2 * 100.f/16,
                 param3 * 100.f/16,
