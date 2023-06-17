@@ -29,8 +29,9 @@ class UserReslitButton : public QPushButton {
         void signalTorstonResultClicked(TorstonResult result);
 
     private slots:
-            void onClicked();
+        void onClicked();
 
+    public:
         ~UserReslitButton();
 
 
