@@ -85,7 +85,6 @@ void MainWindow::onHelpOpened() {
 
 void MainWindow::syncUserList(QList<UserAccount> users) {
     this->ui->authWidget->syncUserList(users);
-    this->ui->testWidget->syncUserList(users);
 }
 
 

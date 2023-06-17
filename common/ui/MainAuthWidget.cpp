@@ -38,6 +38,7 @@ void MainAuthWidget::openTorstonResult() {
 
 void MainAuthWidget::syncUserList(QList<UserAccount> users) {
     this->ui->authPage->displayUserAccounts(users);
+    this->ui->psychoResults->displayUserAccounts(users);
 }
 
 void MainAuthWidget::onAuthUser(UserAccount user) {
