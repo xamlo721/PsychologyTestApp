@@ -31,7 +31,7 @@ MainTestWidget::MainTestWidget(QWidget *parent) : QWidget(parent),  ui(new Ui::M
 
 
 
-void MainTestWidget::showResult(EnumTorsonResult result) {
+void MainTestWidget::showResult(TorstonResult result) {
     this->ui->stackedWidget->setCurrentIndex(EnumAvailableTestWidgets::ResultTorston);
     this->ui->resultTorston->showResult(result);
 }

@@ -7,9 +7,9 @@ ResultTorson::ResultTorson(QWidget *parent) : QWidget(parent),  ui(new Ui::Resul
 
 }
 
-void ResultTorson::showResult(EnumTorsonResult result) {
+void ResultTorson::showResult(TorstonResult result) {
 
-    switch (result) {
+    switch (result.result) {
 
         case EnumTorsonResult::VeryLow :
         case EnumTorsonResult::Low :

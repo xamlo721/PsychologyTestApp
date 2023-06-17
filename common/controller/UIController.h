@@ -6,6 +6,7 @@
 #include "common/items/Question.h"
 #include "common/items/TestResult.h"
 #include "common/items/LiriResult.h"
+#include "common/items/TorstonResult.h"
 
 #include "common/ui/MainWindow.h"
 
@@ -46,7 +47,7 @@ class UIController : public QObject {
 
         void onAskQuestion(EnumTestType testType, Question q);
 
-        void onShowTorstonResult(EnumTorsonResult result);
+        void onShowTorstonResult(TorstonResult result);
 
         void onShowLiriResult(LiriResult result);
 

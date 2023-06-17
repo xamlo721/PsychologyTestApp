@@ -6,6 +6,7 @@
 #include "ui_ResultTorson.h"
 
 #include "common/items/EnumTorsonResult.h"
+#include "common/items/TorstonResult.h"
 
 
 namespace Ui {
@@ -20,7 +21,7 @@ class ResultTorson : public QWidget {
         explicit ResultTorson(QWidget *parent = nullptr);
         ~ResultTorson();
 
-        void showResult(EnumTorsonResult result);
+        void showResult(TorstonResult result);
 
     public:
         Ui::ResultTorson *ui;

@@ -5,6 +5,8 @@
 
 #include "ui_MainWindow.h"
 #include "common/items/LiriResult.h"
+#include "common/items/TorstonResult.h"
+#include "common/items/Question.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -20,25 +22,36 @@ class MainWindow : public QMainWindow {
         MainWindow(QWidget *parent = nullptr);
         ~MainWindow();
 
-    public://FIXME
-        Ui::MainWindow *ui;
-
-        void onHelpOpened();
+        void displayLiriResult(LiriResult result);
+        void displayTorstonResult(TorstonResult result);
+        void updateProgressBar(float completePercent);
         void syncUserList(QList<UserAccount> users);
+        void changeLiriQuestion(Question q);
+        void changeTorstonQuestion(Question q);
+
+    private://FIXME
+        Ui::MainWindow *ui;
+        void onHelpOpened();
+
 
     public slots:
         void onTestComplete();
         void onTestReady();
-        void displayLiriResult(LiriResult result);
-        void displayTorstonResult();
+
 
     signals:
-        void signalTestStarted();
 
         void signalAuthUser(UserAccount user);
         void signalAddUser(QString user);
         void signalEditUser(UserAccount user);
         void signalDeleteUser(UserAccount user);
+
+        void signalSelectTest(EnumTestType testType);
+        void signalTestStarted();
+        void signalTestComplete();
+        void signalTestAborted();
+        void signalLiriAnswered(bool answer);
+        void signalTorstonAnswered(bool a1, bool a2, bool a3, bool a4 );
 
     protected:
         virtual void keyPressEvent(QKeyEvent *event) override;

@@ -6,7 +6,7 @@
 #include "ui_MainTestWidget.h"
 
 #include "common/items/EnumTestType.h"
-#include "common/items/EnumTorsonResult.h"
+#include "common/items/TorstonResult.h"
 
 namespace Ui {
     class MainTestWidget;
@@ -19,7 +19,7 @@ class MainTestWidget : public QWidget {
     public:
         explicit MainTestWidget(QWidget *parent = nullptr);
         ~MainTestWidget();
-        void showResult(EnumTorsonResult result);
+        void showResult(TorstonResult result);
 
     public slots:
         void onMainMenuLiriTestButtonClicked();

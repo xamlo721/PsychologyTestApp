@@ -162,7 +162,7 @@ void ApplicationLogic::onQuestAnsweredTorson(bool a1, bool a2, bool a3, bool a4 
 
     if (questions.empty()) {
         qDebug() << "calculating torson";
-        emit signalShowTorstonResult(calculateTorstonResult());
+        emit signalShowTorstonResult(TorstonResult(this->currentUser, calculateTorstonResult()));
 
         return;
     }

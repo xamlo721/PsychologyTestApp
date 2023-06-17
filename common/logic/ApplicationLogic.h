@@ -11,6 +11,7 @@
 #include "common/items/Question.h"
 #include "common/items/EnumTorsonResult.h"
 #include "common/items/LiriResult.h"
+#include "common/items/TorstonResult.h"
 
 #include "common/logic/LogicConstants.h"
 
@@ -31,7 +32,7 @@ class ApplicationLogic : public QObject {
 
         void signalShowSectionDescription();//TODO: не уверен. что он нужен, ну на всякий случай
 
-        void signalShowTorstonResult(EnumTorsonResult result);
+        void signalShowTorstonResult(TorstonResult result);
 
         void signalShowLiriResult(LiriResult result);
 

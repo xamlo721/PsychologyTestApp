@@ -8,9 +8,9 @@ void UIController::init() {
 
     //TODO: Проверить на наличие окна
 
-    QObject::connect(window->ui->testWidget, &MainTestWidget::signalSelectTest, this, &UIController::signalOpenTest);
-    QObject::connect(window->ui->testWidget, &MainTestWidget::signalTestComplete, this, &UIController::signalCompleteTest);
-    QObject::connect(window->ui->testWidget, &MainTestWidget::signalTestAborted, this, &UIController::signalAbortTest);
+    QObject::connect(window, &MainWindow::signalSelectTest, this, &UIController::signalOpenTest);
+    QObject::connect(window, &MainWindow::signalTestComplete, this, &UIController::signalCompleteTest);
+    QObject::connect(window, &MainWindow::signalTestAborted, this, &UIController::signalAbortTest);
 
     QObject::connect(window, &MainWindow::signalTestStarted, this, &UIController::signalStartTest);
     QObject::connect(window, &MainWindow::signalAuthUser, this, &UIController::onAuthUser);
@@ -18,8 +18,8 @@ void UIController::init() {
     QObject::connect(window, &MainWindow::signalEditUser, this, &UIController::onEditUser);
     QObject::connect(window, &MainWindow::signalDeleteUser, this, &UIController::onDeleteUser);
 
-    QObject::connect(window->ui->testWidget->ui->questLiri, &QuestionLiriWidget::signalAnswerd, this, &UIController::signalQuestAnsweredLiri);
-    QObject::connect(window->ui->testWidget->ui->questTorson, &QuestionTorsonWidget::signalAnswered, this, &UIController::signalQuestAnsweredTorson);
+    QObject::connect(window, &MainWindow::signalLiriAnswered, this, &UIController::signalQuestAnsweredLiri);
+    QObject::connect(window, &MainWindow::signalTorstonAnswered, this, &UIController::signalQuestAnsweredTorson);
 }
 
 void UIController::setUI(MainWindow * window) {
@@ -49,24 +49,16 @@ void UIController::onDeleteUser(UserAccount user) {
 void UIController::onAskQuestion(EnumTestType testType, Question q) {
 
     if (testType == EnumTestType::Liri) {
-        this->window->ui->testWidget->ui->questLiri->uiQuestionsLiri->label_question->setText(q.getText());
         //TODO: Картинки молчат
+        this->window->changeLiriQuestion(q);
     } else {
-        this->window->ui->testWidget->ui->questTorson->uiQuestionsTorston->label_question->setText(q.getText());
-
-        if (q.hasPicture()) {
-
-            QString stylesheet = "QWidget#widget_picture {"
-                                 "	background-image: url(:" + q.getPicturePath() +");\n"
-                                 "}";
-             this->window->ui->testWidget->ui->questTorson->uiQuestionsTorston->widget_picture->setStyleSheet(stylesheet);
-        }
+        this->window->changeTorstonQuestion(q);
     }
 
 }
 
-void UIController::onShowTorstonResult(EnumTorsonResult result) {
-    this->window->ui->testWidget->showResult(result);
+void UIController::onShowTorstonResult(TorstonResult result) {
+    this->window->displayTorstonResult(result);
 
 }
 void UIController::onShowLiriResult(LiriResult result) {
@@ -76,8 +68,7 @@ void UIController::onShowLiriResult(LiriResult result) {
 
 
 void UIController::onUpdateProgressBar(float completePercent) {
-    this->window->ui->testWidget->ui->questLiri->uiQuestionsLiri->progressBar->setValue(completePercent * 100);
-    this->window->ui->testWidget->ui->questTorson->uiQuestionsTorston->progressBar->setValue(completePercent * 100);
+    this->window->updateProgressBar(completePercent);
 }
 
 void UIController::onUpdateUserList(QList<UserAccount> users) {
