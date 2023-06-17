@@ -3,6 +3,7 @@
 
 UserAccountPutton::UserAccountPutton(UserAccount user, QPushButton *parent) : QPushButton(parent), ui(new Ui::UserAccountPutton) {
     ui->setupUi(this);
+    this->user = user;
     this->setText(user.getName());
     QObject::connect(this, &QPushButton::clicked, this, &UserAccountPutton::onButtonClicked);//TODO: Не туда коннектим
 

@@ -28,6 +28,7 @@ class UserAuthWidget : public QWidget {
 
         void changeAccountName(UserAccount account);
         void displayNewAccount(UserAccount account);
+        void displayUserAccounts(QList <UserAccount> accounts);
         void removeDisplayedAccount(UserAccount account);
 
     private slots:
@@ -49,7 +50,6 @@ class UserAuthWidget : public QWidget {
 
     private:
         void clearAccountsListWidgets();
-        void displayUserAccounts(QList <UserAccount> accounts);
         void onSelectAccount();
         void onUnselectAccount();
 

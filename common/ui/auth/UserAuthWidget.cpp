@@ -16,7 +16,7 @@ UserAuthWidget::UserAuthWidget(QWidget *parent) : QWidget(parent), ui(new Ui::Us
     this->ui->auth_pushButton->setDisabled(true);
     this->ui->edit_pushButton->setDisabled(true);
     this->ui->remove_pushButton->setDisabled(true);
-
+    this->hasSelectedAccount = false;
 }
 
 void UserAuthWidget::changeAccountName(UserAccount account) {
@@ -44,15 +44,17 @@ void UserAuthWidget::displayNewAccount(UserAccount account) {
 }
 
 void UserAuthWidget::displayUserAccounts(QList <UserAccount> accounts) {
+    this->clearAccountsListWidgets();
+    this->accounts.clear();
 
     for (UserAccount account : accounts) {
         this->displayNewAccount(account);
     }
+    this->onUnselectAccount();
 
 }
 
 void UserAuthWidget::removeDisplayedAccount(UserAccount account) {
-    this->clearAccountsListWidgets();
     this->accounts.remove(account);
     QList<UserAccount> accountsNames = this->accounts.keys();
     this->accounts.clear();

@@ -24,6 +24,7 @@ class MainWindow : public QMainWindow {
         Ui::MainWindow *ui;
 
         void onHelpOpened();
+        void syncUserList(QList<UserAccount> users);
 
     public slots:
         void onTestComplete();

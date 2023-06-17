@@ -36,14 +36,16 @@ void MainAuthWidget::openTorstonResult() {
     this->ui->stackedWidget->setCurrentIndex(EnumAvailableAuthWidgets::UserResultTorston);
 }
 
+void MainAuthWidget::syncUserList(QList<UserAccount> users) {
+    this->ui->authPage->displayUserAccounts(users);
+}
+
 void MainAuthWidget::onAuthUser(UserAccount user) {
     emit signalAuthUser(user);
     this->openWelcomePage();
 }
-#include <QDebug>
 
 void MainAuthWidget::onAddUser(QString user) {
-    qDebug() << user;
     emit signalAddUser(user);
 
 }

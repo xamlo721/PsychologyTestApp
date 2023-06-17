@@ -36,6 +36,9 @@ void MainTestWidget::showResult(EnumTorsonResult result) {
     this->ui->resultTorston->showResult(result);
 }
 
+void MainTestWidget::syncUserList(QList<UserAccount> users) {
+
+}
 
 void MainTestWidget::onMainMenuLiriTestButtonClicked() {
     emit signalSelectTest(EnumTestType::Liri);

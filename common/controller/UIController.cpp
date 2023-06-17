@@ -79,3 +79,7 @@ void UIController::onUpdateProgressBar(float completePercent) {
     this->window->ui->testWidget->ui->questLiri->uiQuestionsLiri->progressBar->setValue(completePercent * 100);
     this->window->ui->testWidget->ui->questTorson->uiQuestionsTorston->progressBar->setValue(completePercent * 100);
 }
+
+void UIController::onUpdateUserList(QList<UserAccount> users) {
+    this->window->syncUserList(users);
+}

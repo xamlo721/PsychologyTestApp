@@ -22,6 +22,7 @@ class MainAuthWidget : public QWidget {
         void openPsychoPage();
         void openUserLiriResult();
         void openTorstonResult();
+        void syncUserList(QList<UserAccount> users);
 
     public slots:
         void onRespButtonPressed();

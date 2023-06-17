@@ -52,6 +52,8 @@ class UIController : public QObject {
 
         void onUpdateProgressBar(float completePercent);
 
+        void onUpdateUserList(QList<UserAccount> users);
+
     private slots:
         void onAuthUser(UserAccount user);
         void onAddUser(QString user);

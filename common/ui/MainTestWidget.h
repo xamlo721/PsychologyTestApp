@@ -7,6 +7,7 @@
 
 #include "common/items/EnumTestType.h"
 #include "common/items/EnumTorsonResult.h"
+#include "common/items/UserAccount.h"
 
 namespace Ui {
     class MainTestWidget;
@@ -20,6 +21,7 @@ class MainTestWidget : public QWidget {
         explicit MainTestWidget(QWidget *parent = nullptr);
         ~MainTestWidget();
         void showResult(EnumTorsonResult result);
+        void syncUserList(QList<UserAccount> users);
 
     public slots:
         void onMainMenuLiriTestButtonClicked();

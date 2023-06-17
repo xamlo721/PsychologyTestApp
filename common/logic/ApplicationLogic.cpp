@@ -11,10 +11,6 @@ void ApplicationLogic::setAvailableTests(QMap<EnumTestType, Test *> tests) {
 
 void ApplicationLogic::onAuthUser(UserAccount user) {
     this->currentUser = user;
-
-
-
-    //emit signalAuthUser(user);
 }
 
 void ApplicationLogic::onAddUser(QString user) {
