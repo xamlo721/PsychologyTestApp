@@ -49,7 +49,8 @@ SOURCES += \
     common/ui/MainTestWidget.cpp \
     common/ui/auth/UserAuthWidget.cpp \
     common/ui/auth/WelcomeAuthWidget.cpp \
-    common/ui/auth/UserAccountPutton.cpp
+    common/ui/auth/UserAccountPutton.cpp \
+    ui/auth/UserReslitButton.cpp
 
 RC_FILE     = resources.rc
 
@@ -97,11 +98,13 @@ HEADERS += \
     common/ui/MainTestWidget.h \
     common/ui/auth/UserAuthWidget.h \
     common/ui/auth/WelcomeAuthWidget.h \
-    common/ui/auth/UserAccountPutton.h
+    common/ui/auth/UserAccountPutton.h \
+    ui/auth/UserReslitButton.h
 
 FORMS += \
     ui/auth/UserDialog.ui \
     ui/auth/UserAccountPutton.ui \
+    ui/auth/UserReslitButton.ui \
     ui/auth/UserResultLiriWidget.ui \
     ui/auth/UserResultTorstonWidget.ui \
     ui/auth/PsychoResultWidget.ui \
