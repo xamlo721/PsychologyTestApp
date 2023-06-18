@@ -23,6 +23,7 @@ class UserReslitButton : public QPushButton {
     public:
         explicit UserReslitButton(LiriResult result, QWidget *parent = nullptr);
         explicit UserReslitButton(TorstonResult result, QWidget *parent = nullptr);
+        int getResultId();
 
     signals:
         void signalLiriResultClicked(LiriResult result);

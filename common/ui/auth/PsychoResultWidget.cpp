@@ -175,12 +175,28 @@ void PsychoResultWidget::onLiriResultClicked(LiriResult result) {
     selectedResultType = EnumTestType::Liri;
     this->selectedLiriResult = result;
     this->onSelectResult();
+
+    for(UserReslitButton * r : this->displayesResults.value(this->selectedAccount)) {
+        r->setChecked(false);
+        if (r->getResultId() == result.resultID) {
+            r->setChecked(true);
+        }
+    }
 }
 
 void PsychoResultWidget::onTorstonResultClicked(TorstonResult result) {
     selectedResultType = EnumTestType::Torston;
     this->selectedTorstonResult = result;
     this->onSelectResult();
+
+
+    for(UserReslitButton * r : this->displayesResults.value(this->selectedAccount)) {
+        r->setChecked(false);
+        if (r->getResultId() == result.resultID) {
+            r->setChecked(true);
+        }
+    }
+
 }
 
 void PsychoResultWidget::onUserAccountClicked(UserAccount account) {

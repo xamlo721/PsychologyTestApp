@@ -20,6 +20,14 @@ UserReslitButton::UserReslitButton(TorstonResult result, QWidget *parent) : QPus
 
 }
 
+int UserReslitButton::getResultId() {
+    if (this->testType == EnumTestType::Liri) {
+        return this->liriResult.resultID;
+    } else {
+        return this->torstonResult.resultID;
+    }
+}
+
 void UserReslitButton::onClicked() {
 
     if (this->testType == EnumTestType::Liri) {
@@ -27,6 +35,7 @@ void UserReslitButton::onClicked() {
     } else {
         emit signalTorstonResultClicked(this->torstonResult);
     }
+    //this->setChecked(true);
 
 }
 
