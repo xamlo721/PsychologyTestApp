@@ -26,6 +26,7 @@ class MainWindow : public QMainWindow {
         void displayTorstonResult(TorstonResult result);
         void updateProgressBar(float completePercent);
         void syncUserList(QList<UserAccount> users);
+        void syncResultsList(QMap <UserAccount, QPair<QList<LiriResult>, QList<TorstonResult>>> results);
         void changeLiriQuestion(Question q);
         void changeTorstonQuestion(Question q);
 

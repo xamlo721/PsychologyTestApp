@@ -161,8 +161,8 @@ void ApplicationLogic::onQuestAnsweredTorson(bool a1, bool a2, bool a3, bool a4 
     // по таблице переводятся в стандартные баллы.
 
     if (questions.empty()) {
-        qDebug() << "calculating torson";
-        emit signalShowTorstonResult(TorstonResult(this->currentUser, calculateTorstonResult()));
+
+        this->sendTorstonResult();
 
         return;
     }
@@ -189,6 +189,7 @@ void ApplicationLogic::onTestAborted() {
 void ApplicationLogic::onTestEnded() {
 
     //TODO: Сбросить все счётчики и т.д
+    emit signalUpdateResultsList(this->results);
 
 
 }
@@ -199,15 +200,57 @@ EnumTorsonResult ApplicationLogic::calculateTorstonResult() {
     return testLogic.getTorsonResult(torsonPoitns);
 }
 
+void ApplicationLogic::sendTorstonResult() {
+
+    TorstonResult torston(this->availableUserId++, this->currentUser, calculateTorstonResult());
+
+    if (!this->results.contains(this->currentUser)) {
+        this->results.insert(this->currentUser, QPair<QList<LiriResult>, QList<TorstonResult>>());
+    }
+
+    QPair<QList<LiriResult>, QList<TorstonResult>> userAllResults = this->results.value(this->currentUser);
+
+    QList<TorstonResult> userTorstonResults = userAllResults.second;
+    userTorstonResults.append(torston);
+
+    userAllResults.second = userTorstonResults;
+
+    this->results.insert(this->currentUser, userAllResults);
+
+    emit signalUpdateResultsList(this->results);
+
+    emit signalShowTorstonResult(torston);
+
+}
+
+
 void ApplicationLogic::sendLiriResult() {
 
-    emit signalShowLiriResult(LiriResult(this->currentUser,
-                param1 * 100.f/16,
-                param2 * 100.f/16,
-                param3 * 100.f/16,
-                param4 * 100.f/16,
-                param5 * 100.f/16,
-                param6 * 100.f/16,
-                param7 * 100.f/16,
-                param8 * 100.f/16));
+    LiriResult liri(this->availableUserId++,
+                    this->currentUser,
+                    param1 * 100.f/16,
+                    param2 * 100.f/16,
+                    param3 * 100.f/16,
+                    param4 * 100.f/16,
+                    param5 * 100.f/16,
+                    param6 * 100.f/16,
+                    param7 * 100.f/16,
+                    param8 * 100.f/16);
+
+    if (!this->results.contains(this->currentUser)) {
+        this->results.insert(this->currentUser, QPair<QList<LiriResult>, QList<TorstonResult>>());
+    }
+
+    QPair<QList<LiriResult>, QList<TorstonResult>> userAllResults = this->results.value(this->currentUser);
+
+    QList<LiriResult> userLiriResults = userAllResults.first;
+    userLiriResults.append(liri);
+
+    userAllResults.first = userLiriResults;
+
+    this->results.insert(this->currentUser, userAllResults);
+
+    emit signalUpdateResultsList(this->results);
+
+    emit signalShowLiriResult(liri);
 }

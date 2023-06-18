@@ -6,6 +6,7 @@
 class LiriResult {
 
     public:
+        int resultID;
         UserAccount user;
         int st1;
         int st2;
@@ -20,7 +21,8 @@ class LiriResult {
 
         }
 
-        LiriResult(UserAccount user, int st1, int st2,int st3,int st4,int st5,int st6,int st7,int st8) {
+        LiriResult(int resultID, UserAccount user, int st1, int st2,int st3,int st4,int st5,int st6,int st7,int st8) {
+            this->resultID = resultID;
             this->user = user;
             this->st1 =st1;
             this->st2 =st2;

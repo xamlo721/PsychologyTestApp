@@ -100,6 +100,10 @@ void MainWindow::syncUserList(QList<UserAccount> users) {
     this->ui->authWidget->syncUserList(users);
 }
 
+void MainWindow::syncResultsList(QMap <UserAccount, QPair<QList<LiriResult>, QList<TorstonResult>>> results) {
+    this->ui->authWidget->syncResultsList(results);
+}
+
 void MainWindow::changeLiriQuestion(Question q) {
     this->ui->testWidget->ui->questLiri->uiQuestionsLiri->label_question->setText(q.getText());
 

@@ -40,6 +40,8 @@ class ApplicationLogic : public QObject {
 
         void signalUpdateUserList(QList<UserAccount> users);
 
+        void signalUpdateResultsList(QMap <UserAccount, QPair<QList<LiriResult>, QList<TorstonResult>>> results);
+
     public slots:
         void onTestSelected(EnumTestType testType);
 
@@ -88,11 +90,14 @@ class ApplicationLogic : public QObject {
         UserAccount currentUser;
 
         int availableUserId = 0;
+        int availableResultId = 0;
 
         EnumTorsonResult calculateTorstonResult();
         void sendLiriResult();
+        void sendTorstonResult();
 
         QList<UserAccount> users;
+        QMap <UserAccount, QPair<QList<LiriResult>, QList<TorstonResult>>> results;
 
 
 };

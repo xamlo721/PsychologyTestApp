@@ -41,9 +41,15 @@ void MainAuthWidget::syncUserList(QList<UserAccount> users) {
     this->ui->psychoResults->displayUserAccounts(users);
 }
 
+void MainAuthWidget::syncResultsList(QMap <UserAccount, QPair<QList<LiriResult>, QList<TorstonResult>>> results) {
+    this->ui->psychoResults->displayUserResults(results);
+}
+
+
 void MainAuthWidget::onAuthUser(UserAccount user) {
     emit signalAuthUser(user);
     this->openWelcomePage();
+    emit signalReadyForTest();
 }
 
 void MainAuthWidget::onAddUser(QString user) {

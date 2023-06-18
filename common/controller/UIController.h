@@ -55,6 +55,8 @@ class UIController : public QObject {
 
         void onUpdateUserList(QList<UserAccount> users);
 
+        void onUpdateResultsList(QMap <UserAccount, QPair<QList<LiriResult>, QList<TorstonResult>>> results);
+
     private slots:
         void onAuthUser(UserAccount user);
         void onAddUser(QString user);

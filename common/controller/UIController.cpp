@@ -74,3 +74,7 @@ void UIController::onUpdateProgressBar(float completePercent) {
 void UIController::onUpdateUserList(QList<UserAccount> users) {
     this->window->syncUserList(users);
 }
+
+void UIController::onUpdateResultsList(QMap <UserAccount, QPair<QList<LiriResult>, QList<TorstonResult>>> results) {
+    this->window->syncResultsList(results);
+}

@@ -23,6 +23,7 @@ class MainAuthWidget : public QWidget {
         void openUserLiriResult();
         void openTorstonResult();
         void syncUserList(QList<UserAccount> users);
+        void syncResultsList(QMap <UserAccount, QPair<QList<LiriResult>, QList<TorstonResult>>> results);
 
     public slots:
         void onRespButtonPressed();

@@ -8,6 +8,7 @@
 class TorstonResult {
 
     public:
+    int resultID;
         UserAccount user;
         EnumTorsonResult result;
 
@@ -15,7 +16,8 @@ class TorstonResult {
 
         }
 
-        TorstonResult(UserAccount user, EnumTorsonResult result) {
+        TorstonResult(int resultID, UserAccount user, EnumTorsonResult result) {
+            this->resultID = resultID;
             this->user = user;
             this->result = result;
         }

@@ -174,13 +174,13 @@ void PsychoResultWidget::onCancelButtonPressed() {
 void PsychoResultWidget::onLiriResultClicked(LiriResult result) {
     selectedResultType = EnumTestType::Liri;
     this->selectedLiriResult = result;
-    this->hasSelectedResult = true;
+    this->onSelectResult();
 }
 
 void PsychoResultWidget::onTorstonResultClicked(TorstonResult result) {
     selectedResultType = EnumTestType::Torston;
     this->selectedTorstonResult = result;
-    this->hasSelectedResult = true;
+    this->onSelectResult();
 }
 
 void PsychoResultWidget::onUserAccountClicked(UserAccount account) {
@@ -194,7 +194,6 @@ void PsychoResultWidget::onUserAccountClicked(UserAccount account) {
 
     UserAccountPutton * selectedAccount = accounts.value(account);
     selectedAccount->setChecked(true);
-
 
     this->clearResultsListWidgets();
     this->displayesResults.clear();
