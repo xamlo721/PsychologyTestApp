@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>40</height>
+    <width>374</width>
+    <height>50</height>
    </rect>
   </property>
   <property name="minimumSize">
@@ -16,8 +16,26 @@
     <height>40</height>
    </size>
   </property>
+  <property name="font">
+   <font>
+    <family>Montserrat Medium</family>
+    <pointsize>8</pointsize>
+   </font>
+  </property>
   <property name="windowTitle">
    <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QPushButton:checked {
+	background-color: rgb(255, 158, 93);
+		color: rgb(255, 255, 255);
+}
+
+QPushButton {
+background-color: rgb(85, 170, 127);
+color: rgb(0, 0, 0);
+border-radius: 10px;
+}</string>
   </property>
   <property name="checkable">
    <bool>true</bool>
