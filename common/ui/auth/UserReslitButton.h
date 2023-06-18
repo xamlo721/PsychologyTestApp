@@ -14,7 +14,7 @@ class UserReslitButton : public QPushButton {
 
     Q_OBJECT
 
-    private:
+    public://TODO: сделать гетеры
         Ui::UserReslitButton *ui;
         EnumTestType testType;
         LiriResult liriResult;
