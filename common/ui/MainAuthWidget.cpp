@@ -2,6 +2,7 @@
 #include "common/ui/auth/EnumAvailableAuthWidgets.h"
 #include "common/items/TorstonResult.h"
 #include "common/items/LiriResult.h"
+#include "common/ui/auth/PsychoDialog.h"
 
 MainAuthWidget::MainAuthWidget(QWidget *parent) : QWidget(parent),  ui(new Ui::MainAuthWidget) {
     ui->setupUi(this);
@@ -106,7 +107,12 @@ void MainAuthWidget::onRespButtonPressed() {
 }
 
 void MainAuthWidget::onPsychoButtonPressed() {
-    this->openPsychoPage();
+
+    PsychoDialog * dialog = new PsychoDialog();
+    dialog->setModal(true);
+    dialog->show();
+    QObject::connect(dialog, &PsychoDialog::signalAuthPsycho, this, &MainAuthWidget::openPsychoPage);
+
 }
 
 void MainAuthWidget::onExitButton() {
