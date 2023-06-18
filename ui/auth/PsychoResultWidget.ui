@@ -18,7 +18,7 @@
             background-image: url(&quot;:/pictures/back.png&quot;);
 }</string>
   </property>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>740</x>
@@ -112,6 +112,34 @@ QPushButton:hover {
       </property>
       <property name="checkable">
        <bool>false</bool>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="print_pushButton">
+      <property name="minimumSize">
+       <size>
+        <width>210</width>
+        <height>40</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <family>Montserrat Medium</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+	border-radius: 10px;
+	background-color: rgb(255, 255, 255);
+}
+QPushButton:hover {
+        background-color: rgba(216, 249, 255);
+}</string>
+      </property>
+      <property name="text">
+       <string>Распечатать</string>
       </property>
      </widget>
     </item>

@@ -8,6 +8,7 @@ PsychoResultWidget::PsychoResultWidget(QWidget *parent) :  QWidget(parent), ui(n
     QObject::connect(this->ui->showResult_pushButton, &QPushButton::clicked, this, &PsychoResultWidget::onShowResultButtonPressed);
     QObject::connect(this->ui->showprotocol_pushButton, &QPushButton::clicked, this, &PsychoResultWidget::onShowProtocolPressed);
     QObject::connect(this->ui->changePassword_pushButton, &QPushButton::clicked, this, &PsychoResultWidget::onChangePasswdPressed);
+    QObject::connect(this->ui->print_pushButton, &QPushButton::clicked, this, &PsychoResultWidget::onPrintButtonPressed);
     QObject::connect(this->ui->remove_pushButton, &QPushButton::clicked, this, &PsychoResultWidget::onRemoveButtonPressed);
     QObject::connect(this->ui->cancel_pushButton, &QPushButton::clicked, this, &PsychoResultWidget::onCancelButtonPressed);
 
@@ -19,6 +20,7 @@ PsychoResultWidget::PsychoResultWidget(QWidget *parent) :  QWidget(parent), ui(n
 
     this->ui->showResult_pushButton->setDisabled(true);
     this->ui->showprotocol_pushButton->setDisabled(true);
+    this->ui->print_pushButton->setDisabled(true);
     this->ui->remove_pushButton->setDisabled(true);
 
     this->hasSelectedAccount = false;
@@ -27,7 +29,7 @@ PsychoResultWidget::PsychoResultWidget(QWidget *parent) :  QWidget(parent), ui(n
 }
 
 void PsychoResultWidget::changeAccountName(UserAccount account) {
-
+        //Не нужна
 }
 
 void PsychoResultWidget::displayNewAccount(UserAccount account) {
@@ -179,6 +181,14 @@ void PsychoResultWidget::onChangePasswdPressed() {
 
 }
 
+void PsychoResultWidget::onPrintButtonPressed() {
+
+    //Code plase
+
+
+}
+
+
 
 void PsychoResultWidget::onRemoveButtonPressed() {
     if (hasSelectedAccount) {
@@ -283,6 +293,7 @@ void PsychoResultWidget::clearResultsListWidgets() {
 void PsychoResultWidget::onSelectResult() {
     this->ui->showResult_pushButton->setDisabled(false);
     this->ui->showprotocol_pushButton->setDisabled(false);
+    this->ui->print_pushButton->setDisabled(false);
     this->ui->remove_pushButton->setDisabled(false);
     this->hasSelectedResult = true;
 }
@@ -290,6 +301,7 @@ void PsychoResultWidget::onSelectResult() {
 void PsychoResultWidget::onUnselectResult() {
     this->ui->showResult_pushButton->setDisabled(true);
     this->ui->showprotocol_pushButton->setDisabled(true);
+    this->ui->print_pushButton->setDisabled(true);
     this->ui->remove_pushButton->setDisabled(true);
     this->hasSelectedResult = false;
 }
