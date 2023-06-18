@@ -17,11 +17,14 @@ MainAuthWidget::MainAuthWidget(QWidget *parent) : QWidget(parent),  ui(new Ui::M
     QObject::connect(this->ui->authPage, &UserAuthWidget::signalDeleteUser, this, &MainAuthWidget::onDeleteUser);
     QObject::connect(this->ui->authPage, &UserAuthWidget::signalCancel, this, &MainAuthWidget::openWelcomePage);
 
+    QObject::connect(this->ui->userTestProtocol, &UserTestProtocol::signalCancel, this, &MainAuthWidget::openWelcomePage);
+
     QObject::connect(this->ui->psychoResults, &PsychoResultWidget::signalLiriResultClicked, this, &MainAuthWidget::onPsychoShowLiriResult);
     QObject::connect(this->ui->psychoResults, &PsychoResultWidget::signalTorstonResultClicked, this, &MainAuthWidget::onPsychoShowTorstonResult);
     QObject::connect(this->ui->psychoResults, &PsychoResultWidget::signalDeleteLiriResult, this, &MainAuthWidget::onDeleteLiriResult);
     QObject::connect(this->ui->psychoResults, &PsychoResultWidget::signalDeleteTorstonResult, this, &MainAuthWidget::onDeleteTorstonResult);
     QObject::connect(this->ui->psychoResults, &PsychoResultWidget::signalCancelButtonPressed, this, &MainAuthWidget::openWelcomePage);
+    QObject::connect(this->ui->psychoResults, &PsychoResultWidget::signalProtocolClicked, this, &MainAuthWidget::onTestProtocolClicked);
 
     QObject::connect(this->ui->psychoResults, &PsychoResultWidget::signalPasswordChanged, this, &MainAuthWidget::onPasswordChanged);
 
@@ -50,6 +53,10 @@ void MainAuthWidget::openUserLiriResult() {
 
 void MainAuthWidget::openTorstonResult() {
     this->ui->stackedWidget->setCurrentIndex(EnumAvailableAuthWidgets::UserResultTorston);
+}
+
+void MainAuthWidget::openTestProtocol() {
+    this->ui->stackedWidget->setCurrentIndex(EnumAvailableAuthWidgets::UserTestProtocol);
 }
 //=================================================================================================
 
@@ -83,6 +90,11 @@ void MainAuthWidget::onDeleteLiriResult(UserAccount account, LiriResult result) 
 }
 void MainAuthWidget::onDeleteTorstonResult(UserAccount account, TorstonResult result) {
     emit signalDeleteTorstonResult(account, result);
+}
+
+void MainAuthWidget::onTestProtocolClicked(AnswerProtocol protocol) {
+    this->ui->userTestProtocol->showProtocol(protocol);
+    this->openTestProtocol();
 }
 
 

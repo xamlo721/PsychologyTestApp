@@ -11,7 +11,9 @@ enum EnumAvailableAuthWidgets : int {
 
     UserResultLiri = 3,
 
-    UserResultTorston = 4
+    UserResultTorston = 4,
+
+    UserTestProtocol = 5
 
 };
 

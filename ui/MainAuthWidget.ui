@@ -41,6 +41,7 @@
      <widget class="PsychoResultWidget" name="psychoResults"/>
      <widget class="UserResultLiriWidget" name="userResultLiri"/>
      <widget class="UserResultTorstonWidget" name="userResultTorston"/>
+     <widget class="UserTestProtocol" name="userTestProtocol"/>
     </widget>
    </item>
   </layout>
@@ -74,6 +75,12 @@
    <class>UserResultTorstonWidget</class>
    <extends>QWidget</extends>
    <header>common/ui/auth/UserResultTorstonWidget.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>UserTestProtocol</class>
+   <extends>QWidget</extends>
+   <header>common/ui/auth/UserTestProtocol.h</header>
    <container>1</container>
   </customwidget>
  </customwidgets>

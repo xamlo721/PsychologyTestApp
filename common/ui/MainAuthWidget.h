@@ -23,6 +23,7 @@ class MainAuthWidget : public QWidget {
         void openPsychoPage();
         void openUserLiriResult();
         void openTorstonResult();
+        void openTestProtocol();
         void syncUserList(QList<UserAccount> users);
         void syncResultsList(QMap <UserAccount, QPair<QList<LiriResult>, QList<TorstonResult>>> results);
         void syncProtocols(QMap <UserAccount, QPair<QList<AnswerProtocol>, QList<AnswerProtocol>>> protocols);
@@ -47,6 +48,7 @@ class MainAuthWidget : public QWidget {
         void onPsychoShowTorstonResult(TorstonResult result);
         void onDeleteLiriResult(UserAccount account, LiriResult result);
         void onDeleteTorstonResult(UserAccount account, TorstonResult result);
+        void onTestProtocolClicked(AnswerProtocol newPassword);
 
         void onPasswordChanged(QString newPassword);
 

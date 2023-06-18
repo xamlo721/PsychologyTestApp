@@ -37,6 +37,7 @@ SOURCES += \
     common/ui/auth/UserDialog.cpp \
     common/ui/auth/UserResultLiriWidget.cpp \
     common/ui/auth/UserResultTorstonWidget.cpp \
+    common/ui/auth/UserTestProtocol.cpp \
     common/ui/test/InstructionLiriWidget.cpp \
     common/ui/test/InstrutionTorsonWidget.cpp \
     common/ui/test/QuestionLiriWidget.cpp \
@@ -89,6 +90,7 @@ HEADERS += \
     common/ui/auth/UserDialog.h \
     common/ui/auth/UserResultLiriWidget.h \
     common/ui/auth/UserResultTorstonWidget.h \
+    common/ui/auth/UserTestProtocol.h \
     common/ui/test/EnumAvailableTestWidgets.h \
     common/ui/test/InstructionLiriWidget.h \
     common/ui/test/InstrutionTorsonWidget.h \
@@ -117,6 +119,7 @@ FORMS += \
     ui/MainAuthWidget.ui \
     ui/MainTestWidget.ui \
     ui/auth/UserAuthWidget.ui \
+    ui/auth/UserTestProtocol.ui \
     ui/auth/WelcomeAuthWidget.ui \
     ui/test/InstructionLiri.ui \
     ui/test/InstructionTorston.ui \

@@ -151,11 +151,22 @@ void PsychoResultWidget::onShowResultButtonPressed() {
 
 void PsychoResultWidget::onShowProtocolPressed() {
     //Выбрать аккаунт, по которому кликали и кинуть сигнал вверху
+
+    QPair<QList<AnswerProtocol>, QList<AnswerProtocol>> allUserProtocols = protocols.value(this->selectedAccount);
+
     if(this->hasSelectedAccount) {
         if (this->selectedResultType == EnumTestType::Liri) {
-            emit signalLiriProtocolClicked(this->selectedLiriResult);
+            for (AnswerProtocol p : allUserProtocols.first) {
+                if (p.resultID == this->selectedLiriResult.resultID) {
+                    emit signalProtocolClicked(p);
+                }
+            }
         } else {
-            emit signalTorstonProtocolClicked(this->selectedTorstonResult);
+            for (AnswerProtocol p : allUserProtocols.second) {
+                if (p.resultID == this->selectedTorstonResult.resultID) {
+                    emit signalProtocolClicked(p);
+                }
+            }
         }
     }
 }
