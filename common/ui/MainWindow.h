@@ -7,6 +7,7 @@
 #include "common/items/LiriResult.h"
 #include "common/items/TorstonResult.h"
 #include "common/items/Question.h"
+#include "common/items/AnswerProtocol.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -27,10 +28,11 @@ class MainWindow : public QMainWindow {
         void updateProgressBar(float completePercent);
         void syncUserList(QList<UserAccount> users);
         void syncResultsList(QMap <UserAccount, QPair<QList<LiriResult>, QList<TorstonResult>>> results);
+        void syncProtocols(QMap <UserAccount, QPair<QList<AnswerProtocol>, QList<AnswerProtocol>>> protocols);
         void changeLiriQuestion(Question q);
         void changeTorstonQuestion(Question q);
 
-    private://FIXME
+private://FIXME
         Ui::MainWindow *ui;
         void onHelpOpened();
 

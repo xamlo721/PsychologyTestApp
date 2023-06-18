@@ -62,6 +62,7 @@ HEADERS += \
     common/controller/UIController.h \
     common/items/AbstractTextElement.h \
     common/items/Answer.h \
+    common/items/AnswerProtocol.h \
     common/items/EnumTorsonResult.h \
     common/items/LiriResult.h \
     common/items/TestInstruction.h \

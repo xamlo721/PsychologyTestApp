@@ -9,6 +9,7 @@
 #include "common/items/LiriResult.h"
 #include "common/ui/auth/UserAccountPutton.h"
 #include "common/ui/auth/UserReslitButton.h"
+#include "common/items/AnswerProtocol.h"
 
 namespace Ui {
     class PsychoResultWidget;
@@ -23,6 +24,7 @@ class PsychoResultWidget : public QWidget {
         QMap <UserAccount, UserAccountPutton * > accounts;
         QMap <UserAccount, QList<UserReslitButton * >> displayesResults;
         QMap <UserAccount, QPair<QList<LiriResult>, QList<TorstonResult>>> results;
+        QMap <UserAccount, QPair<QList<AnswerProtocol>, QList<AnswerProtocol>>> protocols;
         UserAccount selectedAccount;
         bool hasSelectedAccount;
 
@@ -42,6 +44,7 @@ class PsychoResultWidget : public QWidget {
         void displayNewResult(TorstonResult result);
         void displayUserAccounts(QList <UserAccount> accounts);
         void displayUserResults(QMap <UserAccount, QPair<QList<LiriResult>, QList<TorstonResult>>> results); //Ля шо творю
+        void syncProtocols(QMap <UserAccount, QPair<QList<AnswerProtocol>, QList<AnswerProtocol>>> protocols);
         void removeDisplayedAccount(UserAccount account);
         void removeDisplayedResult(UserAccount account, LiriResult result);
         void removeDisplayedResult(UserAccount account, TorstonResult result);

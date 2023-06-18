@@ -62,6 +62,10 @@ void MainAuthWidget::syncResultsList(QMap <UserAccount, QPair<QList<LiriResult>,
     this->ui->psychoResults->displayUserResults(results);
 }
 
+void MainAuthWidget::syncProtocols(QMap <UserAccount, QPair<QList<AnswerProtocol>, QList<AnswerProtocol>>> protocols) {
+    this->ui->psychoResults->syncProtocols(protocols);
+}
+
 void MainAuthWidget::onPsychoShowLiriResult(LiriResult result) {
     this->ui->userResultLiri->showResult(result);
     this->openUserLiriResult();

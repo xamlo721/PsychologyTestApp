@@ -287,6 +287,9 @@ void PsychoResultWidget::onPasswordChanged(QString newPassword) {
     emit signalPasswordChanged(newPassword);
 }
 
+void PsychoResultWidget::syncProtocols(QMap <UserAccount, QPair<QList<AnswerProtocol>, QList<AnswerProtocol>>> protocols) {
+    this->protocols = protocols;
+}
 
 
 PsychoResultWidget::~PsychoResultWidget() {

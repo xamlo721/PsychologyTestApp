@@ -7,6 +7,7 @@
 #include "common/items/TestResult.h"
 #include "common/items/LiriResult.h"
 #include "common/items/TorstonResult.h"
+#include "common/items/AnswerProtocol.h"
 
 #include "common/ui/MainWindow.h"
 
@@ -58,6 +59,8 @@ class UIController : public QObject {
         void onUpdateUserList(QList<UserAccount> users);
 
         void onUpdateResultsList(QMap <UserAccount, QPair<QList<LiriResult>, QList<TorstonResult>>> results);
+
+        void onUpdateProtocolList(QMap <UserAccount, QPair<QList<AnswerProtocol>, QList<AnswerProtocol>>> protocols);
 
     private slots:
         void onAuthUser(UserAccount user);

@@ -16,6 +16,7 @@
 #include "common/logic/LogicConstants.h"
 
 #include "common/items/UserAccount.h"
+#include "common/items/AnswerProtocol.h"
 
 
 class ApplicationLogic : public QObject {
@@ -42,6 +43,8 @@ class ApplicationLogic : public QObject {
 
         void signalUpdateResultsList(QMap <UserAccount, QPair<QList<LiriResult>, QList<TorstonResult>>> results);
 
+        void signalUpdateProtocols(QMap <UserAccount, QPair<QList<AnswerProtocol>, QList<AnswerProtocol>>> protocols);
+
     public slots:
         void onTestSelected(EnumTestType testType);
 
@@ -49,7 +52,7 @@ class ApplicationLogic : public QObject {
 
         void onQuestAnsweredLiri(bool asnwer);
 
-        void onQuestAnsweredTorson(bool a1, bool a2, bool a3, bool a4);
+        void onQuestAnsweredTorston(bool a1, bool a2, bool a3, bool a4);
 
         void onSectionEnded();//TODO: пока не реализуется. Я спать хочу
 
@@ -104,7 +107,9 @@ class ApplicationLogic : public QObject {
 
         QList<UserAccount> users;
         QMap <UserAccount, QPair<QList<LiriResult>, QList<TorstonResult>>> results;
+        QMap <UserAccount, QPair<QList<AnswerProtocol>, QList<AnswerProtocol>>> protocols;
 
+        AnswerProtocol currentAnswerProtocol;
 
 };
 

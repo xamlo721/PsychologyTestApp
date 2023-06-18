@@ -88,3 +88,7 @@ void UIController::onUpdateUserList(QList<UserAccount> users) {
 void UIController::onUpdateResultsList(QMap <UserAccount, QPair<QList<LiriResult>, QList<TorstonResult>>> results) {
     this->window->syncResultsList(results);
 }
+
+void UIController::onUpdateProtocolList(QMap <UserAccount, QPair<QList<AnswerProtocol>, QList<AnswerProtocol>>> protocols) {
+    this->window->syncProtocols(protocols);
+}

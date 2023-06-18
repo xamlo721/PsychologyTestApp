@@ -4,6 +4,7 @@
 #include <QWidget>
 
 #include "ui_MainAuthWidget.h"
+#include "common/items/AnswerProtocol.h"
 
 namespace Ui {
     class MainAuthWidget;
@@ -24,6 +25,7 @@ class MainAuthWidget : public QWidget {
         void openTorstonResult();
         void syncUserList(QList<UserAccount> users);
         void syncResultsList(QMap <UserAccount, QPair<QList<LiriResult>, QList<TorstonResult>>> results);
+        void syncProtocols(QMap <UserAccount, QPair<QList<AnswerProtocol>, QList<AnswerProtocol>>> protocols);
 
     public slots:
         void onRespButtonPressed();

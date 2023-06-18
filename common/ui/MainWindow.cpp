@@ -139,6 +139,11 @@ void MainWindow::syncResultsList(QMap <UserAccount, QPair<QList<LiriResult>, QLi
     this->ui->authWidget->syncResultsList(results);
 }
 
+void MainWindow::syncProtocols(QMap <UserAccount, QPair<QList<AnswerProtocol>, QList<AnswerProtocol>>> protocols) {
+    this->ui->authWidget->syncProtocols(protocols);
+}
+
+
 void MainWindow::changeLiriQuestion(Question q) {
     this->ui->testWidget->ui->questLiri->uiQuestionsLiri->label_question->setText(q.getText());
 

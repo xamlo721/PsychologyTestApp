@@ -92,19 +92,31 @@ void ApplicationLogic::onDeleteTorstonResult(UserAccount account, TorstonResult 
 
 void ApplicationLogic::onTestSelected(EnumTestType testType) {
 
+    //Ну и костыль, господи...
+    this->currentAnswerProtocol.answers.first.clear();
+    this->currentAnswerProtocol.answers.second.clear();
+    this->currentAnswerProtocol.resultID = this->availableLiriResultId + this->availableTorstonResultId;
+
+
     if (!tests.contains(testType)) {
         throw std::runtime_error(QString("[ApplicationLogic] Error loading Test!").toLocal8Bit().constData());
     }
 
     this->currentTest = tests.value(testType);
 
+    int questionCounter = 1;
     //Запихнуть тест в очередь вопросов
     for (int s = 0; s < currentTest->getSections().size(); s++) {
         TestSection section = currentTest->getSections().value(s);
         for (int i = 0; i < section.getQuestions().size(); i ++) {
-            this->questions.append(section.getQuestions().value(i));
+            Question q = section.getQuestions().value(i);
+            this->questions.append(q);
+            if (testType == EnumTestType::Liri) {
+                currentAnswerProtocol.answers.first.append(q.getText());
+            } else {
+                currentAnswerProtocol.answers.first.append(QString::number(questionCounter++));
+            }
         }
-
     }
 
     questionsSize = this->questions.size();
@@ -126,6 +138,7 @@ void ApplicationLogic::onTestStarted() {
     this->param6 = 0;
     this->param7 = 0;
     this->param8 = 0;
+
 
     currentQuest = questions.takeFirst();
 
@@ -156,6 +169,11 @@ void ApplicationLogic::onQuestAnsweredLiri(bool answer) {
     }
 
 
+    if (answer) {
+        currentAnswerProtocol.answers.second.append( "Да");
+    } else {
+        currentAnswerProtocol.answers.second.append( "Нет");
+    }
 
 
     this->liriQuestionNumber++;
@@ -178,7 +196,7 @@ void ApplicationLogic::onQuestAnsweredLiri(bool answer) {
 
 }
 
-void ApplicationLogic::onQuestAnsweredTorson(bool a1, bool a2, bool a3, bool a4 ) {
+void ApplicationLogic::onQuestAnsweredTorston(bool a1, bool a2, bool a3, bool a4 ) {
     QMap<int, Answer> answers = currentQuest.getAnswers();
 
     Answer answer1 =answers.value(0);
@@ -194,6 +212,35 @@ void ApplicationLogic::onQuestAnsweredTorson(bool a1, bool a2, bool a3, bool a4 
     // По ключу подсчитывается количество сырых очков
     // в соответствии с правильными ответами, которые
     // по таблице переводятся в стандартные баллы.
+
+    QString result;
+
+    if (a1) {
+        result.append(" Да");
+    } else {
+        result.append(" Нет");
+    }
+
+    if (a2) {
+        result.append(" Да");
+    } else {
+        result.append(" Нет");
+    }
+
+    if (a3) {
+        result.append(" Да");
+    } else {
+        result.append(" Нет");
+    }
+
+    if (a4) {
+        result.append(" Да");
+    } else {
+        result.append(" Нет");
+    }
+
+    currentAnswerProtocol.answers.second.append(result);
+
 
     if (questions.empty()) {
 
@@ -250,7 +297,13 @@ void ApplicationLogic::sendTorstonResult() {
 
     userAllResults.second = userTorstonResults;
 
+    QPair<QList<AnswerProtocol>, QList<AnswerProtocol>> allUserProtocols = this->protocols.value(this->currentUser);
+    allUserProtocols.second.append(AnswerProtocol(torston.resultID, this->currentAnswerProtocol.answers));
+    this->protocols.insert(this->currentUser, allUserProtocols);
+
     this->results.insert(this->currentUser, userAllResults);
+
+    emit signalUpdateProtocols(this->protocols);
 
     emit signalUpdateResultsList(this->results);
 
@@ -284,6 +337,13 @@ void ApplicationLogic::sendLiriResult() {
     userAllResults.first = userLiriResults;
 
     this->results.insert(this->currentUser, userAllResults);
+
+
+    QPair<QList<AnswerProtocol>, QList<AnswerProtocol>> allUserProtocols = this->protocols.value(this->currentUser);
+    allUserProtocols.first.append(AnswerProtocol(liri.resultID, this->currentAnswerProtocol.answers));
+    this->protocols.insert(this->currentUser, allUserProtocols);
+
+    emit signalUpdateProtocols(this->protocols);
 
     emit signalUpdateResultsList(this->results);
 

@@ -28,11 +28,12 @@ void InitModule::connect() {
     QObject::connect(logic, &ApplicationLogic::signalUpdateProgressBar, uiController, &UIController::onUpdateProgressBar);
     QObject::connect(logic, &ApplicationLogic::signalUpdateUserList, uiController, &UIController::onUpdateUserList);
     QObject::connect(logic, &ApplicationLogic::signalUpdateResultsList, uiController, &UIController::onUpdateResultsList);
+    QObject::connect(logic, &ApplicationLogic::signalUpdateProtocols, uiController, &UIController::onUpdateProtocolList);
 
     QObject::connect(uiController, &UIController::signalOpenTest, logic, &ApplicationLogic::onTestSelected);
     QObject::connect(uiController, &UIController::signalStartTest, logic, &ApplicationLogic::onTestStarted);
     QObject::connect(uiController, &UIController::signalQuestAnsweredLiri, logic, &ApplicationLogic::onQuestAnsweredLiri);
-    QObject::connect(uiController, &UIController::signalQuestAnsweredTorson, logic, &ApplicationLogic::onQuestAnsweredTorson);
+    QObject::connect(uiController, &UIController::signalQuestAnsweredTorson, logic, &ApplicationLogic::onQuestAnsweredTorston);
     QObject::connect(uiController, &UIController::signalAbortTest, logic, &ApplicationLogic::onTestAborted);
     QObject::connect(uiController, &UIController::signalCompleteTest, logic, &ApplicationLogic::onTestEnded);
 
