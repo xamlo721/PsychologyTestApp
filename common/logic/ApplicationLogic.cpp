@@ -31,12 +31,22 @@ void ApplicationLogic::onAddUser(QString user) {
 
 void ApplicationLogic::onEditUser(UserAccount user) {
 
-    if (!users.contains(user)) {
-        //TODO:
-        return;
-    }
+//    bool contains;
+//    UserAccount oldAccount;
 
-    this->users.append(user);
+    for (UserAccount acc : this->users) {
+        if (acc.getID() == user.getID()) {
+            this->users.removeOne(acc);
+            acc.changeUserName(user.getName());
+            this->users.append(acc);
+        }
+    }
+//    if (!users.contains(user)) {
+//        //TODO:
+//        return;
+//    }
+
+    //this->users.append(user);
 
     emit signalUpdateUserList(this->users);
 }
