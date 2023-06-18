@@ -14,9 +14,7 @@
    <string>Form</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">QWidget#MainTestWidget {
-            background-image: url(&quot;:/pictures/back.png&quot;);
-}</string>
+   <string notr="true"/>
   </property>
   <layout class="QHBoxLayout" name="horizontalLayout">
    <property name="spacing">
@@ -37,9 +35,7 @@
    <item>
     <widget class="QStackedWidget" name="stackedWidget">
      <property name="styleSheet">
-      <string notr="true">QWidget#stackedWidget {
-            background-image: url(&quot;:/pictures/back.png&quot;);
-}</string>
+      <string notr="true"/>
      </property>
      <property name="currentIndex">
       <number>0</number>
