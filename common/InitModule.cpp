@@ -47,7 +47,8 @@ void InitModule::connect() {
 
 void InitModule::launch() {
 
-    window->show();
+    //window->show();
+    window->showFullScreen();
 
 }
 

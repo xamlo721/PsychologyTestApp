@@ -58,7 +58,7 @@ class MainWindow : public QMainWindow {
 
     protected:
         virtual void keyPressEvent(QKeyEvent *event) override;
-
+        virtual void resizeEvent(QResizeEvent *evt) override;
     private:
 
     private slots:

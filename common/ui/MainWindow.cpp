@@ -15,6 +15,15 @@
 MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWindow) {
     ui->setupUi(this);
     this->ui->stackedWidget->setCurrentIndex(EnumUIMode::Auth);
+
+    QPixmap bkgnd(":/pictures/back.png");
+    bkgnd = bkgnd.scaled(size(), Qt::IgnoreAspectRatio);
+    QPalette p = palette(); //copy current, not create new
+    p.setBrush(QPalette::Background, bkgnd);
+
+    this->setPalette(p);
+
+
     QObject::connect(this->ui->authWidget, &MainAuthWidget::signalReadyForTest, this, &MainWindow::onTestReady);
     QObject::connect(this->ui->testWidget, &MainTestWidget::signalTestComplete, this, &MainWindow::onTestComplete);
     QObject::connect(this->ui->testWidget, &MainTestWidget::signalSelectTest, this, &MainWindow::signalSelectTest);
@@ -36,6 +45,16 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWi
 
     QObject::connect(this->ui->authWidget, &MainAuthWidget::signalWindowClose, this, &MainWindow::onCloseWindow);
 
+}
+
+void MainWindow::resizeEvent(QResizeEvent *evt) {
+    QPixmap bkgnd(":/pictures/back.png");
+    bkgnd = bkgnd.scaled(size(), Qt::IgnoreAspectRatio);
+    QPalette p = palette(); //copy current, not create new
+    p.setBrush(QPalette::Background, bkgnd);
+    this->setPalette(p);
+
+    QMainWindow::resizeEvent(evt); //call base implementation
 }
 
 void MainWindow::onTestComplete() {
