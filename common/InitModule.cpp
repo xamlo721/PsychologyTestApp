@@ -40,6 +40,8 @@ void InitModule::connect() {
     QObject::connect(uiController, &UIController::signalAddUser, logic, &ApplicationLogic::onAddUser);
     QObject::connect(uiController, &UIController::signalEditUser, logic, &ApplicationLogic::onEditUser);
     QObject::connect(uiController, &UIController::signalDeleteUser, logic, &ApplicationLogic::onDeleteUser);
+    QObject::connect(uiController, &UIController::signalDeleteLiriResult, logic, &ApplicationLogic::onDeleteLiriResult);
+    QObject::connect(uiController, &UIController::signalDeleteTorstonResult, logic, &ApplicationLogic::onDeleteTorstonResult);
 
 }
 

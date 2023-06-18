@@ -170,11 +170,13 @@ void PsychoResultWidget::onChangePasswdPressed() {
 
 void PsychoResultWidget::onRemoveButtonPressed() {
     if (hasSelectedAccount) {
-        emit signalDeleteResult(this->selectedAccount);
+        if (this->selectedResultType == EnumTestType::Liri) {
+            emit signalDeleteLiriResult(this->selectedAccount, this->selectedLiriResult);
+        } else {
+            emit signalDeleteTorstonResult(this->selectedAccount, this->selectedTorstonResult);
+        }
     }
 }
-
-
 
 void PsychoResultWidget::onCancelButtonPressed() {
 

@@ -35,12 +35,17 @@ class MainAuthWidget : public QWidget {
         void signalAddUser(QString user);
         void signalEditUser(UserAccount user);
         void signalDeleteUser(UserAccount user);
+        void signalDeleteLiriResult(UserAccount account, LiriResult result);
+        void signalDeleteTorstonResult(UserAccount account, TorstonResult result);
         void signalReadyForTest();
         void signalWindowClose();
 
     private slots:
         void onPsychoShowLiriResult(LiriResult result);
         void onPsychoShowTorstonResult(TorstonResult result);
+        void onDeleteLiriResult(UserAccount account, LiriResult result);
+        void onDeleteTorstonResult(UserAccount account, TorstonResult result);
+
 
         void onAuthUser(UserAccount user);
         void onAddUser(QString user);

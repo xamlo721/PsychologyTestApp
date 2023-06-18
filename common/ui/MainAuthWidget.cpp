@@ -18,6 +18,8 @@ MainAuthWidget::MainAuthWidget(QWidget *parent) : QWidget(parent),  ui(new Ui::M
 
     QObject::connect(this->ui->psychoResults, &PsychoResultWidget::signalLiriResultClicked, this, &MainAuthWidget::onPsychoShowLiriResult);
     QObject::connect(this->ui->psychoResults, &PsychoResultWidget::signalTorstonResultClicked, this, &MainAuthWidget::onPsychoShowTorstonResult);
+    QObject::connect(this->ui->psychoResults, &PsychoResultWidget::signalDeleteLiriResult, this, &MainAuthWidget::onDeleteLiriResult);
+    QObject::connect(this->ui->psychoResults, &PsychoResultWidget::signalDeleteTorstonResult, this, &MainAuthWidget::onDeleteTorstonResult);
     QObject::connect(this->ui->psychoResults, &PsychoResultWidget::signalCancelButtonPressed, this, &MainAuthWidget::openWelcomePage);
 
 
@@ -59,21 +61,22 @@ void MainAuthWidget::syncResultsList(QMap <UserAccount, QPair<QList<LiriResult>,
 }
 
 void MainAuthWidget::onPsychoShowLiriResult(LiriResult result) {
-
     this->ui->userResultLiri->showResult(result);
-
     this->openUserLiriResult();
 }
 
 void MainAuthWidget::onPsychoShowTorstonResult(TorstonResult result) {
-
     this->ui->userResultTorston->showResult(result);
-
-
-
-
     this->openTorstonResult();
 
+}
+
+void MainAuthWidget::onDeleteLiriResult(UserAccount account, LiriResult result) {
+    emit signalDeleteLiriResult(account, result);
+
+}
+void MainAuthWidget::onDeleteTorstonResult(UserAccount account, TorstonResult result) {
+    emit signalDeleteTorstonResult(account, result);
 }
 
 

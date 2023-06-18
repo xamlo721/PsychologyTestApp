@@ -54,6 +54,31 @@ void ApplicationLogic::onDeleteUser(UserAccount user) {
     emit signalUpdateUserList(this->users);
 }
 
+void ApplicationLogic::onDeleteLiriResult(UserAccount account, LiriResult result) {
+    QPair<QList<LiriResult>, QList<TorstonResult>> userAllResults = this->results.value(account);
+
+    QList<LiriResult> userLiriResults = userAllResults.first;
+    userLiriResults.removeOne(result);
+
+    userAllResults.first = userLiriResults;
+
+    this->results.insert(account, userAllResults);
+
+    emit signalUpdateResultsList(this->results);
+}
+
+void ApplicationLogic::onDeleteTorstonResult(UserAccount account, TorstonResult result) {
+    QPair<QList<LiriResult>, QList<TorstonResult>> userAllResults = this->results.value(account);
+
+    QList<TorstonResult> userTorstonResults = userAllResults.second;
+    userTorstonResults.removeOne(result);
+
+    userAllResults.second = userTorstonResults;
+
+    this->results.insert(account, userAllResults);
+
+    emit signalUpdateResultsList(this->results);
+}
 
 void ApplicationLogic::onTestSelected(EnumTestType testType) {
 

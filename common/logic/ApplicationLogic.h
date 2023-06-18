@@ -65,6 +65,11 @@ class ApplicationLogic : public QObject {
 
         void onDeleteUser(UserAccount user);
 
+        void onDeleteLiriResult(UserAccount account, LiriResult result);
+
+        void onDeleteTorstonResult(UserAccount account, TorstonResult result);
+
+
     private:
         QMap<EnumTestType, Test *> tests;
         Test * currentTest;

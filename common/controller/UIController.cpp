@@ -17,6 +17,8 @@ void UIController::init() {
     QObject::connect(window, &MainWindow::signalAddUser, this, &UIController::onAddUser);
     QObject::connect(window, &MainWindow::signalEditUser, this, &UIController::onEditUser);
     QObject::connect(window, &MainWindow::signalDeleteUser, this, &UIController::onDeleteUser);
+    QObject::connect(window, &MainWindow::signalDeleteLiriResult, this, &UIController::onDeleteLiriResult);
+    QObject::connect(window, &MainWindow::signalDeleteTorstonResult, this, &UIController::onDeleteTorstonResult);
 
     QObject::connect(window, &MainWindow::signalLiriAnswered, this, &UIController::signalQuestAnsweredLiri);
     QObject::connect(window, &MainWindow::signalTorstonAnswered, this, &UIController::signalQuestAnsweredTorson);
@@ -45,6 +47,14 @@ void UIController::onDeleteUser(UserAccount user) {
 
 }
 
+void UIController::onDeleteLiriResult(UserAccount account, LiriResult result) {
+    emit signalDeleteLiriResult(account, result);
+
+}
+
+void UIController::onDeleteTorstonResult(UserAccount account, TorstonResult result) {
+    emit signalDeleteTorstonResult(account, result);
+}
 
 void UIController::onAskQuestion(EnumTestType testType, Question q) {
 

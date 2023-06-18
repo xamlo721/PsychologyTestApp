@@ -31,6 +31,8 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWi
     QObject::connect(this->ui->authWidget, &MainAuthWidget::signalAddUser, this, &MainWindow::onAddUser);
     QObject::connect(this->ui->authWidget, &MainAuthWidget::signalEditUser, this, &MainWindow::onEditUser);
     QObject::connect(this->ui->authWidget, &MainAuthWidget::signalDeleteUser, this, &MainWindow::onDeleteUser);
+    QObject::connect(this->ui->authWidget, &MainAuthWidget::signalDeleteLiriResult, this, &MainWindow::onDeleteLiriResult);
+    QObject::connect(this->ui->authWidget, &MainAuthWidget::signalDeleteTorstonResult, this, &MainWindow::onDeleteTorstonResult);
 
 }
 
@@ -72,6 +74,14 @@ void MainWindow::onEditUser(UserAccount user) {
 void MainWindow::onDeleteUser(UserAccount user) {
     emit signalDeleteUser(user);
 
+}
+
+void MainWindow::onDeleteLiriResult(UserAccount account, LiriResult result) {
+    emit signalDeleteLiriResult(account, result);
+
+}
+void MainWindow::onDeleteTorstonResult(UserAccount account, TorstonResult result) {
+    emit signalDeleteTorstonResult(account, result);
 }
 
 void MainWindow::onHelpOpened() {
