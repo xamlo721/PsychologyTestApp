@@ -34,6 +34,8 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWi
     QObject::connect(this->ui->authWidget, &MainAuthWidget::signalDeleteLiriResult, this, &MainWindow::onDeleteLiriResult);
     QObject::connect(this->ui->authWidget, &MainAuthWidget::signalDeleteTorstonResult, this, &MainWindow::onDeleteTorstonResult);
 
+    QObject::connect(this->ui->authWidget, &MainAuthWidget::signalWindowClose, this, &MainWindow::onCloseWindow);
+
 }
 
 void MainWindow::onTestComplete() {
@@ -82,6 +84,10 @@ void MainWindow::onDeleteLiriResult(UserAccount account, LiriResult result) {
 }
 void MainWindow::onDeleteTorstonResult(UserAccount account, TorstonResult result) {
     emit signalDeleteTorstonResult(account, result);
+}
+
+void MainWindow::onCloseWindow() {
+    this->close();
 }
 
 void MainWindow::onHelpOpened() {

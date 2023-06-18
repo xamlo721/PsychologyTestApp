@@ -71,6 +71,7 @@ class MainWindow : public QMainWindow {
         void onDeleteLiriResult(UserAccount account, LiriResult result);
         void onDeleteTorstonResult(UserAccount account, TorstonResult result);
 
+        void onCloseWindow();
 
 };
 
