@@ -11,6 +11,7 @@ UserResultLiriWidget::UserResultLiriWidget(QWidget *parent) : QWidget(parent), u
 void UserResultLiriWidget::showResult(LiriResult result) {
     this->displayRadar(result.st1, result.st2, result.st3, result.st4,
                        result.st5, result.st6, result.st7, result.st8);
+    this->ui->username->setText(result.user.getName());
 }
 
 

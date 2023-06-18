@@ -13,6 +13,7 @@ UserResultTorstonWidget::UserResultTorstonWidget(QWidget *parent) : QWidget(pare
 
 void UserResultTorstonWidget::showResult(TorstonResult result) {
 
+    this->ui->username->setText(result.user.getName());
     switch (result.result) {
 
         case EnumTorsonResult::VeryLow :
