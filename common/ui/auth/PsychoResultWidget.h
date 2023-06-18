@@ -49,8 +49,8 @@ class PsychoResultWidget : public QWidget {
     signals:
         void signalLiriResultClicked(LiriResult account);
         void signalTorstonResultClicked(TorstonResult account);
-        void signalLiriProtocolClicked(LiriResult account);
-        void signalTorstonProtocolClicked(TorstonResult account);
+        void signalLiriProtocolClicked(LiriResult result);
+        void signalTorstonProtocolClicked(TorstonResult result);
         void signalDeleteResult(UserAccount account);
         void signalPasswordChanged(QString passwd);
         void signalCancelButtonPressed();

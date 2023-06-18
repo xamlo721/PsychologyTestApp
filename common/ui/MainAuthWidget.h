@@ -39,6 +39,9 @@ class MainAuthWidget : public QWidget {
         void signalWindowClose();
 
     private slots:
+        void onPsychoShowLiriResult(LiriResult result);
+        void onPsychoShowTorstonResult(TorstonResult result);
+
         void onAuthUser(UserAccount user);
         void onAddUser(QString user);
         void onEditUser(UserAccount user);

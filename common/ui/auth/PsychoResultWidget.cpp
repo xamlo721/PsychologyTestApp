@@ -4,7 +4,12 @@
 
 PsychoResultWidget::PsychoResultWidget(QWidget *parent) :  QWidget(parent), ui(new Ui::PsychoResultWidget) {
     ui->setupUi(this);
+    QObject::connect(this->ui->showResult_pushButton, &QPushButton::clicked, this, &PsychoResultWidget::onShowResultButtonPressed);
+    QObject::connect(this->ui->showprotocol_pushButton, &QPushButton::clicked, this, &PsychoResultWidget::onShowProtocolPressed);
+    QObject::connect(this->ui->changePassword_pushButton, &QPushButton::clicked, this, &PsychoResultWidget::onChangePasswdPressed);
+    QObject::connect(this->ui->remove_pushButton, &QPushButton::clicked, this, &PsychoResultWidget::onRemoveButtonPressed);
     QObject::connect(this->ui->cancel_pushButton, &QPushButton::clicked, this, &PsychoResultWidget::onCancelButtonPressed);
+
     ui->scrollArea_users->setLayout(new QVBoxLayout());
     ui->scrollArea_users->layout()->setAlignment(Qt::AlignTop);
 

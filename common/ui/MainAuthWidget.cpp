@@ -1,5 +1,7 @@
 #include "MainAuthWidget.h"
 #include "common/ui/auth/EnumAvailableAuthWidgets.h"
+#include "common/items/TorstonResult.h"
+#include "common/items/LiriResult.h"
 
 MainAuthWidget::MainAuthWidget(QWidget *parent) : QWidget(parent),  ui(new Ui::MainAuthWidget) {
     ui->setupUi(this);
@@ -7,14 +9,24 @@ MainAuthWidget::MainAuthWidget(QWidget *parent) : QWidget(parent),  ui(new Ui::M
     QObject::connect(this->ui->welcomePage, &WelcomeAuthWidget::signalRespOpen, this, &MainAuthWidget::onRespButtonPressed);
     QObject::connect(this->ui->welcomePage, &WelcomeAuthWidget::signalPsychoOpen, this, &MainAuthWidget::onPsychoButtonPressed);
     QObject::connect(this->ui->welcomePage, &WelcomeAuthWidget::signalApplicationClose, this, &MainAuthWidget::onExitButton);
+
     QObject::connect(this->ui->authPage, &UserAuthWidget::signalAuthUser, this, &MainAuthWidget::onAuthUser);
     QObject::connect(this->ui->authPage, &UserAuthWidget::signalAddUser, this, &MainAuthWidget::onAddUser);
     QObject::connect(this->ui->authPage, &UserAuthWidget::signalEditUser, this, &MainAuthWidget::onEditUser);
     QObject::connect(this->ui->authPage, &UserAuthWidget::signalDeleteUser, this, &MainAuthWidget::onDeleteUser);
     QObject::connect(this->ui->authPage, &UserAuthWidget::signalCancel, this, &MainAuthWidget::openWelcomePage);
+
+    QObject::connect(this->ui->psychoResults, &PsychoResultWidget::signalLiriResultClicked, this, &MainAuthWidget::onPsychoShowLiriResult);
+    QObject::connect(this->ui->psychoResults, &PsychoResultWidget::signalTorstonResultClicked, this, &MainAuthWidget::onPsychoShowTorstonResult);
     QObject::connect(this->ui->psychoResults, &PsychoResultWidget::signalCancelButtonPressed, this, &MainAuthWidget::openWelcomePage);
 
+
+    QObject::connect(this->ui->userResultLiri, &UserResultLiriWidget::signalCancel, this, &MainAuthWidget::openWelcomePage);
+    QObject::connect(this->ui->userResultTorston, &UserResultTorstonWidget::signalCancel, this, &MainAuthWidget::openWelcomePage);
+
+
 }
+//=================================================================================================
 
 void MainAuthWidget::openWelcomePage() {
     this->ui->stackedWidget->setCurrentIndex(EnumAvailableAuthWidgets::Welcome);
@@ -35,6 +47,7 @@ void MainAuthWidget::openUserLiriResult() {
 void MainAuthWidget::openTorstonResult() {
     this->ui->stackedWidget->setCurrentIndex(EnumAvailableAuthWidgets::UserResultTorston);
 }
+//=================================================================================================
 
 void MainAuthWidget::syncUserList(QList<UserAccount> users) {
     this->ui->authPage->displayUserAccounts(users);
@@ -43,6 +56,24 @@ void MainAuthWidget::syncUserList(QList<UserAccount> users) {
 
 void MainAuthWidget::syncResultsList(QMap <UserAccount, QPair<QList<LiriResult>, QList<TorstonResult>>> results) {
     this->ui->psychoResults->displayUserResults(results);
+}
+
+void MainAuthWidget::onPsychoShowLiriResult(LiriResult result) {
+
+    this->ui->userResultLiri->showResult(result);
+
+    this->openUserLiriResult();
+}
+
+void MainAuthWidget::onPsychoShowTorstonResult(TorstonResult result) {
+
+    this->ui->userResultTorston->showResult(result);
+
+
+
+
+    this->openTorstonResult();
+
 }
 
 
