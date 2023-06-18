@@ -237,7 +237,7 @@ EnumTorsonResult ApplicationLogic::calculateTorstonResult() {
 
 void ApplicationLogic::sendTorstonResult() {
 
-    TorstonResult torston(this->availableUserId++, this->currentUser, calculateTorstonResult());
+    TorstonResult torston(this->availableTorstonResultId++, this->currentUser, calculateTorstonResult());
 
     if (!this->results.contains(this->currentUser)) {
         this->results.insert(this->currentUser, QPair<QList<LiriResult>, QList<TorstonResult>>());
@@ -261,7 +261,7 @@ void ApplicationLogic::sendTorstonResult() {
 
 void ApplicationLogic::sendLiriResult() {
 
-    LiriResult liri(this->availableUserId++,
+    LiriResult liri(this->availableLiriResultId++,
                     this->currentUser,
                     param1 * 100.f/16,
                     param2 * 100.f/16,

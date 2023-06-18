@@ -95,7 +95,8 @@ class ApplicationLogic : public QObject {
         UserAccount currentUser;
 
         int availableUserId = 0;
-        int availableResultId = 0;
+        int availableLiriResultId = 1;
+        int availableTorstonResultId = 1;
 
         EnumTorsonResult calculateTorstonResult();
         void sendLiriResult();
