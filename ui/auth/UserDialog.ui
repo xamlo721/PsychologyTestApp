@@ -11,7 +11,10 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>Ввод данных</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(255, 255, 255);</string>
   </property>
   <property name="modal">
    <bool>true</bool>
@@ -20,10 +23,18 @@
    <property name="geometry">
     <rect>
      <x>20</x>
-     <y>60</y>
-     <width>341</width>
+     <y>50</y>
+     <width>361</width>
      <height>32</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Montserrat Medium</family>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(0, 0, 0);</string>
    </property>
    <property name="orientation">
     <enum>Qt::Horizontal</enum>
@@ -37,9 +48,17 @@
     <rect>
      <x>20</x>
      <y>10</y>
-     <width>111</width>
+     <width>121</width>
      <height>31</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Montserrat SemiBold</family>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(0, 0, 0);</string>
    </property>
    <property name="text">
     <string>Введите ваше имя:</string>
@@ -48,7 +67,7 @@
   <widget class="QLineEdit" name="lineEdit">
    <property name="geometry">
     <rect>
-     <x>140</x>
+     <x>150</x>
      <y>20</y>
      <width>181</width>
      <height>21</height>
@@ -66,7 +85,7 @@
    <hints>
     <hint type="sourcelabel">
      <x>248</x>
-     <y>254</y>
+     <y>81</y>
     </hint>
     <hint type="destinationlabel">
      <x>157</x>
@@ -82,7 +101,7 @@
    <hints>
     <hint type="sourcelabel">
      <x>316</x>
-     <y>260</y>
+     <y>81</y>
     </hint>
     <hint type="destinationlabel">
      <x>286</x>
