@@ -103,8 +103,6 @@ void PsychoResultWidget::displayUserResults(QMap <UserAccount, QPair<QList<LiriR
         }
     }
 
-
-
 }
 
 void PsychoResultWidget::removeDisplayedAccount(UserAccount account) {
@@ -120,10 +118,21 @@ void PsychoResultWidget::removeDisplayedAccount(UserAccount account) {
 
 void PsychoResultWidget::removeDisplayedResult(UserAccount account, TorstonResult result) {
 
+    QPair<QList<LiriResult>, QList<TorstonResult>> allresults = this->results.value(account);
+    QList<TorstonResult> torstonResults = allresults.second;
+    torstonResults.removeOne(result);
+    allresults.second = torstonResults;
+    this->results.insert(account, allresults);
+    this->displayUserResults(this->results);
 }
 
 void PsychoResultWidget::removeDisplayedResult(UserAccount account, LiriResult result) {
-
+    QPair<QList<LiriResult>, QList<TorstonResult>> allresults = this->results.value(account);
+    QList<LiriResult> liriResults = allresults.first;
+    liriResults.removeOne(result);
+    allresults.first = liriResults;
+    this->results.insert(account, allresults);
+    this->displayUserResults(this->results);
 }
 
 

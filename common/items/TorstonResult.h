@@ -8,7 +8,7 @@
 class TorstonResult {
 
     public:
-    int resultID;
+        int resultID;
         UserAccount user;
         EnumTorsonResult result;
 
@@ -22,6 +22,41 @@ class TorstonResult {
             this->result = result;
         }
 
+
+        TorstonResult (const TorstonResult & other) :
+            resultID(other.resultID), user(other.user),
+            result(other.result){
+
+        }
+
+        TorstonResult& operator=(const TorstonResult& other) {
+            if (&other == this) {
+                return *this;
+            }
+
+            this->resultID = other.resultID;
+            this->user = other.user;
+            this->result = other.result;
+
+            return *this;
+        }
+
+        bool operator==(const TorstonResult& other) const {
+            return (resultID == other.resultID &&
+                    user == other.user);
+        }
+
+        bool operator!=(const TorstonResult& other) const {
+            return !(*this == other);
+        }
+
+        bool operator<(const TorstonResult& other) const {
+            return this->resultID < other.resultID;
+        }
+
+        bool operator>(const TorstonResult& other) const {
+            return !(*this < other);
+        }
 
 };
 
