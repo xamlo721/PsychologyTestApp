@@ -1,8 +1,9 @@
 #include "PsychoDialog.h"
 #include "ui_UserDialog.h"
 
-PsychoDialog::PsychoDialog(QWidget *parent): QDialog(parent), ui(new Ui::UserDialog) {
+PsychoDialog::PsychoDialog(QString passwd, QWidget *parent): QDialog(parent), ui(new Ui::UserDialog) {
     ui->setupUi(this);
+    this->truePassword = passwd;
     this->ui->label->setText("Введите пароль: ");
     QObject::connect(this->ui->buttonBox, &QDialogButtonBox::accepted, this, &PsychoDialog::onOkButtonClicked);
 

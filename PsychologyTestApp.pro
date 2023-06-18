@@ -31,6 +31,7 @@ SOURCES += \
     common/items/TestSection.cpp \
     common/logic/XMLHelper.cpp \
     common/ui/MainAuthWidget.cpp \
+    common/ui/auth/ChangePasswordDialog.cpp \
     common/ui/auth/PsychoDialog.cpp \
     common/ui/auth/PsychoResultWidget.cpp \
     common/ui/auth/UserDialog.cpp \
@@ -80,6 +81,7 @@ HEADERS += \
     common/logic/XMLHelper.h \
     common/ui/EnumUIMode.h \
     common/ui/MainAuthWidget.h \
+    common/ui/auth/ChangePasswordDialog.h \
     common/ui/auth/EnumAvailableAuthWidgets.h \
     common/ui/auth/PsychoDialog.h \
     common/ui/auth/PsychoResultWidget.h \

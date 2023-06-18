@@ -1,6 +1,7 @@
 #include "PsychoResultWidget.h"
 #include "ui_PsychoResultWidget.h"
 #include "common/ui/auth/UserDialog.h"
+#include "common/ui/auth/ChangePasswordDialog.h"
 
 PsychoResultWidget::PsychoResultWidget(QWidget *parent) :  QWidget(parent), ui(new Ui::PsychoResultWidget) {
     ui->setupUi(this);
@@ -161,9 +162,9 @@ void PsychoResultWidget::onShowProtocolPressed() {
 
 void PsychoResultWidget::onChangePasswdPressed() {
     //TODO: Вызвать диалоговое окно ввода имени
-//    UserDialog * nameDialog = new UserDialog(this->selectedAccount);
-//    nameDialog->show();
-//    QObject::connect(nameDialog, &UserDialog::signalEditUserName, this, &PsychoResultWidget::onEditUserAccount);//TODO: Не туда коннектим
+    ChangePasswordDialog * changePasswd = new ChangePasswordDialog();
+    changePasswd->show();
+    QObject::connect(changePasswd, &ChangePasswordDialog::signalPasswordChanged, this, &PsychoResultWidget::onPasswordChanged);
 
 }
 
@@ -281,6 +282,11 @@ void PsychoResultWidget::onUnselectResult() {
     this->ui->remove_pushButton->setDisabled(true);
     this->hasSelectedResult = false;
 }
+
+void PsychoResultWidget::onPasswordChanged(QString newPassword) {
+    emit signalPasswordChanged(newPassword);
+}
+
 
 
 PsychoResultWidget::~PsychoResultWidget() {

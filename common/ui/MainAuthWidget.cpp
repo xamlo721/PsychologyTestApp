@@ -23,6 +23,7 @@ MainAuthWidget::MainAuthWidget(QWidget *parent) : QWidget(parent),  ui(new Ui::M
     QObject::connect(this->ui->psychoResults, &PsychoResultWidget::signalDeleteTorstonResult, this, &MainAuthWidget::onDeleteTorstonResult);
     QObject::connect(this->ui->psychoResults, &PsychoResultWidget::signalCancelButtonPressed, this, &MainAuthWidget::openWelcomePage);
 
+    QObject::connect(this->ui->psychoResults, &PsychoResultWidget::signalPasswordChanged, this, &MainAuthWidget::onPasswordChanged);
 
     QObject::connect(this->ui->userResultLiri, &UserResultLiriWidget::signalCancel, this, &MainAuthWidget::openWelcomePage);
     QObject::connect(this->ui->userResultTorston, &UserResultTorstonWidget::signalCancel, this, &MainAuthWidget::openWelcomePage);
@@ -108,12 +109,17 @@ void MainAuthWidget::onRespButtonPressed() {
 
 void MainAuthWidget::onPsychoButtonPressed() {
 
-    PsychoDialog * dialog = new PsychoDialog();
+    PsychoDialog * dialog = new PsychoDialog(psychoPassword);
     dialog->setModal(true);
     dialog->show();
     QObject::connect(dialog, &PsychoDialog::signalAuthPsycho, this, &MainAuthWidget::openPsychoPage);
 
 }
+
+void MainAuthWidget::onPasswordChanged(QString newPassword) {
+    this->psychoPassword = newPassword;
+}
+
 
 void MainAuthWidget::onExitButton() {
     emit signalWindowClose();

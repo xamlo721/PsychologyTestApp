@@ -73,6 +73,7 @@ class PsychoResultWidget : public QWidget {
         void clearResultsListWidgets();
         void onSelectResult();
         void onUnselectResult();
+        void onPasswordChanged(QString newPassword);
 };
 
 #endif // PSYCHORESULTWIDGET_H

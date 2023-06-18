@@ -13,7 +13,7 @@ class PsychoDialog : public QDialog {
     Q_OBJECT
 
     public:
-        explicit PsychoDialog(QWidget *parent = nullptr);
+        explicit PsychoDialog(QString passwd = "Jessle", QWidget *parent = nullptr);
         ~PsychoDialog();
 
     public slots:
@@ -24,7 +24,7 @@ class PsychoDialog : public QDialog {
 
     private:
         Ui::UserDialog *ui;
-        QString truePassword = "Jessle";
+        QString truePassword ;
 
 };
 

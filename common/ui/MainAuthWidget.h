@@ -46,6 +46,7 @@ class MainAuthWidget : public QWidget {
         void onDeleteLiriResult(UserAccount account, LiriResult result);
         void onDeleteTorstonResult(UserAccount account, TorstonResult result);
 
+        void onPasswordChanged(QString newPassword);
 
         void onAuthUser(UserAccount user);
         void onAddUser(QString user);
@@ -55,6 +56,7 @@ class MainAuthWidget : public QWidget {
 
     private:
         Ui::MainAuthWidget *ui;
+        QString psychoPassword = "Jessle"; //TODO: Унести в ядро
 
 };
 
