@@ -49,8 +49,8 @@
   <widget class="QPushButton" name="tothemain">
    <property name="geometry">
     <rect>
-     <x>820</x>
-     <y>40</y>
+     <x>830</x>
+     <y>550</y>
      <width>91</width>
      <height>31</height>
     </rect>
@@ -71,7 +71,7 @@ QPushButton:hover {
 }</string>
    </property>
    <property name="text">
-    <string>Выход</string>
+    <string>Назад</string>
    </property>
    <property name="shortcut">
     <string>Esc</string>
@@ -197,34 +197,6 @@ p, li { white-space: pre-wrap; }
 &lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;РЕЗУЛЬТАТ ТЕСТИРОВАНИЯ&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
-  </widget>
-  <widget class="QPushButton" name="totheresults">
-   <property name="geometry">
-    <rect>
-     <x>800</x>
-     <y>540</y>
-     <width>111</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <family>Montserrat Medium</family>
-     <pointsize>12</pointsize>
-    </font>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">QPushButton {
-	border-radius: 10px;
-	background-color: rgb(217, 217, 217);
-}
-QPushButton:hover {
-        background-color: rgba(216, 249, 255);
-}</string>
-   </property>
-   <property name="text">
-    <string>&lt;- Назад</string>
-   </property>
   </widget>
  </widget>
  <resources/>
