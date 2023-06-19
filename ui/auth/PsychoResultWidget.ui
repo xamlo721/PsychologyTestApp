@@ -139,7 +139,7 @@ QPushButton:hover {
 }</string>
       </property>
       <property name="text">
-       <string>Распечатать</string>
+       <string>Сохранить файл</string>
       </property>
      </widget>
     </item>

@@ -444,6 +444,7 @@ void PsychoResultWidget::printLiriResult() {
 
 
 
+
     QString filename = QFileDialog::getSaveFileName(tempBuffer, "Сохранение результата", QString(), "Pdf File(*.pdf)");
     qDebug() << "Print file name is " << filename;
     if(!filename.isEmpty()) {
