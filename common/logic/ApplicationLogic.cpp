@@ -298,7 +298,7 @@ void ApplicationLogic::sendTorstonResult() {
     userAllResults.second = userTorstonResults;
 
     QPair<QList<AnswerProtocol>, QList<AnswerProtocol>> allUserProtocols = this->protocols.value(this->currentUser);
-    allUserProtocols.second.append(AnswerProtocol(torston.resultID, this->currentAnswerProtocol.answers));
+    allUserProtocols.second.append(AnswerProtocol(torston.resultID, this->currentUser, this->currentAnswerProtocol.answers));
     this->protocols.insert(this->currentUser, allUserProtocols);
 
     this->results.insert(this->currentUser, userAllResults);
@@ -340,7 +340,7 @@ void ApplicationLogic::sendLiriResult() {
 
 
     QPair<QList<AnswerProtocol>, QList<AnswerProtocol>> allUserProtocols = this->protocols.value(this->currentUser);
-    allUserProtocols.first.append(AnswerProtocol(liri.resultID, this->currentAnswerProtocol.answers));
+    allUserProtocols.first.append(AnswerProtocol(liri.resultID, this->currentUser, this->currentAnswerProtocol.answers));
     this->protocols.insert(this->currentUser, allUserProtocols);
 
     emit signalUpdateProtocols(this->protocols);

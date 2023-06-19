@@ -4,26 +4,29 @@
 #include <QString>
 #include <QList>
 #include <QPair>
+#include "common/items/UserAccount.h"
 
 class AnswerProtocol {
 
     public:
         int resultID;
+        UserAccount user;
         QPair<QList<QString>, QList<QString>> answers;
 
         AnswerProtocol() {
 
         }
 
-        AnswerProtocol(int resultID,QPair<QList<QString>, QList<QString>> answers ) {
+        AnswerProtocol(int resultID, UserAccount user, QPair<QList<QString>, QList<QString>> answers ) {
             this->resultID = resultID;
+            this->user = user;
             this->answers = answers;
 
         }
 
 
         AnswerProtocol (const AnswerProtocol & other) :
-            resultID(other.resultID), answers(other.answers) {
+            resultID(other.resultID), answers(other.answers), user(other.user) {
 
         }
 
@@ -34,6 +37,7 @@ class AnswerProtocol {
 
             this->resultID = other.resultID;
             this->answers = other.answers;
+            this->user = other.user;
 
             return *this;
         }

@@ -7,7 +7,7 @@ UserTestProtocol::UserTestProtocol(QWidget *parent) : QWidget(parent), ui(new Ui
 }
 
 void UserTestProtocol::showProtocol(AnswerProtocol protocol) {
-    this->ui->textEdit->setText("");
+    this->ui->textEdit->setText("Протокол пользователя: " + protocol.user.getName() + "\n");
 
     for (int i = 0; i < protocol.answers.first.size(); i++) {
         QString protocolRecord = protocol.answers.first.at(i) + "   :   " + protocol.answers.second.at(i) + "\n";
