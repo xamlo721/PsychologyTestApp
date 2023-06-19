@@ -2,6 +2,7 @@
 #include "ui_PsychoResultWidget.h"
 #include "common/ui/auth/UserDialog.h"
 #include "common/ui/auth/ChangePasswordDialog.h"
+#include <cmath>
 
 PsychoResultWidget::PsychoResultWidget(QWidget *parent) :  QWidget(parent), ui(new Ui::PsychoResultWidget) {
     ui->setupUi(this);
@@ -185,7 +186,58 @@ void PsychoResultWidget::onPrintButtonPressed() {
 
     //Code plase
 
+//    QTextEdit parent;
+//    parent.setText("We are the world!");
+//    parent.show();
 
+//    QString filename = QFileDialog::getOpenFileName(&parent,"Open File",QString(),"Pdf File(*.pdf)");
+//    qDebug()<<"Print file name is "<<filename;
+//    if(!filename.isEmpty()) {
+//        if(QFileInfo(filename).suffix().isEmpty()) {
+//            filename.append(".pdf");
+//        }
+
+//        QPrinter printer(QPrinter::HighResolution);
+//        printer.setOutputFormat(QPrinter::PdfFormat);
+//        printer.setOutputFileName(filename);
+//        QPrintDialog*dlg = new QPrintDialog(&printer,&parent);
+//        dlg->setWindowTitle(QObject::tr("Print Document"));
+
+//        if(dlg->exec() == QDialog::Accepted) {
+//            parent.print(&printer);
+//        }
+//        delete dlg;
+//    }
+
+
+
+
+//    QPrinter printer(QPrinter::PrinterResolution);
+//    printer.setOutputFormat(QPrinter::PdfFormat);
+//    printer.setOutputFileName("document.pdf");
+
+
+//    QPainter painter;
+//    if (!painter.begin(&printer)) {
+//        qWarning("Failed to open printer");
+//        return;
+//    }
+
+//    painter.drawText(100, 100, "Hello, world!");
+//    painter.end();
+
+
+
+//    QPrintDialog printDialog(printer, parent);
+//    if (printDialog.exec() == QDialog::Accepted) {
+//        // print ...
+//    }
+
+    if (this->selectedResultType == EnumTestType::Liri) {
+        this->printLiriResult();
+    } else {
+        this->printTorsronResult();
+    }
 }
 
 
@@ -312,6 +364,221 @@ void PsychoResultWidget::onPasswordChanged(QString newPassword) {
 
 void PsychoResultWidget::syncProtocols(QMap <UserAccount, QPair<QList<AnswerProtocol>, QList<AnswerProtocol>>> protocols) {
     this->protocols = protocols;
+}
+
+void PsychoResultWidget::printLiriResult() {
+    QTextEdit * tempBuffer = new QTextEdit();
+
+            tempBuffer->setHtml("<!DOCTYPE HTML PUBLIC -//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd\">"
+                                "<html>"
+
+                                "<head>"
+                                    "<meta name=\"qrichtext\" content=\"1\" />"
+                                    "<style type=\"text/css\">"
+                                        "p,"
+                                        "li {"
+                                            "white-space: pre-wrap;"
+                                        "}"
+                                    "</style>"
+                                "</head>"
+
+                                "<body style=\" font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;\">"
+
+                                    "<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:150%;\">"
+                                        "<span style=\" font-family:'Montserrat Medium'; font-size:24pt; color:#000000;\">	"
+                                            "Результат участника: " + this->selectedAccount.getName() +
+                                        "</span>"
+                                    "</p>"
+                                    "<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:150%;\">"
+                                        "<span style=\" font-family:'Montserrat Medium'; font-size:16pt; color:#000000;\">	"
+                                            "Авторитарность: " + QString::number(std::round(this->selectedLiriResult.st1*16.0 / 100)) +
+                                        "</span>"
+                                    "</p>"
+                                        "<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:150%;\">"
+                                            "<span style=\" font-family:'Montserrat Medium'; font-size:16pt; color:#000000;\">	"
+                                                "Эгоистичность: " + QString::number(std::round(this->selectedLiriResult.st2*16.0 / 100)) +
+                                            "</span>"
+                                        "</p>"
+                                            "<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:150%;\">"
+                                                "<span style=\" font-family:'Montserrat Medium'; font-size:16pt; color:#000000;\">	"
+                                                    "Агрессивность: " + QString::number(std::round(this->selectedLiriResult.st3*16.0 / 100)) +
+                                                "</span>"
+                                            "</p>"
+                                                "<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:150%;\">"
+                                                    "<span style=\" font-family:'Montserrat Medium'; font-size:16pt; color:#000000;\">	"
+                                                        "Подозрительность: " + QString::number(std::round(this->selectedLiriResult.st4*16.0 / 100)) +
+                                                    "</span>"
+                                                "</p>"
+                                                    "<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:150%;\">"
+                                                        "<span style=\" font-family:'Montserrat Medium'; font-size:16pt; color:#000000;\">	"
+                                                            "Подчиняемость: " + QString::number(std::round(this->selectedLiriResult.st5*16.0 / 100)) +
+                                                        "</span>"
+                                                    "</p>"
+                                                        "<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:150%;\">"
+                                                            "<span style=\" font-family:'Montserrat Medium'; font-size:16pt; color:#000000;\">	"
+                                                                "Зависимость: " + QString::number(std::round(this->selectedLiriResult.st6*16.0 / 100)) +
+                                                            "</span>"
+                                                        "</p>"
+                                                            "<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:150%;\">"
+                                                                "<span style=\" font-family:'Montserrat Medium'; font-size:16pt; color:#000000;\">	"
+                                                                    "Дружелюбность: " + QString::number(std::round(this->selectedLiriResult.st7*16.0 / 100)) +
+                                                                "</span>"
+                                                            "</p>"
+                                                                "<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:150%;\">"
+                                                                    "<span style=\" font-family:'Montserrat Medium'; font-size:16pt; color:#000000;\">	"
+                                                                        "Альтруистичность: " + QString::number(std::round(this->selectedLiriResult.st8*16.0 / 100)) +
+                                                                    "</span>"
+                                                                "</p>"
+
+                                "</body>"
+
+                                "</html>");
+
+
+//    tempBuffer->show();//Просто посмотреть что получилось.
+
+
+
+    QString filename = QFileDialog::getSaveFileName(tempBuffer, "Open File", QString(), "Pdf File(*.pdf)");
+    qDebug() << "Print file name is " << filename;
+    if(!filename.isEmpty()) {
+        if(QFileInfo(filename).suffix().isEmpty()) {
+            filename.append(".pdf");
+        }
+
+        QPrinter printer(QPrinter::HighResolution);
+        printer.setOutputFormat(QPrinter::PdfFormat);
+        printer.setOutputFileName(filename);
+
+        QTextDocument doc;
+        doc.setHtml(tempBuffer->toHtml());
+        doc.print(&printer);
+    }
+
+    delete tempBuffer;
+}
+
+
+void PsychoResultWidget::printTorsronResult() {
+
+    QTextEdit * tempBuffer = new QTextEdit();
+
+    switch (this->selectedTorstonResult.result) {
+
+        case EnumTorsonResult::VeryLow :
+        case EnumTorsonResult::Low :
+        case EnumTorsonResult::Medium : {
+            tempBuffer->setHtml("<!DOCTYPE HTML PUBLIC -//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd\">"
+                                "<html>"
+
+                                "<head>"
+                                    "<meta name=\"qrichtext\" content=\"1\" />"
+                                    "<style type=\"text/css\">"
+                                        "p,"
+                                        "li {"
+                                            "white-space: pre-wrap;"
+                                        "}"
+                                    "</style>"
+                                "</head>"
+
+                                "<body style=\" font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;\">"
+
+                                    "<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:150%;\">"
+                                        "<span style=\" font-family:'Montserrat Medium'; font-size:24pt; color:#000000;\">	"
+                                            "Результат участника: " + this->selectedAccount.getName() +
+                                        "</span>"
+                                    "</p>"
+
+                                    "<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:150%;\">"
+                                        "<span style=\" font-family:'Montserrat Medium'; font-size:16pt; color:#000000;\">	"
+                                            "Полезависимые индивиды демонстрируют преимущественную ориентацию на внешние факторы при решении проблем."
+                                        "</span>"
+                                    "</p>"
+                                    "<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:150%;\">"
+                                        "<span style=\" font-family:'Montserrat Medium'; font-size:16pt; color:#000000;\">	"
+                                            "У Вас более рациональная стратегия запоминания и воспроизведения, более развиты селективное внимание и контролирующие процессы."
+                                        "</span>"
+                                    "</p>"
+                                    "<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:150%;\">"
+                                        "<span style=\" font-family:'Montserrat Medium'; font-size:16pt; color:#000000;\">	"
+                                            "Вы отличаетесь худшим познанием своего поведения, большей пассивностью в отношении к окружающему, большей внушаемостью и зависимостью от группы. "
+                                            "При этом Вы легче разрешаете конфликтные ситуации."
+                                        "</span>"
+                                    "</p>"
+                                "</body>"
+
+                                "</html>");
+            break;
+        }
+
+        case EnumTorsonResult::High :
+        case EnumTorsonResult::VeryHigh : {
+        tempBuffer->setHtml("<!DOCTYPE HTML PUBLIC -//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd\">"
+                            "<html>"
+
+                            "<head>"
+                                "<meta name=\"qrichtext\" content=\"1\" />"
+                                "<style type=\"text/css\">"
+                                    "p,"
+                                    "li {"
+                                        "white-space: pre-wrap;"
+                                    "}"
+                                "</style>"
+                            "</head>"
+
+                            "<body style=\" font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;\">"
+
+                                "<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:150%;\">"
+                                    "<span style=\" font-family:'Montserrat Medium'; font-size:24pt; color:#000000;\">	"
+                                        "Результат участника: " + this->selectedAccount.getName() +
+                                    "</span>"
+                                "</p>"
+
+                                "<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:150%;\">"
+                                    "<span style=\" font-family:'Montserrat Medium'; font-size:16pt; color:#000000;\">	"
+                                        "Вы не самый социально-активный человек, больше проявляете интерес к теории и достижению цели. "
+                                    "</span>"
+                                "</p>"
+                                "<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:150%;\">"
+                                    "<span style=\" font-family:'Montserrat Medium'; font-size:16pt; color:#000000;\">	"
+                                        "Для Вас характерна преимущественная ориентация на внутренние эталоны упорядочивания внешних впечатлений в условиях, когда навязываются неадекватные формы отражения внешнего мира. "
+                                        "Вам свойственна устойчивость и адекватное восприятие предметного мира. Вы независимы от общества в большинстве ситуаций, а при выборе своей цели игнорируете окружение. "
+                                    "</span>"
+                                "</p>"
+                                "<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:150%;\">"
+                                    "<span style=\" font-family:'Montserrat Medium'; font-size:16pt; color:#000000;\">	"
+                                        "Для Вас характерна высокая аналитичность, позволяющая Вам легко структурировать окружающую среду, и большая склонность полагаться на свои собственные оценки, мнения, впечатления."
+                                    "</span>"
+                                "</p>"
+                            "</body>"
+
+                            "</html>");
+        break;
+        }
+
+    }
+
+//    tempBuffer->show();//Просто посмотреть что получилось.
+
+
+
+    QString filename = QFileDialog::getSaveFileName(tempBuffer, "Open File", QString(), "Pdf File(*.pdf)");
+    qDebug() << "Print file name is " << filename;
+    if(!filename.isEmpty()) {
+        if(QFileInfo(filename).suffix().isEmpty()) {
+            filename.append(".pdf");
+        }
+
+        QPrinter printer(QPrinter::HighResolution);
+        printer.setOutputFormat(QPrinter::PdfFormat);
+        printer.setOutputFileName(filename);
+
+        QTextDocument doc;
+        doc.setHtml(tempBuffer->toHtml());
+        doc.print(&printer);
+    }
+
+    delete tempBuffer;
 }
 
 

@@ -11,6 +11,14 @@
 #include "common/ui/auth/UserReslitButton.h"
 #include "common/items/AnswerProtocol.h"
 
+#include <QPrinter>
+#include <QPainter>
+#include <QPrintDialog>
+#include <QTextEdit>
+#include <QFileDialog>
+#include <QFileInfo>
+#include <QDebug>
+
 namespace Ui {
     class PsychoResultWidget;
 }
@@ -77,6 +85,9 @@ class PsychoResultWidget : public QWidget {
         void onSelectResult();
         void onUnselectResult();
         void onPasswordChanged(QString newPassword);
+
+        void printTorsronResult();
+        void printLiriResult();
 
 
 };
