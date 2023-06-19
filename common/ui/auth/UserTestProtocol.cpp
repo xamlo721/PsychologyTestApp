@@ -4,9 +4,7 @@
 UserTestProtocol::UserTestProtocol(QWidget *parent) : QWidget(parent), ui(new Ui::UserTestProtocol) {
     ui->setupUi(this);
     QObject::connect(this->ui->tothemain, &QPushButton::clicked, this, &UserTestProtocol::signalCancel);
-
 }
-
 
 void UserTestProtocol::showProtocol(AnswerProtocol protocol) {
     this->ui->textEdit->setText("");
