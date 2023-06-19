@@ -439,11 +439,8 @@ void PsychoResultWidget::printLiriResult() {
 
 
 
-<<<<<<< HEAD
-    QString filename = QFileDialog::getSaveFileName(tempBuffer, "Save file", QString(), "pdf file(*.pdf)");
-=======
+
     QString filename = QFileDialog::getSaveFileName(tempBuffer, "Сохранение результата", QString(), "Pdf File(*.pdf)");
->>>>>>> main
     qDebug() << "Print file name is " << filename;
     if(!filename.isEmpty()) {
         if(QFileInfo(filename).suffix().isEmpty()) {
@@ -566,11 +563,7 @@ void PsychoResultWidget::printTorsronResult() {
 
 
 
-<<<<<<< HEAD
-    QString filename = QFileDialog::getSaveFileName(tempBuffer, "Save file", QString(), "pdf file(*.pdf)");
-=======
     QString filename = QFileDialog::getSaveFileName(tempBuffer, "Сохранение результата", QString(), "Pdf File(*.pdf)");
->>>>>>> main
     qDebug() << "Print file name is " << filename;
     if(!filename.isEmpty()) {
         if(QFileInfo(filename).suffix().isEmpty()) {
