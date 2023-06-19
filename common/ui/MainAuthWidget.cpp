@@ -17,7 +17,7 @@ MainAuthWidget::MainAuthWidget(QWidget *parent) : QWidget(parent),  ui(new Ui::M
     QObject::connect(this->ui->authPage, &UserAuthWidget::signalDeleteUser, this, &MainAuthWidget::onDeleteUser);
     QObject::connect(this->ui->authPage, &UserAuthWidget::signalCancel, this, &MainAuthWidget::openWelcomePage);
 
-    QObject::connect(this->ui->userTestProtocol, &UserTestProtocol::signalCancel, this, &MainAuthWidget::openWelcomePage);
+    QObject::connect(this->ui->userTestProtocol, &UserTestProtocol::signalCancel, this, &MainAuthWidget::openPsychoPage);
 
     QObject::connect(this->ui->psychoResults, &PsychoResultWidget::signalLiriResultClicked, this, &MainAuthWidget::onPsychoShowLiriResult);
     QObject::connect(this->ui->psychoResults, &PsychoResultWidget::signalTorstonResultClicked, this, &MainAuthWidget::onPsychoShowTorstonResult);
@@ -28,8 +28,8 @@ MainAuthWidget::MainAuthWidget(QWidget *parent) : QWidget(parent),  ui(new Ui::M
 
     QObject::connect(this->ui->psychoResults, &PsychoResultWidget::signalPasswordChanged, this, &MainAuthWidget::onPasswordChanged);
 
-    QObject::connect(this->ui->userResultLiri, &UserResultLiriWidget::signalCancel, this, &MainAuthWidget::openWelcomePage);
-    QObject::connect(this->ui->userResultTorston, &UserResultTorstonWidget::signalCancel, this, &MainAuthWidget::openWelcomePage);
+    QObject::connect(this->ui->userResultLiri, &UserResultLiriWidget::signalCancel, this, &MainAuthWidget::openPsychoPage);
+    QObject::connect(this->ui->userResultTorston, &UserResultTorstonWidget::signalCancel, this, &MainAuthWidget::openPsychoPage);
 
 
 }
