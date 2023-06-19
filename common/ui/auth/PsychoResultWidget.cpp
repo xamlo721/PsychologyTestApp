@@ -389,6 +389,11 @@ void PsychoResultWidget::printLiriResult() {
                                             "Результат участника: " + this->selectedAccount.getName() +
                                         "</span>"
                                     "</p>"
+                                        "<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:150%;\">"
+                                            "<span style=\" font-family:'Montserrat Medium'; font-size:12pt; color:#000000;\">	"
+                                                "Тест Лири."
+                                            "</span>"
+                                        "</p>"
                                     "<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:150%;\">"
                                         "<span style=\" font-family:'Montserrat Medium'; font-size:16pt; color:#000000;\">	"
                                             "Авторитарность: " + QString::number(std::round(this->selectedLiriResult.st1*16.0 / 100)) +
@@ -488,7 +493,11 @@ void PsychoResultWidget::printTorsronResult() {
                                             "Результат участника: " + this->selectedAccount.getName() +
                                         "</span>"
                                     "</p>"
-
+                                        "<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:150%;\">"
+                                            "<span style=\" font-family:'Montserrat Medium'; font-size:12pt; color:#000000;\">	"
+                                                "Тест Торстона."
+                                            "</span>"
+                                        "</p>"
                                     "<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:150%;\">"
                                         "<span style=\" font-family:'Montserrat Medium'; font-size:16pt; color:#000000;\">	"
                                             "Полезависимые индивиды демонстрируют преимущественную ориентацию на внешние факторы при решении проблем."
@@ -533,7 +542,11 @@ void PsychoResultWidget::printTorsronResult() {
                                         "Результат участника: " + this->selectedAccount.getName() +
                                     "</span>"
                                 "</p>"
-
+                                    "<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:150%;\">"
+                                        "<span style=\" font-family:'Montserrat Medium'; font-size:12pt; color:#000000;\">	"
+                                            "Тест Торстона."
+                                        "</span>"
+                                    "</p>"
                                 "<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:150%;\">"
                                     "<span style=\" font-family:'Montserrat Medium'; font-size:16pt; color:#000000;\">	"
                                         "Вы не самый социально-активный человек, больше проявляете интерес к теории и достижению цели. "
