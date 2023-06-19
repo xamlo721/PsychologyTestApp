@@ -268,7 +268,7 @@ void PsychoResultWidget::onLiriResultClicked(LiriResult result) {
 
     for(UserReslitButton * r : this->displayesResults.value(this->selectedAccount)) {
         r->setChecked(false);
-        if (r->getResultId() == result.resultID) {
+        if (r->getResultId() == result.resultID && r->testType == EnumTestType::Liri) {
             r->setChecked(true);
         }
     }
@@ -282,7 +282,7 @@ void PsychoResultWidget::onTorstonResultClicked(TorstonResult result) {
 
     for(UserReslitButton * r : this->displayesResults.value(this->selectedAccount)) {
         r->setChecked(false);
-        if (r->getResultId() == result.resultID) {
+        if (r->getResultId() == result.resultID && r->testType == EnumTestType::Torston) {
             r->setChecked(true);
         }
     }
@@ -439,7 +439,7 @@ void PsychoResultWidget::printLiriResult() {
 
 
 
-    QString filename = QFileDialog::getSaveFileName(tempBuffer, "Open File", QString(), "Pdf File(*.pdf)");
+    QString filename = QFileDialog::getSaveFileName(tempBuffer, "Сохранение результата", QString(), "Pdf File(*.pdf)");
     qDebug() << "Print file name is " << filename;
     if(!filename.isEmpty()) {
         if(QFileInfo(filename).suffix().isEmpty()) {
@@ -562,7 +562,7 @@ void PsychoResultWidget::printTorsronResult() {
 
 
 
-    QString filename = QFileDialog::getSaveFileName(tempBuffer, "Open File", QString(), "Pdf File(*.pdf)");
+    QString filename = QFileDialog::getSaveFileName(tempBuffer, "Сохранение результата", QString(), "Pdf File(*.pdf)");
     qDebug() << "Print file name is " << filename;
     if(!filename.isEmpty()) {
         if(QFileInfo(filename).suffix().isEmpty()) {
