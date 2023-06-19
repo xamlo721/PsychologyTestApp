@@ -60,7 +60,7 @@ class MainAuthWidget : public QWidget {
 
     private:
         Ui::MainAuthWidget *ui;
-        QString psychoPassword = "Jessle"; //TODO: Унести в ядро
+        QString psychoPassword = "12345"; //TODO: Унести в ядро
 
 };
 
